@@ -90,6 +90,17 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 #michiNote .men a:hover{background:var(--surface-2);color:var(--ink)}
 #michiNote .tobu{margin-left:10px;font-size:12px;font-weight:600;white-space:nowrap;
   text-decoration-color:var(--rule-strong)}
+.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:0 0 6px}
+.zoombar .k{font-size:11.5px;color:var(--muted);letter-spacing:.08em;margin-right:4px}
+#zoomNow{font-size:12px;color:var(--ink-2);min-width:3.6em;text-align:center;
+  font-variant-numeric:tabular-nums}
+.zb{width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
+  background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:15px;line-height:1;
+  font-family:inherit;padding:0}
+.zb.w{width:auto;padding:0 11px;font-size:12px;font-weight:600}
+.zb:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.zb:disabled{opacity:.35;cursor:default}
+.zb:disabled:hover{background:var(--surface);color:var(--ink-2);border-color:var(--rule-strong)}
 .zuwrap{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
   overflow:auto;margin:0 0 8px;max-height:min(84vh,1300px);overscroll-behavior:contain}
 #zu{display:block}

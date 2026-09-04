@@ -89,6 +89,17 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 #michiNote .men a:hover{background:var(--surface-2);color:var(--ink)}
 #michiNote .tobu{margin-left:10px;font-size:12px;font-weight:600;white-space:nowrap;
   text-decoration-color:var(--rule-strong)}
+.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:0 0 6px}
+.zoombar .k{font-size:11.5px;color:var(--muted);letter-spacing:.08em;margin-right:4px}
+#zoomNow{font-size:12px;color:var(--ink-2);min-width:3.6em;text-align:center;
+  font-variant-numeric:tabular-nums}
+.zb{width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
+  background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:15px;line-height:1;
+  font-family:inherit;padding:0}
+.zb.w{width:auto;padding:0 11px;font-size:12px;font-weight:600}
+.zb:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.zb:disabled{opacity:.35;cursor:default}
+.zb:disabled:hover{background:var(--surface);color:var(--ink-2);border-color:var(--rule-strong)}
 .zuwrap{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
   overflow:auto;margin:0 0 8px;max-height:min(84vh,1300px);overscroll-behavior:contain}
 #zu{display:block}
@@ -273,6 +284,14 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   <div class="gyo"><span class="g">全体</span><span class="b"><button class="mi all active" data-k="">しぼらない</button></span></div><div class="gyo"><span class="g">古代に始まる</span><span class="b"><button class="mi" data-k="ソクラテス以前の自然学">ソクラテス以前の自然学</button><button class="mi" data-k="プラトンの系譜">プラトンの系譜</button><button class="mi" data-k="アリストテレスとスコラ学">アリストテレスとスコラ学</button><button class="mi" data-k="原子論と唯物論">原子論と唯物論</button><button class="mi" data-k="ストア派">ストア派</button><button class="mi" data-k="懐疑主義">懐疑主義</button></span></div><div class="gyo"><span class="g">近世に始まる</span><span class="b"><button class="mi" data-k="大陸合理論">大陸合理論</button><button class="mi" data-k="イギリス経験論">イギリス経験論</button><button class="mi" data-k="社会契約">社会契約</button><button class="mi" data-k="功利主義">功利主義</button><button class="mi" data-k="ドイツ観念論">ドイツ観念論</button><button class="mi" data-k="歴史と社会の学">歴史と社会の学</button></span></div><div class="gyo"><span class="g">19世紀から・大陸</span><span class="b"><button class="mi" data-k="マルクス主義と批判理論">マルクス主義と批判理論</button><button class="mi" data-k="生の哲学と無意識">生の哲学と無意識</button><button class="mi" data-k="実存主義">実存主義</button><button class="mi" data-k="現象学">現象学</button><button class="mi" data-k="解釈学">解釈学</button><button class="mi" data-k="構造主義とポスト構造主義">構造主義とポスト構造主義</button></span></div><div class="gyo"><span class="g">19世紀から・英語圏</span><span class="b"><button class="mi" data-k="プラグマティズム">プラグマティズム</button><button class="mi" data-k="分析哲学">分析哲学</button><button class="mi" data-k="徳倫理の再興">徳倫理の再興</button></span></div>
 </div>
 <p id="michiNote"></p>
+<div class="zoombar">
+  <span class="k">拡大</span>
+  <button class="zb" data-z="out" title="小さく">−</button>
+  <span id="zoomNow">100%</span>
+  <button class="zb" data-z="in" title="大きく">＋</button>
+  <button class="zb w" data-z="reset">100%</button>
+  <button class="zb w" data-z="fit">全体を見る</button>
+</div>
 <div class="zuwrap"><svg id="zu" viewBox="0 0 1960 3208" width="1960" height="3208" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="西洋哲学史の影響関係">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <rect class="lane" x="136" y="0" width="300" height="3208"/>
@@ -1693,11 +1712,42 @@ const michiNote = document.getElementById("michiNote");
 const chips = [...document.querySelectorAll(".mi")];
 let 系譜中 = null;
 
-const 素の幅 = zu.getAttribute("width"), 素の高さ = zu.getAttribute("height");
+const 素の幅 = +zu.getAttribute("width"), 素の高さ = +zu.getAttribute("height");
+const 枠 = document.querySelector(".zuwrap");
+const zoomNow = document.getElementById("zoomNow");
+const 倍率の下限 = 0.2, 倍率の上限 = 2.5;
+let 倍率 = 1;
 
-function 縮尺を戻す(){
-  zu.style.width = 素の幅 + "px"; zu.style.height = 素の高さ + "px";
+function 倍率を当てる(新, 中心を保つ){
+  const 前 = 倍率;
+  倍率 = Math.min(倍率の上限, Math.max(倍率の下限, 新));
+  const cx = (枠.scrollLeft + 枠.clientWidth / 2) / 前;
+  const cy = (枠.scrollTop + 枠.clientHeight / 2) / 前;
+  zu.style.width = (素の幅 * 倍率) + "px";
+  zu.style.height = (素の高さ * 倍率) + "px";
+  if(中心を保つ !== false){
+    枠.scrollLeft = cx * 倍率 - 枠.clientWidth / 2;
+    枠.scrollTop = cy * 倍率 - 枠.clientHeight / 2;
+  }
+  zoomNow.textContent = Math.round(倍率 * 100) + "%";
+  document.querySelector('.zb[data-z="in"]').disabled = 倍率 >= 倍率の上限 - 0.001;
+  document.querySelector('.zb[data-z="out"]').disabled = 倍率 <= 倍率の下限 + 0.001;
 }
+
+function 縮尺を戻す(){ 倍率を当てる(1, false); }
+
+document.querySelectorAll(".zb").forEach(b=>b.addEventListener("click", ()=>{
+  const z = b.dataset.z;
+  if(z === "in") 倍率を当てる(倍率 * 1.25);
+  else if(z === "out") 倍率を当てる(倍率 / 1.25);
+  else if(z === "reset") 倍率を当てる(1);
+  else if(z === "fit"){
+    const 見 = Math.max(260, Math.min(枠.getBoundingClientRect().height,
+      window.innerHeight - 枠.getBoundingClientRect().top - 10));
+    倍率を当てる(Math.min(枠.clientWidth / 素の幅, 見 / 素の高さ), false);
+    枠.scrollTo({left: 0, top: 0});
+  }
+}));
 
 // 選んだ系譜がまるごと見えるところまで図を縮める（小さくしすぎない）
 function 収める(面々){
@@ -1722,8 +1772,7 @@ function 収める(面々){
   const 読める下限 = 0.62;
   const 倍 = Math.max(読める下限, Math.min(1,
     (見える高さ - 24) / (下 - 上 + 余 * 2), (外.width - 24) / (右 - 左 + 余 * 2)));
-  zu.style.width = (+素の幅 * 倍) + "px";
-  zu.style.height = (+素の高さ * 倍) + "px";
+  倍率を当てる(倍, false);
   // 縮めても収まりきらない系譜は、真ん中ではなく先頭に寄せる
   // （そうしないと、誰もいない時代の真ん中で止まってしまう）
   const 縦が余る = (下 - 上 + 余 * 2) * 倍 <= 見える高さ;
@@ -1801,6 +1850,8 @@ zu.addEventListener("click", e=>{
 document.querySelectorAll(".lg input").forEach(cb=>{
   cb.addEventListener("change", ()=> zu.classList.toggle("off-"+cb.dataset.t, !cb.checked));
 });
+
+倍率を当てる(1, false);   // はじめの見え方をそろえる
 
 (function(){
   let 先頭 = null, 上 = Infinity;
