@@ -59,14 +59,14 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
 .michi-head{display:flex;align-items:baseline;gap:12px;margin:0 0 9px}
-.michi-head .k{font-size:13px;color:var(--ink);font-weight:700;letter-spacing:.1em;
+.michi-head .k{font-size:16px;color:var(--ink);font-weight:700;letter-spacing:.09em;
   font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
 .michi-head .s{font-size:11.5px;color:var(--muted)}
-.gyo{display:grid;grid-template-columns:5.6em 1fr;gap:0 10px;align-items:start;
+.gyo{display:grid;grid-template-columns:9.6em 1fr;gap:0 10px;align-items:start;
   padding:5px 0;border-top:1px solid var(--rule)}
 .gyo:first-of-type{border-top:0;padding-top:0}
-.gyo .g{font-size:11px;color:var(--muted);letter-spacing:.06em;padding-top:6px;
-  text-align:right;line-height:1.4}
+.gyo .g{font-size:11.5px;color:var(--muted);letter-spacing:0;padding-top:7px;
+  text-align:right;line-height:1.4;white-space:nowrap}
 .gyo .b{display:flex;flex-wrap:wrap;gap:5px}
 .mi{font-size:12.5px;padding:5px 11px;border:1px solid var(--rule-strong);border-radius:3px;
   background:var(--surface);cursor:pointer;user-select:none;color:var(--ink-2);
@@ -204,6 +204,12 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .hitobito summary::before{content:"▸ ";color:var(--rule-strong)}
 .hitobito[open] summary::before{content:"▾ "}
 .hitobito summary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.lead-top{font-size:17px;font-weight:700;color:var(--ink);line-height:1.75;
+  margin:0 0 15px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;letter-spacing:.02em}
+.watashi{margin:15px 0 0;padding:11px 15px;background:var(--surface-2);border-radius:8px;
+  border-left:3px solid var(--rule-strong);font-size:13.5px;color:var(--ink-2)}
+.watashi b{display:block;font-size:11px;color:var(--muted);letter-spacing:.12em;
+  margin:0 0 3px;font-weight:700}
 .lead ul{margin:0;padding-left:1.15em;list-style:none}
 .lead li{margin:0 0 7px;position:relative;padding-left:0}
 .lead li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
