@@ -183,6 +183,25 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .michi-box p{margin:0 0 8px;color:var(--ink-2);font-size:13.5px}
 .michi-box .men{font-size:13px;color:var(--muted);line-height:2}
 .michi-box .men a{color:var(--ink-2);text-decoration-color:var(--rule)}
+.hitobito{margin:0 0 4px}
+.hitobito summary{cursor:pointer;list-style:none;user-select:none;display:inline-block;
+  font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:5px 13px;
+  background:var(--surface);margin-bottom:12px}
+.hitobito summary::-webkit-details-marker{display:none}
+.hitobito summary::before{content:"▸ ";color:var(--rule-strong)}
+.hitobito[open] summary::before{content:"▾ "}
+.hitobito summary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.lead ul{margin:0;padding-left:1.15em;list-style:none}
+.lead li{margin:0 0 7px;position:relative;padding-left:0}
+.lead li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
+.lead li:last-child{margin-bottom:0}
+.mi-b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;
+  margin:0 4px 0 0;font-weight:700}
+.kei-box ul{margin:0;padding-left:1.15em;list-style:none;color:var(--ink-2);font-size:14px}
+.kei-box li{margin:0 0 7px;position:relative}
+.kei-box li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
+a.mi{text-decoration:none;display:inline-block}
 .kzubox{margin:12px -6px 0;padding:6px;background:var(--surface-2);border-radius:9px;
   overflow-x:auto;max-height:640px;overflow-y:auto;overscroll-behavior:contain}
 svg.kzu{display:block;margin:0 auto}
@@ -861,8 +880,8 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <div id="panel"><button class="x" aria-label="閉じる">×</button><div id="pbody"></div></div>
 
 <h2 class="era" id="時代-古代">古代<span class="kazu">22人</span></h2>
-<div class="lead"><p>世界の成り立ちを神々の物語から切り離して説明しようとしたところから始まった。その説明が互いに食い違い、決着がつかなくなったところで、問いが人の側へ折り返す。ソクラテスが「よく生きるとは何か」を問い詰め、プラトンが変わらないものを別の世界に置き、アリストテレスがそれを個々のものの内側へ戻した。</p><p>都市国家が力を失うと、重心は世界の成り立ちから生き方へ移る。エピクロス派・ストア派・懐疑派が、心を乱されずにいるための作法を競った。ローマがそれをラテン語に移し、プロティノスがプラトンを階層の体系として読み直した。</p><p>次の時代へ渡ったのは二つ。アリストテレスの論理学と、プラトンを階層として読む枠組み。</p></div>
-<div class="cards">
+<div class="lead"><p>神話から離れて世界を説明しようとしたところから始まり、問いが人の側へ折り返すまで。</p><ul><li>世界の元をひとつのものに求める試みが、小アジアの港町で始まる。水、限りないもの、火と、答えが分かれた</li><li>パルメニデスが「変化も生成も成り立たない」と論じ、自然学は答え方を変える。四つの元、原子と、元を複数に置く道へ</li><li>説明が食い違ったまま決着しないところで、ソクラテスが問いを人の側へ折り返す。よく生きるとは何か</li><li>プラトンが変わらないものを別の世界に置き、アリストテレスがそれを個々のものの内側へ戻す</li><li>都市国家が力を失うと、重心は世界の成り立ちから生き方へ移る。エピクロス派・ストア派・懐疑派が、心を乱されずにいる作法を競った</li><li>ローマがそれをラテン語へ移し、プロティノスがプラトンを階層の体系として読み直す</li><li><b class='mi-b'>次の時代へ渡ったもの</b>：アリストテレスの論理学と、プラトンを階層として読む枠組み</li></ul></div>
+<details class="hitobito"><summary>この時代の22人を見る</summary><div class="cards">
 <a class="card c2" href="人物/%E3%82%BF%E3%83%AC%E3%82%B9.html"><h3>タレス<span class="meta">前624–前546頃／自然・経験</span></h3><p>世界が何からできているのかを、神々の物語を使わずに答えようとした。</p></a>
 <a class="card c2" href="人物/%E3%82%A2%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%9E%E3%83%B3%E3%83%89%E3%83%AD%E3%82%B9.html"><h3>アナクシマンドロス<span class="meta">前610–前546頃／自然・経験</span></h3><p>世界の元を、水のような目に見えるものではなく、限りのないものだとした。</p></a>
 <a class="card c1" href="人物/%E3%83%94%E3%83%A5%E3%82%BF%E3%82%B4%E3%83%A9%E3%82%B9.html"><h3>ピュタゴラス<span class="meta">前570–前495頃／合理・観念</span></h3><p>世界の秩序を数と比で説明し、それを守る生活の共同体をあわせて作った。</p></a>
@@ -885,10 +904,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c5" href="人物/%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%AA%E3%82%B3%E3%82%B9.html"><h3>セクストス・エンペイリコス<span class="meta">160–210頃／生き方・実存</span></h3><p>古代の懐疑をひとつの手引きにまとめ、その本が千三百年後の近世を揺らした。</p></a>
 <a class="card c1" href="人物/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A3%E3%83%8E%E3%82%B9.html"><h3>プロティノス<span class="meta">205–270／合理・観念</span></h3><p>すべては「一者」から溢れ出て階層をなし、魂はそこへ帰っていくとした。</p></a>
 <a class="card c1" href="人物/%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html"><h3>ポルフュリオス<span class="meta">234–305頃／合理・観念</span></h3><p>プロティノスの講義を編んで残し、その入門書の一文が中世千年の論争を生んだ。</p></a>
-</div>
+</div></details>
 <h2 class="era" id="時代-中世">中世<span class="kazu">11人</span></h2>
-<div class="lead"><p>ローマの西方が崩れ、アリストテレスの著作の大半が読めなくなった。ボエティウスが訳した論理学の一部だけが残り、六百年のあいだ、西方が手にしていたアリストテレスはそれだけだった。哲学は神学の内側で続き、信じることと理解することのどちらが先かが問われた。</p><p>失われた著作はアラビア語圏で読み継がれていた。イブン・シーナーが体系に組み直し、イブン・ルシュドが原典に即して註解する。12世紀にその訳がラテン語へ入り、生まれたばかりの大学がそれを読んだ。トマス・アクィナスは理性で届く範囲と啓示の範囲を線引きして両立させ、オッカムはその線を引き直して理性の側を狭め、在るのは個々のものだけだとした。</p><p>次の時代へ渡ったのは、神の秩序を理性で必然としてたどれるとは限らないという緩みと、自然を神学から切り離して観察してよいという余地。</p></div>
-<div class="cards">
+<div class="lead"><p>アリストテレスが西方から消え、イスラム世界を経由して戻ってくるまでの八百年。</p><ul><li>ローマの西方が崩れ、アリストテレスの著作の大半が読めなくなる。ボエティウスが訳した論理学の一部だけが残った</li><li>哲学は神学の内側で続き、信じることと理解することのどちらが先かが問われる</li><li>失われた著作はアラビア語圏で読み継がれていた。イブン・シーナーが体系に組み直し、ガザーリーがその主張を論駁し、イブン・ルシュドが原典に即して註解する</li><li>12世紀、その訳がラテン語へ入り、生まれたばかりの大学が読む</li><li>トマス・アクィナスが、理性で届く範囲と啓示がなければ届かない範囲を線引きして両立させる</li><li>ドゥンス・スコトゥスとオッカムがその線を引き直し、理性の側を狭める。在るのは個々のものだけになった</li><li><b class='mi-b'>次の時代へ渡ったもの</b>：神の秩序を理性で必然としてたどれるとは限らないという緩みと、自然を神学から切り離して観察してよいという余地</li></ul></div>
+<details class="hitobito"><summary>この時代の11人を見る</summary><div class="cards">
 <a class="card c6" href="人物/%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html"><h3>アウグスティヌス<span class="meta">354–430／信仰・神学</span></h3><p>ギリシア以来の思考の道具でキリスト教の信仰を説明し、内面を掘り下げる書き方を始めた。</p></a>
 <a class="card c6" href="人物/%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><h3>ボエティウス<span class="meta">477–524頃／信仰・神学</span></h3><p>処刑を待つ獄中で幸福と運命を論じ、ギリシア論理学をラテン世界へ橋渡しした。</p></a>
 <a class="card c6" href="人物/%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%8A%E3%83%BC.html"><h3>イブン・シーナー<span class="meta">980–1037／信仰・神学</span></h3><p>アリストテレスをひとつの体系に組み直し、何であるかと現に在ることを分けた。</p></a>
@@ -900,10 +919,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c6" href="人物/%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><h3>トマス・アクィナス<span class="meta">1225–1274／信仰・神学</span></h3><p>イスラム世界経由で戻ってきたアリストテレスを使い、理性で届く範囲と信仰の範囲を分けた。</p></a>
 <a class="card c6" href="人物/%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html"><h3>ドゥンス・スコトゥス<span class="meta">1266–1308頃／信仰・神学</span></h3><p>在るという語は神にも被造物にも同じ意味で使えるとし、意志を知性の上に置いた。</p></a>
 <a class="card c6" href="人物/%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html"><h3>オッカム<span class="meta">1287–1347頃／信仰・神学</span></h3><p>「人間そのもの」のような普遍は名前にすぎず、在るのは個々のものだけだとした。</p></a>
-</div>
+</div></details>
 <h2 class="era" id="時代-近世">近世<span class="kazu">20人</span></h2>
-<div class="lead"><p>権威が二重に崩れた。宗教改革が教会の一致を壊し、新しい天文学が世界像を壊した。何を確かなものとして残せるかが問題になり、答え方が二つに分かれる。デカルトは疑いに耐える一点から理性の運びで積み直し、ベーコンとロックは観察の側から組み立てた。</p><p>この分かれ目が時代を通じて広がる。一方はスピノザとライプニッツへ、他方はバークリとヒュームへ。ヒュームが経験の規則を最後まで守り抜いたとき、因果も自我も手元に残らなかった。同じ時期、ホッブズ・ロック・ルソーが、国家の正しさを神の任命から人々の取り決めへ移している。</p><p>カントが二つの道を、認識する側の形式という一点でまとめ直したところで、この時代が閉じる。</p></div>
-<div class="cards">
+<div class="lead"><p>権威が二重に崩れ、何を確かなものとして残せるかが問題になった時代。</p><ul><li>宗教改革が教会の一致を壊し、新しい天文学が世界像を壊す</li><li>1562年にセクストスの訳が出て、古代の懐疑が近世へ戻る。モンテーニュが「私は何を知っているか」と書く</li><li>答え方が二つに分かれる。デカルトは疑いに耐える一点から理性の運びで積み直し、ベーコンとロックは観察の側から組み立てた</li><li>分かれ目が時代を通じて広がる。一方はスピノザとライプニッツへ、他方はバークリとヒュームへ</li><li>ヒュームが経験の規則を最後まで守り抜いたとき、因果も自我も手元に残らなかった</li><li>同じ時期、グロティウス・ホッブズ・ロック・ルソーが、国家の正しさを神の任命から人々の取り決めへ移す</li><li><b class='mi-b'>この時代を閉じたもの</b>：カントが二つの道を、認識する側の形式という一点でまとめ直した</li></ul></div>
+<details class="hitobito"><summary>この時代の20人を見る</summary><div class="cards">
 <a class="card c4" href="人物/%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html"><h3>マキャヴェリ<span class="meta">1469–1527／社会・歴史</span></h3><p>政治を、あるべき姿からではなく、人が現にどう振る舞うかから論じ直した。</p></a>
 <a class="card c5" href="人物/%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html"><h3>モンテーニュ<span class="meta">1533–1592／生き方・実存</span></h3><p>自分自身を材料にして書き、「私は何を知っているか」と問い続けた。</p></a>
 <a class="card c2" href="人物/%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html"><h3>ベーコン<span class="meta">1561–1626／自然・経験</span></h3><p>観察を積み上げて法則へ上る手順を定め、学問の目的を人の暮らしの改善に置いた。</p></a>
@@ -924,10 +943,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c4" href="人物/%E3%83%AB%E3%82%BD%E3%83%BC.html"><h3>ルソー<span class="meta">1712–1778／社会・歴史</span></h3><p>文明が人を不自由にしたと論じ、正統な国家を人々の一般意志のうえに置き直した。</p></a>
 <a class="card c4" href="人物/%E3%82%A2%E3%83%80%E3%83%A0%E3%83%BB%E3%82%B9%E3%83%9F%E3%82%B9.html"><h3>アダム・スミス<span class="meta">1723–1790／社会・歴史</span></h3><p>人の判断を他人の目に自分を映す働きから説明し、市場の秩序も同じ仕組みから導いた。</p></a>
 <a class="card c1" href="人物/%E3%82%AB%E3%83%B3%E3%83%88.html"><h3>カント<span class="meta">1724–1804／合理・観念</span></h3><p>認識が対象に従うのではなく、対象が認識の形式に従うとして、二つの流れをまとめ直した。</p></a>
-</div>
+</div></details>
 <h2 class="era" id="時代-近代">近代<span class="kazu">23人</span></h2>
-<div class="lead"><p>カントは二つのものを残した。認識の形式と、その形式が届かない範囲。後の世代はそれぞれを受け取った。フィヒテとヘーゲルは届かない範囲を消し、動く体系へ進む。その体系に対して、キルケゴールは決断する一人の私を、マルクスは物を作り分け合う仕組みを突きつけた。</p><p>イギリスでは経験の系統がベンサムとミルの功利主義へ流れ、フランスではコントが社会を科学の対象にした。世紀の終わりに、ニーチェが価値そのものの出どころを問い、フレーゲが推論を記号だけで書ける形にする。</p><p>この二つが、次の世紀に分かれる二本の道の入口になる。</p></div>
-<div class="cards">
+<div class="lead"><p>カントが残した二つのもの——認識の形式と、その形式が届かない範囲——を、後の世代がそれぞれ受け取った時代。</p><ul><li>フィヒテとヘーゲルは届かない範囲を消し、動く体系へ進む</li><li>その体系に対して、キルケゴールは決断する一人の私を、マルクスは物を作り分け合う仕組みを突きつけた</li><li>イギリスでは経験の系統がベンサムとミルの功利主義へ流れる</li><li>フランスではコントが社会を科学の対象にし、ドイツではヘルダーとディルタイが歴史と言語を学問の対象にする</li><li>世紀の終わりに、ニーチェが価値そのものの出どころを問い、フロイトが理性の下に無意識を置いた</li><li>同じ頃、フレーゲが推論を記号だけで書ける形にする</li><li><b class='mi-b'>次の世紀へ渡ったもの</b>：分かれる二本の道の入口。言葉と論理の側と、人が世界に住み着いている在り方の側</li></ul></div>
+<details class="hitobito"><summary>この時代の23人を見る</summary><div class="cards">
 <a class="card c1" href="人物/%E3%83%A4%E3%82%B3%E3%83%BC%E3%83%93.html"><h3>ヤコービ<span class="meta">1743–1819／合理・観念</span></h3><p>理性を最後まで押していくと信仰を失うと論じ、スピノザをめぐる論争に火をつけた。</p></a>
 <a class="card c4" href="人物/%E3%83%98%E3%83%AB%E3%83%80%E3%83%BC.html"><h3>ヘルダー<span class="meta">1744–1803／社会・歴史</span></h3><p>どの民族にも固有の考え方があるとし、言語と歴史をその現れとして読んだ。</p></a>
 <a class="card c2" href="人物/%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html"><h3>ベンサム<span class="meta">1748–1832／自然・経験</span></h3><p>行為の善悪を、それが生み出す快と苦の総量だけで測ろうとした。</p></a>
@@ -951,10 +970,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c3" href="人物/%E3%83%95%E3%83%AC%E3%83%BC%E3%82%B2.html"><h3>フレーゲ<span class="meta">1848–1925／言語・論理</span></h3><p>推論の筋道を記号だけで書ける記法を作り、数を論理から導こうとした。</p></a>
 <a class="card c5" href="人物/%E3%83%95%E3%83%AD%E3%82%A4%E3%83%88.html"><h3>フロイト<span class="meta">1856–1939／生き方・実存</span></h3><p>人が自分でも知らない動機に動かされているとし、心に意識の外側の領域を置いた。</p></a>
 <a class="card c3" href="人物/%E3%82%BD%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB.html"><h3>ソシュール<span class="meta">1857–1913／言語・論理</span></h3><p>語の値は、指す物ではなく、体系のなかの他の語との違いによって決まるとした。</p></a>
-</div>
+</div></details>
 <h2 class="era" id="時代-現代">現代<span class="kazu">47人</span></h2>
-<div class="lead"><p>19世紀の終わりに開いた二つの入口が、そのまま二本の道になり、最後まで交わらなかった。一方はフレーゲからラッセル、ウィトゲンシュタイン、カルナップへ進み、言葉と論理の側から哲学を組み直そうとした。もう一方はブレンターノからフッサール、ハイデガー、サルトルへ進み、人がすでに世界に住み着いている在り方の側から組み直そうとした。</p><p>二つの世界大戦と絶滅収容所を経て、アドルノとアレントが理性そのものを問い直し、ロールズが正義の原則を立て直した。世紀の後半には、それぞれの道の内側から足元を崩す動きが出る。クワインとクーンが一方で、フーコーとデリダとドゥルーズがもう一方で。ローティは両方を読んだうえで、哲学を会話を続ける営みと呼び直した。</p></div>
-<div class="cards">
+<div class="lead"><p>19世紀の終わりに開いた二つの入口が、そのまま二本の道になり、最後まで交わらなかった時代。</p><ul><li>一方はフレーゲからラッセル、ムーア、ウィトゲンシュタイン、カルナップへ進み、言葉と論理の側から哲学を組み直そうとする</li><li>もう一方はブレンターノからフッサール、ハイデガー、サルトルへ進み、人がすでに世界に住み着いている在り方の側から組み直そうとする</li><li>二つの世界大戦と絶滅収容所を経て、アドルノとアレントが理性そのものを問い直す</li><li>ロールズが正義の原則を立て直し、ノージック・セン・テイラー・ヌスバウムが四方向から応じた</li><li>世紀の後半、それぞれの道の内側から足元を崩す動きが出る。クワインとクーンが一方で、フーコーとデリダとドゥルーズがもう一方で</li><li>アンスコムの呼びかけから、二千年ぶりに徳をめぐる議論が戻ってくる</li><li>ローティは両方を読んだうえで、哲学を会話を続ける営みと呼び直した</li></ul></div>
+<details class="hitobito"><summary>この時代の47人を見る</summary><div class="cards">
 <a class="card c1" href="人物/%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html"><h3>フッサール<span class="meta">1859–1938／合理・観念</span></h3><p>世界が在るかどうかの判断をいったん止め、意識に現れるとおりに記述する方法を立てた。</p></a>
 <a class="card c5" href="人物/%E3%83%99%E3%83%AB%E3%82%AF%E3%82%BD%E3%83%B3.html"><h3>ベルクソン<span class="meta">1859–1941／生き方・実存</span></h3><p>時計で測る時間と、生きられている時間は別のものだとして、後者を哲学の中心に置いた。</p></a>
 <a class="card c2" href="人物/%E3%83%87%E3%83%A5%E3%83%BC%E3%82%A4.html"><h3>デューイ<span class="meta">1859–1952／自然・経験</span></h3><p>考えることを、うまくいかない状況を作り変える営みとして捉え直した。</p></a>
@@ -1002,10 +1021,11 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c4" href="人物/%E3%83%8E%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF.html"><h3>ノージック<span class="meta">1938–2002／社会・歴史</span></h3><p>正しさは分配の結果ではなく、そこに至る過程にあるとし、最小限の国家だけを認めた。</p></a>
 <a class="card c3" href="人物/%E3%82%AF%E3%83%AA%E3%83%97%E3%82%AD.html"><h3>クリプキ<span class="meta">1940–2022／言語・論理</span></h3><p>名前は説明を束ねた省略ではなく、最初の名づけから受け渡されてきた鎖だとした。</p></a>
 <a class="card c4" href="人物/%E3%83%8C%E3%82%B9%E3%83%90%E3%82%A6%E3%83%A0.html"><h3>ヌスバウム<span class="meta">1947–／社会・歴史</span></h3><p>人が実際に何をなしうるかで社会を測るべきだとし、感情と文学を倫理の中心に戻した。</p></a>
-</div>
+</div></details>
 
 <div class="keiwrap"><h2 class="era" style="margin-top:0">系譜（21本）</h2>
-<p class="sub" style="margin:0 0 16px">誰から誰へ受け渡されたかの流れ。図の上のボタンを押すと、その系譜だけが残る。人は複数の系譜に出る。</p>
+<p class="sub" style="margin:0 0 12px">誰から誰へ受け渡されたかの流れ。人は複数の系譜に出る。ボタンを押すと、その系譜のところへ移る。</p>
+<div class="michiwrap" style="margin:0 0 22px"><div class="gyo"><span class="g">古代に始まる</span><span class="b"><a class="mi" href="#系譜-ソクラテス以前の自然学">ソクラテス以前の自然学</a><a class="mi" href="#系譜-プラトンの系譜">プラトンの系譜</a><a class="mi" href="#系譜-アリストテレスとスコラ学">アリストテレスとスコラ学</a><a class="mi" href="#系譜-原子論と唯物論">原子論と唯物論</a><a class="mi" href="#系譜-ストア派">ストア派</a><a class="mi" href="#系譜-懐疑主義">懐疑主義</a></span></div><div class="gyo"><span class="g">近世に始まる</span><span class="b"><a class="mi" href="#系譜-大陸合理論">大陸合理論</a><a class="mi" href="#系譜-イギリス経験論">イギリス経験論</a><a class="mi" href="#系譜-社会契約">社会契約</a><a class="mi" href="#系譜-功利主義">功利主義</a><a class="mi" href="#系譜-ドイツ観念論">ドイツ観念論</a><a class="mi" href="#系譜-歴史と社会の学">歴史と社会の学</a></span></div><div class="gyo"><span class="g">19世紀から・大陸</span><span class="b"><a class="mi" href="#系譜-マルクス主義と批判理論">マルクス主義と批判理論</a><a class="mi" href="#系譜-生の哲学と無意識">生の哲学と無意識</a><a class="mi" href="#系譜-実存主義">実存主義</a><a class="mi" href="#系譜-現象学">現象学</a><a class="mi" href="#系譜-解釈学">解釈学</a><a class="mi" href="#系譜-構造主義とポスト構造主義">構造主義とポスト構造主義</a></span></div><div class="gyo"><span class="g">19世紀から・英語圏</span><span class="b"><a class="mi" href="#系譜-プラグマティズム">プラグマティズム</a><a class="mi" href="#系譜-分析哲学">分析哲学</a><a class="mi" href="#系譜-徳倫理の再興">徳倫理の再興</a></span></div></div>
 <div class="michi-box"><h2 id="系譜-ソクラテス以前の自然学">ソクラテス以前の自然学<span class="kazu">古代に始まる／9人</span></h2><p>世界が何からできているかを、神々の物語を使わずに答えようとした最初の線。ここでの食い違いが、以後のすべての分かれ道の元になる。</p><p class="men"><a href="人物/%E3%82%BF%E3%83%AC%E3%82%B9.html">タレス</a>／<a href="人物/%E3%82%A2%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%9E%E3%83%B3%E3%83%89%E3%83%AD%E3%82%B9.html">アナクシマンドロス</a>／<a href="人物/%E3%83%94%E3%83%A5%E3%82%BF%E3%82%B4%E3%83%A9%E3%82%B9.html">ピュタゴラス</a>／<a href="人物/%E3%83%98%E3%83%A9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%88%E3%82%B9.html">ヘラクレイトス</a>／<a href="人物/%E3%83%91%E3%83%AB%E3%83%A1%E3%83%8B%E3%83%87%E3%82%B9.html">パルメニデス</a>／<a href="人物/%E3%82%A8%E3%83%B3%E3%83%9A%E3%83%89%E3%82%AF%E3%83%AC%E3%82%B9.html">エンペドクレス</a>／<a href="人物/%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%A8%E3%83%AC%E3%82%A2%EF%BC%89.html">ゼノン（エレア）</a>／<a href="人物/%E3%83%97%E3%83%AD%E3%82%BF%E3%82%B4%E3%83%A9%E3%82%B9.html">プロタゴラス</a>／<a href="人物/%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a></p><div class="kzubox"><svg class="kzu" viewBox="0 0 432 746" width="432" height="746" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <rect class="lane" x="20" y="0" width="196" height="746"/>
