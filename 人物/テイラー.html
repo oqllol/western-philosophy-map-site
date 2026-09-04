@@ -55,6 +55,28 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.michiwrap{margin:0 0 10px}
+.michi{display:flex;flex-wrap:wrap;gap:5px 6px;align-items:center}
+.michi .k{font-size:11.5px;color:var(--muted);letter-spacing:.08em;font-weight:600;
+  margin-right:4px;white-space:nowrap}
+.mi{font-size:12.5px;padding:4px 12px;border:1px solid var(--rule);border-radius:20px;
+  background:var(--surface);cursor:pointer;user-select:none;color:var(--ink-2);
+  font-family:inherit;line-height:1.5}
+.mi:hover{background:var(--surface-2);color:var(--ink)}
+.mi.active{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:600}
+.mi.all{border-style:dashed}
+#michiNote{font-size:12.5px;color:var(--ink-2);margin:8px 0 0;padding:9px 14px;
+  background:var(--surface);border:1px solid var(--rule);border-radius:9px;display:none}
+#michiNote.on{display:block}
+#michiNote b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;
+  margin:0 8px 0 0;font-weight:700}
+#michiNote i{font-style:normal;color:var(--muted);margin-left:6px}
+#michiNote .men{display:block;margin-top:7px;padding-top:7px;
+  border-top:1px solid var(--rule);line-height:2.1}
+#michiNote .men a{font-size:12px;border:1px solid var(--rule);border-radius:20px;
+  padding:2px 10px;margin:0 5px 0 0;text-decoration:none;color:var(--ink-2);
+  background:var(--bg);white-space:nowrap}
+#michiNote .men a:hover{background:var(--surface-2);color:var(--ink)}
 .zuwrap{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
   overflow:auto;margin:0 0 8px;max-height:min(84vh,1300px);overscroll-behavior:contain}
 #zu{display:block}
@@ -87,6 +109,9 @@ svg a{text-decoration:none;cursor:pointer}
 .node.self rect{fill:var(--surface);stroke-width:2.8}
 #zu.sel .node:not(.on){opacity:.2}
 #zu.sel .edge:not(.on){opacity:.06}
+#zu.michi .node:not(.on){opacity:.1}
+#zu.michi .edge:not(.on){opacity:.03}
+#zu.michi .edge.on{opacity:1;stroke-width:2.4}
 #zu.sel .node.on rect{stroke-width:2.6;fill:var(--surface)}
 #zu.sel .edge.on{opacity:1;stroke-width:2.6}
 #zu.off-inherit .edge.inherit,#zu.off-criticize .edge.criticize,
@@ -139,6 +164,17 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 
 .kazu{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:12px;
   letter-spacing:0;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;vertical-align:3px}
+.michi-box{background:var(--surface);border:1px solid var(--rule);
+  border-left:4px solid var(--rule-strong);border-radius:10px;padding:15px 19px;margin:0 0 11px}
+.michi-box h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;
+  margin:0 0 5px;letter-spacing:.05em;color:var(--ink);scroll-margin-top:16px}
+.michi-box p{margin:0 0 8px;color:var(--ink-2);font-size:13.5px}
+.michi-box .men{font-size:13px;color:var(--muted);line-height:2}
+.michi-box .men a{color:var(--ink-2);text-decoration-color:var(--rule)}
+.keizu{font-size:12.5px;color:var(--muted);margin:-14px 0 20px}
+.keizu a{display:inline-block;border:1px solid var(--rule);border-radius:20px;
+  padding:2px 11px;margin:3px 5px 0 0;text-decoration:none;color:var(--ink-2);font-size:12px}
+.keizu a:hover{background:var(--surface-2)}
 h2.kei{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px;
   margin:0 0 6px;letter-spacing:.06em;scroll-margin-top:16px}
 .keiwrap{margin-top:56px}
@@ -187,6 +223,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 
 <h1>テイラー</h1>
 <p class="meta">1931–／カナダ</p>
+<p class="keizu"><a href="../西洋哲学史マップ.html#系譜-%E8%A7%A3%E9%87%88%E5%AD%A6">解釈学</a></p>
 <p class="lede">人は何が重いかについての枠組みのなかでしか自分を持てないとし、承認を軸に据えた。</p>
 
 <div class="minibox"><svg class="mini" viewBox="0 0 704 172" xmlns="http://www.w3.org/2000/svg">
