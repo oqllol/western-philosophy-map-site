@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ハイデガー — 西洋哲学史マップ</title>
+<meta name="description" content="「在るとはどういうことか」という問いを立て直し、死へ向かう人の在り方から迫った。">
+<style>
+:root{
+  --bg:#EDEEF0; --surface:#FAFAFB; --surface-2:#F2F3F5;
+  --ink:#191B1E; --ink-2:#41464C; --muted:#697079;
+  --rule:#D5D9DE; --rule-strong:#AFB6BF;
+  --c1:#3A5C8C; --c2:#4E7A4E; --c3:#2C7370; --c4:#8A7020; --c5:#6B5788; --c6:#7A5C3E;
+  --inherit:#3A5C8C; --criticize:#B03A2E; --invert:#6B5788;
+  --merge:#4E7A4E; --rediscover:#8A7020; --oppose:#697079;
+  --lane:#00000008;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161A; --surface:#1B1E23; --surface-2:#22262C;
+    --ink:#E7E9EC; --ink-2:#C3C8CF; --muted:#98A0AA;
+    --rule:#2E333B; --rule-strong:#4B535E;
+    --c1:#8FB2DE; --c2:#8CC08C; --c3:#6FBFBB; --c4:#CDB25C; --c5:#B29CD2; --c6:#C4A183;
+    --inherit:#8FB2DE; --criticize:#EF9A85; --invert:#B29CD2;
+    --merge:#8CC08C; --rediscover:#CDB25C; --oppose:#98A0AA;
+    --lane:#FFFFFF08;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif;
+  font-size:15px;line-height:1.85;-webkit-text-size-adjust:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:24px 20px 80px}
+.narrow{max-width:760px}
+a{color:var(--ink);text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+h1{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;letter-spacing:.04em}
+header h1{font-size:25px;margin:0 0 2px}
+header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
+.note{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:9px 14px;margin:0 0 12px;font-size:12.5px;color:var(--ink-2);line-height:1.7}
+.note b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;margin:0;font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:5px 10px;margin:0 0 10px}
+.lg{display:flex;align-items:center;gap:7px;font-size:13px;cursor:pointer;
+  padding:4px 10px 4px 6px;border:1px solid var(--rule);border-radius:20px;
+  background:var(--surface);user-select:none}
+.lg input{position:absolute;opacity:0;width:0;height:0}
+.lg .sw{width:22px;height:0;border-top:3px solid var(--k);border-radius:2px;flex:none}
+.lg b{font-weight:600;color:var(--k)}
+.lg i{font-style:normal;color:var(--muted);font-size:12px}
+.lg:has(input:not(:checked)){opacity:.4}
+.lg.inherit{--k:var(--inherit)} .lg.criticize{--k:var(--criticize)}
+.lg.invert{--k:var(--invert)} .lg.merge{--k:var(--merge)}
+.lg.rediscover{--k:var(--rediscover)} .lg.oppose{--k:var(--oppose)}
+.lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
+.lg.oppose .sw{border-top-style:dotted}
+
+.zuwrap{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
+  overflow:auto;margin:0 0 8px;max-height:min(84vh,1300px);overscroll-behavior:contain}
+#zu{display:block}
+.lane{fill:var(--lane)}
+.laneName{font-size:14px;font-weight:700;letter-spacing:.06em;fill:currentColor}
+.laneName.c1{color:var(--c1)} .laneName.c2{color:var(--c2)} .laneName.c3{color:var(--c3)}
+.laneName.c4{color:var(--c4)} .laneName.c5{color:var(--c5)} .laneName.c6{color:var(--c6)}
+svg a{text-decoration:none;cursor:pointer}
+.tick{stroke:var(--rule);stroke-width:1}
+.tickName{font-size:11px;fill:var(--muted)}
+.eraBar{stroke:var(--rule-strong);stroke-width:2;stroke-linecap:round}
+.eraName{font-size:12.5px;fill:var(--muted);letter-spacing:.34em;font-weight:600}
+.edge{fill:none;stroke-width:1.6;opacity:.62;stroke-linecap:round}
+.edge.inherit{stroke:var(--inherit)}
+.edge.criticize{stroke:var(--criticize)}
+.edge.invert{stroke:var(--invert);stroke-dasharray:7 4}
+.edge.merge{stroke:var(--merge);stroke-width:2.4}
+.edge.rediscover{stroke:var(--rediscover);stroke-dasharray:12 5}
+.edge.oppose{stroke:var(--oppose);stroke-dasharray:2 4}
+.ya.inherit{fill:var(--inherit)} .ya.criticize{fill:var(--criticize)}
+.ya.invert{fill:var(--invert)} .ya.merge{fill:var(--merge)}
+.ya.rediscover{fill:var(--rediscover)} .ya.oppose{fill:var(--oppose)}
+.node rect{fill:var(--surface-2);stroke:currentColor;stroke-width:1.4}
+.node{cursor:pointer;outline:none}
+.node.c1{color:var(--c1)} .node.c2{color:var(--c2)} .node.c3{color:var(--c3)}
+.node.c4{color:var(--c4)} .node.c5{color:var(--c5)} .node.c6{color:var(--c6)}
+.node .nm{font-weight:600;fill:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.node .yr{font-size:10.5px;fill:var(--muted)}
+.node:hover rect,.node:focus-visible rect{fill:var(--surface);stroke-width:2.4}
+.node.self rect{fill:var(--surface);stroke-width:2.8}
+#zu.sel .node:not(.on){opacity:.2}
+#zu.sel .edge:not(.on){opacity:.06}
+#zu.sel .node.on rect{stroke-width:2.6;fill:var(--surface)}
+#zu.sel .edge.on{opacity:1;stroke-width:2.6}
+#zu.off-inherit .edge.inherit,#zu.off-criticize .edge.criticize,
+#zu.off-invert .edge.invert,#zu.off-merge .edge.merge,
+#zu.off-rediscover .edge.rediscover,#zu.off-oppose .edge.oppose{display:none}
+
+#panel{position:fixed;right:20px;bottom:20px;width:min(420px,calc(100vw - 40px));
+  max-height:min(70vh,620px);overflow:auto;background:var(--surface);
+  border:1px solid var(--rule-strong);border-radius:12px;padding:18px 20px;
+  box-shadow:0 10px 40px #0003;display:none;z-index:20;font-size:13.5px}
+#panel.open{display:block}
+#panel h3{margin:0 0 2px;font-size:19px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+#panel .meta{color:var(--muted);font-size:12px;margin:0 0 12px}
+#panel p{margin:0 0 10px}
+#panel .x{position:absolute;top:10px;right:12px;border:0;background:none;
+  color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
+.more{display:inline-block;margin-top:4px;padding:5px 14px;border-radius:18px;
+  background:var(--surface-2);border:1px solid var(--rule-strong);
+  font-size:13px;font-weight:600;text-decoration:none}
+b{display:block;font-size:11.5px;color:var(--muted);font-weight:600;
+  letter-spacing:.08em;margin-bottom:1px}
+ul.rels{margin:0 0 10px;padding-left:0;list-style:none;color:var(--ink-2)}
+ul.rels li{margin-bottom:5px}
+.rel{display:inline-block;min-width:3.6em;font-size:11.5px;font-weight:600;
+  padding:1px 6px;margin-right:6px;border-radius:4px;color:#fff;text-align:center}
+.rel.inherit{background:var(--inherit)} .rel.criticize{background:var(--criticize)}
+.rel.invert{background:var(--invert)} .rel.merge{background:var(--merge)}
+.rel.rediscover{background:var(--rediscover)} .rel.oppose{background:var(--oppose)}
+@media (prefers-color-scheme: dark){.rel{color:#14161A}}
+.yr2{color:var(--muted);font-size:11.5px;margin-left:5px}
+
+h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
+  margin:52px 0 0;padding-bottom:6px;border-bottom:2px solid var(--rule-strong);
+  letter-spacing:.08em;scroll-margin-top:16px}
+.lead{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:18px 22px;margin:14px 0 18px;color:var(--ink-2);font-size:14.5px}
+.lead p{margin:0 0 12px} .lead p:last-child{margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--rule);
+  border-left:4px solid currentColor;border-radius:10px;padding:13px 17px;
+  text-decoration:none;display:block}
+.card:hover{background:var(--surface-2)}
+.card.c1{color:var(--c1)} .card.c2{color:var(--c2)} .card.c3{color:var(--c3)}
+.card.c4{color:var(--c4)} .card.c5{color:var(--c5)} .card.c6{color:var(--c6)}
+.card h3{margin:0 0 3px;font-size:17px;color:var(--ink);
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.card .meta{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:9px;
+  font-family:inherit}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.7}
+
+.kazu{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:12px;
+  letter-spacing:0;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;vertical-align:3px}
+h2.kei{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px;
+  margin:0 0 6px;letter-spacing:.06em;scroll-margin-top:16px}
+.keiwrap{margin-top:56px}
+.kei-box{background:var(--surface);border:1px solid var(--rule);
+  border-left:4px solid currentColor;border-radius:10px;padding:16px 20px;margin:0 0 12px}
+.kei-box.c1{color:var(--c1)} .kei-box.c2{color:var(--c2)} .kei-box.c3{color:var(--c3)}
+.kei-box.c4{color:var(--c4)} .kei-box.c5{color:var(--c5)} .kei-box.c6{color:var(--c6)}
+.kei-box h2{color:var(--ink)}
+.kei-box p{margin:0 0 10px;color:var(--ink-2);font-size:14px} .kei-box p:last-child{margin:0}
+.kei-box .tag{font-size:11.5px;color:currentColor;border:1px solid currentColor;
+  border-radius:4px;padding:1px 7px;margin-left:8px;vertical-align:3px;font-weight:400}
+
+.crumb{font-size:12.5px;color:var(--muted);margin:0 0 14px}
+.crumb a{color:var(--muted)}
+.hito h1{font-size:31px;margin:0 0 4px}
+.hito .meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+.hito .lede{font-size:18px;line-height:1.85;margin:0 0 24px;
+  padding-left:14px;border-left:3px solid var(--rule-strong)}
+.hito section{margin:0 0 22px}
+.hito section p{margin:0;color:var(--ink-2)}
+.minibox{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
+  padding:8px;margin:0 0 26px;overflow-x:auto}
+svg.mini{display:block;margin:0 auto;width:100%;max-width:820px;height:auto}
+.ura{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);
+  padding-top:10px;margin-top:26px}
+nav.tonari{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:10px;margin-top:34px;padding-top:20px;border-top:1px solid var(--rule)}
+nav.tonari a{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:11px 15px;text-decoration:none;font-size:13.5px;display:block}
+nav.tonari a:hover{background:var(--surface-2)}
+nav.tonari .k{display:block;font-size:11px;color:var(--muted);letter-spacing:.08em}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
+  color:var(--muted);font-size:12.5px}
+@media (max-width:640px){
+  .wrap{padding:20px 14px 60px}
+  #panel{right:0;left:0;bottom:0;width:100%;border-radius:12px 12px 0 0;max-height:64vh}
+  .hito h1{font-size:26px} .hito .lede{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="wrap narrow hito">
+<p class="crumb"><a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>
+ ／ <a href="../西洋哲学史マップ.html#時代-%E7%8F%BE%E4%BB%A3">現代</a>
+ ／ <a href="../西洋哲学史マップ.html#系統-%E7%94%9F%E3%81%8D%E6%96%B9%E3%83%BB%E5%AE%9F%E5%AD%98">生き方・実存</a></p>
+
+<h1>ハイデガー</h1>
+<p class="meta">1889–1976／ドイツ</p>
+<p class="lede">「在るとはどういうことか」という問いを立て直し、死へ向かう人の在り方から迫った。</p>
+
+<div class="minibox"><svg class="mini" viewBox="0 0 704 394" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M93.0,58.0 C93.0,73.0 345.0,73.0 345.0,88.0"><title>継承</title></path>
+<path class="edge invert" marker-end="url(#ya-invert)" d="M107.0,58.0 C107.0,73.0 359.0,73.0 359.0,88.0"><title>転回</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
+<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M436.0,58.0 C436.0,73.0 352.0,73.0 352.0,88.0"><title>再発見</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M604.0,58.0 C604.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,132.0 C352.0,147.0 100.0,147.0 100.0,162.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 604.0,147.0 604.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,184.0 100.0,184.0 100.0,236.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M345.0,132.0 C345.0,184.0 261.0,184.0 261.0,236.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M359.0,132.0 C359.0,184.0 275.0,184.0 275.0,236.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,184.0 436.0,184.0 436.0,236.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,184.0 604.0,184.0 604.0,236.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,221.0 352.0,221.0 352.0,310.0"><title>継承</title></path>
+<a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html"><g class="node c1 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">フッサール</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1859–1938</text></g></a>
+<a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html"><g class="node c5 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">キルケゴール</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1813–1855</text></g></a>
+<a href="%E3%83%91%E3%83%AB%E3%83%A1%E3%83%8B%E3%83%87%E3%82%B9.html"><g class="node c1 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">パルメニデス</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">前515–前450頃</text></g></a>
+<a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html"><g class="node c5 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">ディルタイ</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1833–1911</text></g></a>
+<a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><g class="node c3 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">1891–1970</text></g></a>
+<a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%83%BC%E3%82%BC.html"><g class="node c4 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">マルクーゼ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1898–1979</text></g></a>
+<a href="%E3%82%AC%E3%83%80%E3%83%9E%E3%83%BC.html"><g class="node c5 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">ガダマー</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1900–2002</text></g></a>
+<a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html"><g class="node c5 "><rect x="528.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="182.0" text-anchor="middle" font-size="13.5">サルトル</text><text class="yr" x="604.0" y="197.0" text-anchor="middle">1905–1980</text></g></a>
+<a href="%E3%82%A2%E3%83%AC%E3%83%B3%E3%83%88.html"><g class="node c4 "><rect x="24.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="256.0" text-anchor="middle" font-size="13.5">アレント</text><text class="yr" x="100.0" y="271.0" text-anchor="middle">1906–1975</text></g></a>
+<a href="%E3%83%AC%E3%83%B4%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c5 "><rect x="192.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="256.0" text-anchor="middle" font-size="13.5">レヴィナス</text><text class="yr" x="268.0" y="271.0" text-anchor="middle">1906–1995</text></g></a>
+<a href="%E3%83%A1%E3%83%AB%E3%83%AD%EF%BC%9D%E3%83%9D%E3%83%B3%E3%83%86%E3%82%A3.html"><g class="node c5 "><rect x="360.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="256.0" text-anchor="middle" font-size="13.5">メルロ＝ポンティ</text><text class="yr" x="436.0" y="271.0" text-anchor="middle">1908–1961</text></g></a>
+<a href="%E3%83%95%E3%83%BC%E3%82%B3%E3%83%BC.html"><g class="node c4 "><rect x="528.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="256.0" text-anchor="middle" font-size="13.5">フーコー</text><text class="yr" x="604.0" y="271.0" text-anchor="middle">1926–1984</text></g></a>
+<a href="%E3%83%87%E3%83%AA%E3%83%80.html"><g class="node c3 "><rect x="276.0" y="310.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="330.0" text-anchor="middle" font-size="13.5">デリダ</text><text class="yr" x="352.0" y="345.0" text-anchor="middle">1930–2004</text></g></a>
+<g class="node c5 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">ハイデガー</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1889–1976</text></g>
+</svg></div>
+
+<section><b>受け取った問い</b><p>哲学は二千年にわたって在るものを論じてきたが、在ること自体の意味を問わないまま来た。</p></section>
+<section><b>出した答え</b><p>在ることの意味に迫るには、それを問える存在者、つまり人の在り方から始めるほかない。人は世界のなかに投げ込まれ、道具や他人と関わりながら暮らしている。ふだんは「ひと」が言うとおりに生き、自分がいつか終わることを覆い隠している。自分の終わりを引き受けたところで、はじめて自分自身の可能性として生きられる。</p></section>
+<section><b>主著</b><p>『存在と時間』『形而上学入門』</p></section>
+
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html">フッサール</a><span class="yr2">1859–1938</span>｜現れるとおりに記述する方法を、助手として直接受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html">フッサール</a><span class="yr2">1859–1938</span>｜意識の分析から出発する枠組みを、世界のなかで気遣いながら暮らす在り方の分析へ振り向けた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html">キルケゴール</a><span class="yr2">1813–1855</span>｜不安と、自分の終わりを引き受ける決断という主題を引き継いだ。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%91%E3%83%AB%E3%83%A1%E3%83%8B%E3%83%87%E3%82%B9.html">パルメニデス</a><span class="yr2">前515–前450頃</span>｜在ることをめぐる古代の断片を読み直し、そこに問いの原型を見た。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html">ディルタイ</a><span class="yr2">1833–1911</span>｜人の営みを内側から理解するという構えと、人が歴史のなかに在るという見方を受け取った。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜「無が無化する」という文を、意味を持たない語の連なりの例として名指しで退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%83%BC%E3%82%BC.html">マルクーゼ</a><span class="yr2">1898–1979</span>｜学生として、人が世界のなかに投げ込まれている在り方の分析を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AC%E3%83%80%E3%83%9E%E3%83%BC.html">ガダマー</a><span class="yr2">1900–2002</span>｜人がすでに世界のなかに投げ込まれているという分析を、直接の師から受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜世界に投げ出された人の在り方の分析を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AC%E3%83%B3%E3%83%88.html">アレント</a><span class="yr2">1906–1975</span>｜世界のなかに在ることから人を捉える構えを、学生として直接受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AC%E3%83%B4%E3%82%A3%E3%83%8A%E3%82%B9.html">レヴィナス</a><span class="yr2">1906–1995</span>｜在ることを問う立て方を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AC%E3%83%B4%E3%82%A3%E3%83%8A%E3%82%B9.html">レヴィナス</a><span class="yr2">1906–1995</span>｜在ることの問いを最も根本に置く順序を退け、他人への責任をその手前に置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%A1%E3%83%AB%E3%83%AD%EF%BC%9D%E3%83%9D%E3%83%B3%E3%83%86%E3%82%A3.html">メルロ＝ポンティ</a><span class="yr2">1908–1961</span>｜世界のなかにすでに住み着いている在り方の分析を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%BC%E3%82%B3%E3%83%BC.html">フーコー</a><span class="yr2">1926–1984</span>｜西洋の思考の歴史を、前提の連なりとして読む構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%AA%E3%83%80.html">デリダ</a><span class="yr2">1930–2004</span>｜西洋の思考の歴史を、在ることをめぐる決まった前提の連なりとして読む構えを受け取った。</li></ul>
+
+<p class="ura"><b>裏づけ</b>『存在と時間』序論§1-8・§46-53（死へ臨む存在）、『形而上学入門』。1933年のフライブルク大学総長就任とナチスへの加担は、著作の評価と切り離せない論点として研究が続いている。</p>
+
+<nav class="tonari"><a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html"><span class="k">同じ時代のひとつ前</span>ウィトゲンシュタイン</a><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><span class="k">同じ時代のつぎ</span>カルナップ</a><a href="%E3%83%A4%E3%82%B9%E3%83%91%E3%83%BC%E3%82%B9.html"><span class="k">生き方・実存のひとつ前</span>ヤスパース</a><a href="%E3%82%AC%E3%83%80%E3%83%9E%E3%83%BC.html"><span class="k">生き方・実存のつぎ</span>ガダマー</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
+
+<footer>
+  正本は <code>data/</code> の Markdown。このページは <code>scripts/ビューを作る.py</code> が作った生成物。
+</footer>
+</div>
+</body>
+</html>

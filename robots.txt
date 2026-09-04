@@ -1,0 +1,4 @@
+# 検索結果に出さない指定は、各ページの <meta name="robots" content="noindex"> で行っている。
+# ここで Disallow にすると、クローラーがその noindex を読めなくなるため、あえて許可している。
+User-agent: *
+Allow: /
