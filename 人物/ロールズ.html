@@ -37,9 +37,30 @@ a{color:var(--ink);text-decoration-color:var(--rule-strong);text-underline-offse
 h1{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;letter-spacing:.04em}
 header h1{font-size:25px;margin:0 0 2px}
 header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
-.note{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
-  padding:9px 14px;margin:0 0 12px;font-size:12.5px;color:var(--ink-2);line-height:1.7}
-.note b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;margin:0;font-weight:700}
+/* 開け閉めできる棚。閉じているときも、何が入っているかと「ひらく」が見えている */
+.folder{border:1px solid var(--rule-strong);border-radius:10px;background:var(--surface);
+  margin:0 0 10px;overflow:hidden}
+.folder>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;
+  padding:11px 14px;user-select:none;background:var(--surface-2);transition:background .15s}
+.folder>summary::-webkit-details-marker{display:none}
+.folder>summary:hover{background:var(--rule)}
+.folder>summary:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.tri{flex:none;width:8px;height:8px;border-right:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);transform:rotate(-45deg);transition:transform .18s ease}
+.folder[open]>summary .tri{transform:rotate(45deg)}
+.folder>summary b{display:inline;margin:0;font-size:15px;font-weight:700;color:var(--ink);
+  letter-spacing:.09em;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;white-space:nowrap}
+.folder>summary i{font-style:normal;font-size:11.5px;color:var(--muted);line-height:1.5;flex:1}
+.folder>summary::after{content:"ひらく";flex:none;font-size:11px;font-weight:600;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:20px;padding:3px 11px;background:var(--bg);
+  white-space:nowrap}
+.folder[open]>summary::after{content:"とじる"}
+.folder>summary:hover::after{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fbody{padding:12px 14px 13px}
+.fbody .legend{margin:0}
+.fbody.yomi{font-size:12.5px;color:var(--ink-2);line-height:1.7}
+.fbody.yomi b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;
+  margin:0;font-weight:700}
 .legend{display:flex;flex-wrap:wrap;gap:5px 10px;margin:0 0 10px}
 .lg{display:flex;align-items:center;gap:7px;font-size:13px;cursor:pointer;
   padding:4px 10px 4px 6px;border:1px solid var(--rule);border-radius:20px;
@@ -335,6 +356,8 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .wrap{padding:20px 14px 60px}
   #panel{right:0;left:0;bottom:0;width:100%;border-radius:12px 12px 0 0;max-height:64vh}
   .hito h1{font-size:26px} .hito .lede{font-size:16px}
+  .folder>summary{flex-wrap:wrap;gap:8px 10px}
+  .folder>summary i{flex:1 0 100%;order:3}
   .crumbrow{flex-direction:column;gap:10px}
   .crumbrow .crumb{padding-top:0}
   .findwrap.mini{width:100%}

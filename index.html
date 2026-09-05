@@ -36,9 +36,30 @@ a{color:var(--ink);text-decoration-color:var(--rule-strong);text-underline-offse
 h1{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;letter-spacing:.04em}
 header h1{font-size:25px;margin:0 0 2px}
 header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
-.note{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
-  padding:9px 14px;margin:0 0 12px;font-size:12.5px;color:var(--ink-2);line-height:1.7}
-.note b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;margin:0;font-weight:700}
+/* 開け閉めできる棚。閉じているときも、何が入っているかと「ひらく」が見えている */
+.folder{border:1px solid var(--rule-strong);border-radius:10px;background:var(--surface);
+  margin:0 0 10px;overflow:hidden}
+.folder>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;
+  padding:11px 14px;user-select:none;background:var(--surface-2);transition:background .15s}
+.folder>summary::-webkit-details-marker{display:none}
+.folder>summary:hover{background:var(--rule)}
+.folder>summary:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.tri{flex:none;width:8px;height:8px;border-right:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);transform:rotate(-45deg);transition:transform .18s ease}
+.folder[open]>summary .tri{transform:rotate(45deg)}
+.folder>summary b{display:inline;margin:0;font-size:15px;font-weight:700;color:var(--ink);
+  letter-spacing:.09em;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;white-space:nowrap}
+.folder>summary i{font-style:normal;font-size:11.5px;color:var(--muted);line-height:1.5;flex:1}
+.folder>summary::after{content:"ひらく";flex:none;font-size:11px;font-weight:600;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:20px;padding:3px 11px;background:var(--bg);
+  white-space:nowrap}
+.folder[open]>summary::after{content:"とじる"}
+.folder>summary:hover::after{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fbody{padding:12px 14px 13px}
+.fbody .legend{margin:0}
+.fbody.yomi{font-size:12.5px;color:var(--ink-2);line-height:1.7}
+.fbody.yomi b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;
+  margin:0;font-weight:700}
 .legend{display:flex;flex-wrap:wrap;gap:5px 10px;margin:0 0 10px}
 .lg{display:flex;align-items:center;gap:7px;font-size:13px;cursor:pointer;
   padding:4px 10px 4px 6px;border:1px solid var(--rule);border-radius:20px;
@@ -334,6 +355,8 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .wrap{padding:20px 14px 60px}
   #panel{right:0;left:0;bottom:0;width:100%;border-radius:12px 12px 0 0;max-height:64vh}
   .hito h1{font-size:26px} .hito .lede{font-size:16px}
+  .folder>summary{flex-wrap:wrap;gap:8px 10px}
+  .folder>summary i{flex:1 0 100%;order:3}
   .crumbrow{flex-direction:column;gap:10px}
   .crumbrow .crumb{padding-top:0}
   .findwrap.mini{width:100%}
@@ -366,12 +389,17 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   <div class="danbtns"><button class="dn active" data-d="1">44人<i>大きな流れ</i></button><button class="dn" data-d="2">76人<i>学派まで</i></button><button class="dn" data-d="3">123人<i>もっと広く</i></button></div>
 </div>
 
-<div class="legend"><label class="lg inherit"><input type="checkbox" data-t="inherit" checked><span class="sw"></span><b>継承</b><i>受け取り、先へ進めた</i></label><label class="lg criticize"><input type="checkbox" data-t="criticize" checked><span class="sw"></span><b>批判</b><i>退けた・成り立たないと示した</i></label><label class="lg invert"><input type="checkbox" data-t="invert" checked><span class="sw"></span><b>転回</b><i>枠組みは受け取ったまま、向きを反対にした</i></label><label class="lg merge"><input type="checkbox" data-t="merge" checked><span class="sw"></span><b>合流</b><i>分かれていた流れをひとつにまとめた</i></label><label class="lg rediscover"><input type="checkbox" data-t="rediscover" checked><span class="sw"></span><b>再発見</b><i>何世代も隔てた相手を掘り起こした</i></label><label class="lg oppose"><input type="checkbox" data-t="oppose" checked><span class="sw"></span><b>対立</b><i>同時代に正面からぶつかった</i></label></div>
-<div class="michiwrap">
-  <div class="michi-head"><span class="k">系譜でたどる</span>
-    <span class="s">押すと、その流れの人と線だけが残る。もう一度押すと戻る</span></div>
-  <div class="gyo"><span class="g">全体</span><span class="b"><button class="mi all active" data-k="">しぼらない</button></span></div><div class="gyo"><span class="g">古代に始まる</span><span class="b"><button class="mi" data-k="ソクラテス以前の自然学">ソクラテス以前の自然学</button><button class="mi" data-k="プラトンの系譜">プラトンの系譜</button><button class="mi" data-k="アリストテレスとスコラ学">アリストテレスとスコラ学</button><button class="mi" data-k="原子論と唯物論">原子論と唯物論</button><button class="mi" data-k="ストア派">ストア派</button><button class="mi" data-k="懐疑主義">懐疑主義</button></span></div><div class="gyo"><span class="g">近世に始まる</span><span class="b"><button class="mi" data-k="大陸合理論">大陸合理論</button><button class="mi" data-k="イギリス経験論">イギリス経験論</button><button class="mi" data-k="社会契約">社会契約</button><button class="mi" data-k="功利主義">功利主義</button><button class="mi" data-k="ドイツ観念論">ドイツ観念論</button><button class="mi" data-k="歴史と社会の学">歴史と社会の学</button></span></div><div class="gyo"><span class="g">19世紀から・大陸</span><span class="b"><button class="mi" data-k="マルクス主義と批判理論">マルクス主義と批判理論</button><button class="mi" data-k="生の哲学と無意識">生の哲学と無意識</button><button class="mi" data-k="実存主義">実存主義</button><button class="mi" data-k="現象学">現象学</button><button class="mi" data-k="解釈学">解釈学</button><button class="mi" data-k="構造主義とポスト構造主義">構造主義とポスト構造主義</button></span></div><div class="gyo"><span class="g">19世紀から・英語圏</span><span class="b"><button class="mi" data-k="プラグマティズム">プラグマティズム</button><button class="mi" data-k="分析哲学">分析哲学</button><button class="mi" data-k="徳倫理の再興">徳倫理の再興</button></span></div>
-</div>
+<details class="folder">
+  <summary><span class="tri"></span><b>線の種類</b>
+    <i>継承・批判・転回・合流・再発見・対立の6つで色分けしてある。種類ごとに隠せる</i></summary>
+  <div class="fbody"><div class="legend"><label class="lg inherit"><input type="checkbox" data-t="inherit" checked><span class="sw"></span><b>継承</b><i>受け取り、先へ進めた</i></label><label class="lg criticize"><input type="checkbox" data-t="criticize" checked><span class="sw"></span><b>批判</b><i>退けた・成り立たないと示した</i></label><label class="lg invert"><input type="checkbox" data-t="invert" checked><span class="sw"></span><b>転回</b><i>枠組みは受け取ったまま、向きを反対にした</i></label><label class="lg merge"><input type="checkbox" data-t="merge" checked><span class="sw"></span><b>合流</b><i>分かれていた流れをひとつにまとめた</i></label><label class="lg rediscover"><input type="checkbox" data-t="rediscover" checked><span class="sw"></span><b>再発見</b><i>何世代も隔てた相手を掘り起こした</i></label><label class="lg oppose"><input type="checkbox" data-t="oppose" checked><span class="sw"></span><b>対立</b><i>同時代に正面からぶつかった</i></label></div></div>
+</details>
+
+<details class="folder">
+  <summary><span class="tri"></span><b>系譜でたどる</b>
+    <i>21本の流れ。押すと、その流れの人と線だけが残る。もう一度押すと戻る</i></summary>
+  <div class="fbody"><div class="gyo"><span class="g">全体</span><span class="b"><button class="mi all active" data-k="">しぼらない</button></span></div><div class="gyo"><span class="g">古代に始まる</span><span class="b"><button class="mi" data-k="ソクラテス以前の自然学">ソクラテス以前の自然学</button><button class="mi" data-k="プラトンの系譜">プラトンの系譜</button><button class="mi" data-k="アリストテレスとスコラ学">アリストテレスとスコラ学</button><button class="mi" data-k="原子論と唯物論">原子論と唯物論</button><button class="mi" data-k="ストア派">ストア派</button><button class="mi" data-k="懐疑主義">懐疑主義</button></span></div><div class="gyo"><span class="g">近世に始まる</span><span class="b"><button class="mi" data-k="大陸合理論">大陸合理論</button><button class="mi" data-k="イギリス経験論">イギリス経験論</button><button class="mi" data-k="社会契約">社会契約</button><button class="mi" data-k="功利主義">功利主義</button><button class="mi" data-k="ドイツ観念論">ドイツ観念論</button><button class="mi" data-k="歴史と社会の学">歴史と社会の学</button></span></div><div class="gyo"><span class="g">19世紀から・大陸</span><span class="b"><button class="mi" data-k="マルクス主義と批判理論">マルクス主義と批判理論</button><button class="mi" data-k="生の哲学と無意識">生の哲学と無意識</button><button class="mi" data-k="実存主義">実存主義</button><button class="mi" data-k="現象学">現象学</button><button class="mi" data-k="解釈学">解釈学</button><button class="mi" data-k="構造主義とポスト構造主義">構造主義とポスト構造主義</button></span></div><div class="gyo"><span class="g">19世紀から・英語圏</span><span class="b"><button class="mi" data-k="プラグマティズム">プラグマティズム</button><button class="mi" data-k="分析哲学">分析哲学</button><button class="mi" data-k="徳倫理の再興">徳倫理の再興</button></span></div></div>
+</details>
 <p id="michiNote"></p>
 <div class="zoombar">
   <span class="k">拡大</span>
@@ -971,8 +999,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <g class="node c3" data-n="クリプキ" data-d="3" tabindex="0" role="button"><rect x="212.0" y="2973.0" width="148" height="46" rx="7"/><text class="nm" x="286.0" y="2993.0" text-anchor="middle" font-size="14">クリプキ</text><text class="yr" x="286.0" y="3009.0" text-anchor="middle">1940–2022</text></g>
 <g class="node c4" data-n="ヌスバウム" data-d="3" tabindex="0" role="button"><rect x="1712.0" y="3029.0" width="148" height="46" rx="7"/><text class="nm" x="1786.0" y="3049.0" text-anchor="middle" font-size="14">ヌスバウム</text><text class="yr" x="1786.0" y="3065.0" text-anchor="middle">1947–</text></g>
 </svg></div>
-<details class="note">
-  <summary>この図の読み方</summary>
+<details class="folder">
+  <summary><span class="tri"></span><b>この図の読み方</b>
+    <i>矢印の向き、縦の目盛り、系譜と系統の違い</i></summary>
+  <div class="fbody yomi">
   <b>矢印は影響の向き</b>　先人からあとの人へ。色と形は、受け渡し方の6つの型で分けてある。<br>
   <b>縦の目盛りは等間隔ではない</b>　人が密集する時代ほど広く取ってある。左の年号で位置を確かめてほしい。
   箱の位置は生年で、著作の年ではない。<br>
@@ -980,6 +1010,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   系譜は、誰から誰へ受け渡されたかの流れで、立ち位置をまたぐ。<br>
   <b>横に広い</b>　指やトラックパッドで左右に動かせる。選んだ人が図の外にいるときは、図が自動でその人まで動く。
   左端の時代名と上下の系統名からも、下の説明へ飛べる。
+  </div>
 </details>
 
 <div id="panel"><button class="x" aria-label="閉じる">×</button><div id="pbody"></div></div>
