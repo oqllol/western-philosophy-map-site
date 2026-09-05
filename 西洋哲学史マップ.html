@@ -72,6 +72,7 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
 .find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
 .find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+.findhint{margin:6px 0 12px;font-size:11.5px;color:var(--muted);line-height:1.6}
 
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
@@ -295,11 +296,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <div class="findwrap">
   <label class="k" for="find">名前でさがす</label>
   <input id="find" type="search" autocomplete="off" spellcheck="false"
-         placeholder="カント、ヒューム、あーれんと…" aria-describedby="findHint">
+         placeholder="カント、ヒューム、アーレント…" aria-describedby="findHint">
   <div id="findList" class="find-list" hidden></div>
 </div>
-<p id="findHint" class="sub" style="margin:-8px 0 12px;font-size:11.5px">
-  ひらがなで打っても引けます。選ぶと図がその人まで動きます。</p>
+<p id="findHint" class="findhint">ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）。選ぶと図がその人まで動きます。</p>
 
 <details class="note">
   <summary>この図の読み方</summary>
@@ -1727,18 +1727,31 @@ function 閉じる(){
   edges.forEach(e=>e.classList.remove("on"));
 }
 
+const 索引データ = Object.keys(D).map(n => [n, D[n].生没, D[n].系統, D[n].生年]);
+function 選んだとき(名前){ find.value = ""; 候補を閉じる(); 開く(名前); }
+
 // ── 名前でさがす ──────────────────────────────
-// ひらがなで打たれても引けるよう、かたかなに寄せてから比べる。
-// 中黒と空白は無視する（「イブン・シーナー」を「いぶんし」で引ける）
+// 打ち方の揺れを吸収してから比べる。ひらがな→かたかな、ヴァ行→バ行、
+// 小書きの字→大きい字、長音符・促音・中黒・イコール・かっこ・空白は無視、
+// エ段のあとのイとオ段のあとのウは伸ばす音とみなして落とす。
+// これで「あーれんと」「デービッドソン」「オースチン」からも引ける
 const find = document.getElementById("find");
 const findList = document.getElementById("findList");
-const 上限 = 20;
-const 索引 = Object.keys(D).map(名 => ({名, 鍵: よみ(名), 生年: D[名].生年}));
+const 表示上限 = 20;
+const エ段 = "エケセテネヘメレゲゼデベペヱ", オ段 = "オコソトノホモヨロゴゾドボポヲ";
 
 function よみ(s){
-  return s.replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0) + 0x60))
-          .replace(/[・・\s]/g, "").toLowerCase();
+  s = s.replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0) + 0x60));
+  [["ヴァ","バ"],["ヴィ","ビ"],["ヴェ","ベ"],["ヴォ","ボ"],["ヴ","ブ"],
+   ["ティ","チ"],["ヂ","ジ"],["ヅ","ズ"]].forEach(([a,b]) => { s = s.split(a).join(b); });
+  s = s.replace(/[ァィゥェォャュョヮヵヶ]/g,
+        c => "アイウエオヤユヨワカケ"["ァィゥェォャュョヮヵヶ".indexOf(c)]);
+  s = s.replace(new RegExp("([" + エ段 + "])イ", "g"), "$1");
+  s = s.replace(new RegExp("([" + オ段 + "])ウ", "g"), "$1");
+  return s.replace(/[ーッ・＝=（）()\s]/g, "").toLowerCase();
 }
+
+const 索引 = 索引データ.map(([名, 生没, 系統, 生年]) => ({名, 生没, 系統, 生年, 鍵: よみ(名)}));
 
 function さがす(語){
   const q = よみ(語);
@@ -1750,16 +1763,16 @@ function さがす(語){
 }
 
 function 候補を描く(){
-  const 当たり = さがす(find.value);
   if(!find.value.trim()){ findList.hidden = true; findList.innerHTML = ""; return; }
+  const 当たり = さがす(find.value);
   if(!当たり.length){
     findList.innerHTML = '<p class="none">その名前は入っていません</p>';
   } else {
-    findList.innerHTML = 当たり.slice(0, 上限).map(x =>
+    findList.innerHTML = 当たり.slice(0, 表示上限).map(x =>
       '<button type="button" data-go="' + esc(x.名) + '">' + esc(x.名)
-      + "<i>" + esc(D[x.名].生没) + "／" + esc(D[x.名].系統) + "</i></button>").join("")
-      + (当たり.length > 上限
-         ? '<p class="none">ほかに' + (当たり.length - 上限) + "件あります。もう少し打ってください</p>" : "");
+      + "<i>" + esc(x.生没) + "／" + esc(x.系統) + "</i></button>").join("")
+      + (当たり.length > 表示上限
+         ? '<p class="none">ほかに' + (当たり.length - 表示上限) + "件あります。もう少し打ってください</p>" : "");
   }
   findList.hidden = false;
   const 先頭 = findList.querySelector("button");
@@ -1767,12 +1780,6 @@ function 候補を描く(){
 }
 
 function 候補を閉じる(){ findList.hidden = true; }
-
-function 選んで開く(名前){
-  find.value = "";
-  候補を閉じる();
-  開く(名前);
-}
 
 find.addEventListener("input", 候補を描く);
 find.addEventListener("focus", 候補を描く);
@@ -1789,16 +1796,17 @@ find.addEventListener("keydown", e => {
     並び[次].scrollIntoView({block: "nearest"});
   } else if(e.key === "Enter"){
     e.preventDefault();
-    選んで開く((並び[いま] || 並び[0]).dataset.go);
+    選んだとき((並び[いま] || 並び[0]).dataset.go);
   }
 });
 findList.addEventListener("click", e => {
   const b = e.target.closest("button[data-go]");
-  if(b) 選んで開く(b.dataset.go);
+  if(b) 選んだとき(b.dataset.go);
 });
 document.addEventListener("click", e => {
   if(!e.target.closest(".findwrap")) 候補を閉じる();
 });
+
 
 // ── 系譜でしぼる ──────────────────────────────
 const michiNote = document.getElementById("michiNote");
