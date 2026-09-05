@@ -75,6 +75,55 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
 .findhint{margin:6px 0 12px;font-size:11.5px;color:var(--muted);line-height:1.6}
 
+/* 人物ページ用。パンくずの右端に小さく置き、触ったときだけ広がる */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
+  clip-path:inset(50%);white-space:nowrap}
+.crumbrow{display:flex;align-items:flex-start;justify-content:space-between;
+  gap:16px;margin:0 0 18px}
+.crumbrow .crumb{margin:0;padding-top:5px}
+.findwrap.mini{margin:0;flex:none}
+.findwrap.mini .findbox{display:flex;align-items:center;gap:7px;
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:999px;
+  padding:0 12px;transition:border-color .15s,box-shadow .15s,background .15s}
+.findwrap.mini .findbox:focus-within{border-color:var(--ink);background:var(--bg);
+  box-shadow:0 0 0 3px var(--rule)}
+.findwrap.mini svg{width:14px;height:14px;flex:none;display:block;
+  fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;transition:stroke .15s}
+.findwrap.mini .findbox:focus-within svg{stroke:var(--ink)}
+.findwrap.mini #find{width:104px;padding:7px 0;font-size:13.5px;
+  border:0;border-radius:0;background:none;box-shadow:none;
+  transition:width .18s ease}
+.findwrap.mini #find:focus{width:236px;border:0;box-shadow:none}
+.findwrap.mini #find::-webkit-search-cancel-button{-webkit-appearance:none}
+.findwrap.mini .find-list{left:auto;right:0;width:300px;margin-top:6px}
+
+.danwrap{background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;
+  padding:11px 14px 12px;margin:0 0 10px}
+.danhead{display:flex;align-items:baseline;gap:12px;margin:0 0 9px}
+.danhead .k{font-size:16px;color:var(--ink);font-weight:700;letter-spacing:.09em;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.danhead .s{font-size:11.5px;color:var(--muted)}
+.danbtns{display:flex;flex-wrap:wrap;gap:6px}
+.dn{display:flex;flex-direction:column;align-items:flex-start;gap:1px;
+  font-size:14px;font-weight:700;padding:7px 14px;border-radius:3px;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  cursor:pointer;font-family:inherit;line-height:1.35;letter-spacing:.02em}
+.dn i{font-style:normal;font-size:11px;font-weight:400;color:var(--muted)}
+.dn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dn:hover i{color:var(--bg)}
+.dn.active{background:var(--ink);color:var(--bg);border-color:var(--ink);
+  box-shadow:0 0 0 3px var(--rule)}
+.dn.active i{color:var(--bg);opacity:.75}
+body[data-dan="1"] .node[data-d="2"], body[data-dan="1"] .edge[data-d="2"],
+body[data-dan="1"] .card[data-d="2"],
+body[data-dan="1"] .node[data-d="3"], body[data-dan="1"] .edge[data-d="3"],
+body[data-dan="1"] .card[data-d="3"],
+body[data-dan="2"] .node[data-d="3"], body[data-dan="2"] .edge[data-d="3"],
+body[data-dan="2"] .card[data-d="3"]{display:none}
+.node.neu rect{animation:neu 2.2s ease-out 1}
+@keyframes neu{0%{stroke-width:5}60%{stroke-width:5}100%{stroke-width:1.4}}
+.card.neu{animation:neuc 2.2s ease-out 1}
+@keyframes neuc{0%{background:var(--surface-2)}60%{background:var(--surface-2)}100%{background:transparent}}
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -284,22 +333,30 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .wrap{padding:20px 14px 60px}
   #panel{right:0;left:0;bottom:0;width:100%;border-radius:12px 12px 0 0;max-height:64vh}
   .hito h1{font-size:26px} .hito .lede{font-size:16px}
+  .crumbrow{flex-direction:column;gap:10px}
+  .crumbrow .crumb{padding-top:0}
+  .findwrap.mini{width:100%}
+  .findwrap.mini #find,.findwrap.mini #find:focus{width:100%;flex:1}
+  .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
 </head>
 <body>
 <div class="wrap narrow hito">
+<div class="crumbrow">
 <p class="crumb"><a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>
  ／ <a href="../西洋哲学史マップ.html#時代-古代">古代</a>
  ／ <a href="../西洋哲学史マップ.html#系統-合理・観念">合理・観念</a></p>
-
-<div class="findwrap">
-  <label class="k" for="find">名前でさがす</label>
-  <input id="find" type="search" autocomplete="off" spellcheck="false"
-         placeholder="カント、ヒューム、アーレント…" aria-describedby="findHint">
+<div class="findwrap mini">
+  <label class="vh" for="find">名前でさがす</label>
+  <div class="findbox">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14"/></svg>
+    <input id="find" type="search" autocomplete="off" spellcheck="false"
+           placeholder="さがす" title="ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）">
+  </div>
   <div id="findList" class="find-list" hidden></div>
 </div>
-<p id="findHint" class="findhint">ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）。</p>
+</div>
 
 <h1>ポルフュリオス</h1>
 <p class="meta">234–305頃／テュロス／ローマ</p>

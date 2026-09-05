@@ -75,6 +75,55 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
 .findhint{margin:6px 0 12px;font-size:11.5px;color:var(--muted);line-height:1.6}
 
+/* 人物ページ用。パンくずの右端に小さく置き、触ったときだけ広がる */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
+  clip-path:inset(50%);white-space:nowrap}
+.crumbrow{display:flex;align-items:flex-start;justify-content:space-between;
+  gap:16px;margin:0 0 18px}
+.crumbrow .crumb{margin:0;padding-top:5px}
+.findwrap.mini{margin:0;flex:none}
+.findwrap.mini .findbox{display:flex;align-items:center;gap:7px;
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:999px;
+  padding:0 12px;transition:border-color .15s,box-shadow .15s,background .15s}
+.findwrap.mini .findbox:focus-within{border-color:var(--ink);background:var(--bg);
+  box-shadow:0 0 0 3px var(--rule)}
+.findwrap.mini svg{width:14px;height:14px;flex:none;display:block;
+  fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;transition:stroke .15s}
+.findwrap.mini .findbox:focus-within svg{stroke:var(--ink)}
+.findwrap.mini #find{width:104px;padding:7px 0;font-size:13.5px;
+  border:0;border-radius:0;background:none;box-shadow:none;
+  transition:width .18s ease}
+.findwrap.mini #find:focus{width:236px;border:0;box-shadow:none}
+.findwrap.mini #find::-webkit-search-cancel-button{-webkit-appearance:none}
+.findwrap.mini .find-list{left:auto;right:0;width:300px;margin-top:6px}
+
+.danwrap{background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;
+  padding:11px 14px 12px;margin:0 0 10px}
+.danhead{display:flex;align-items:baseline;gap:12px;margin:0 0 9px}
+.danhead .k{font-size:16px;color:var(--ink);font-weight:700;letter-spacing:.09em;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.danhead .s{font-size:11.5px;color:var(--muted)}
+.danbtns{display:flex;flex-wrap:wrap;gap:6px}
+.dn{display:flex;flex-direction:column;align-items:flex-start;gap:1px;
+  font-size:14px;font-weight:700;padding:7px 14px;border-radius:3px;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  cursor:pointer;font-family:inherit;line-height:1.35;letter-spacing:.02em}
+.dn i{font-style:normal;font-size:11px;font-weight:400;color:var(--muted)}
+.dn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dn:hover i{color:var(--bg)}
+.dn.active{background:var(--ink);color:var(--bg);border-color:var(--ink);
+  box-shadow:0 0 0 3px var(--rule)}
+.dn.active i{color:var(--bg);opacity:.75}
+body[data-dan="1"] .node[data-d="2"], body[data-dan="1"] .edge[data-d="2"],
+body[data-dan="1"] .card[data-d="2"],
+body[data-dan="1"] .node[data-d="3"], body[data-dan="1"] .edge[data-d="3"],
+body[data-dan="1"] .card[data-d="3"],
+body[data-dan="2"] .node[data-d="3"], body[data-dan="2"] .edge[data-d="3"],
+body[data-dan="2"] .card[data-d="3"]{display:none}
+.node.neu rect{animation:neu 2.2s ease-out 1}
+@keyframes neu{0%{stroke-width:5}60%{stroke-width:5}100%{stroke-width:1.4}}
+.card.neu{animation:neuc 2.2s ease-out 1}
+@keyframes neuc{0%{background:var(--surface-2)}60%{background:var(--surface-2)}100%{background:transparent}}
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -284,22 +333,30 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .wrap{padding:20px 14px 60px}
   #panel{right:0;left:0;bottom:0;width:100%;border-radius:12px 12px 0 0;max-height:64vh}
   .hito h1{font-size:26px} .hito .lede{font-size:16px}
+  .crumbrow{flex-direction:column;gap:10px}
+  .crumbrow .crumb{padding-top:0}
+  .findwrap.mini{width:100%}
+  .findwrap.mini #find,.findwrap.mini #find:focus{width:100%;flex:1}
+  .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
 </head>
 <body>
 <div class="wrap narrow hito">
+<div class="crumbrow">
 <p class="crumb"><a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>
  ／ <a href="../西洋哲学史マップ.html#時代-古代">古代</a>
  ／ <a href="../西洋哲学史マップ.html#系統-合理・観念">合理・観念</a></p>
-
-<div class="findwrap">
-  <label class="k" for="find">名前でさがす</label>
-  <input id="find" type="search" autocomplete="off" spellcheck="false"
-         placeholder="カント、ヒューム、アーレント…" aria-describedby="findHint">
+<div class="findwrap mini">
+  <label class="vh" for="find">名前でさがす</label>
+  <div class="findbox">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14"/></svg>
+    <input id="find" type="search" autocomplete="off" spellcheck="false"
+           placeholder="さがす" title="ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）">
+  </div>
   <div id="findList" class="find-list" hidden></div>
 </div>
-<p id="findHint" class="findhint">ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）。</p>
+</div>
 
 <h1>プロティノス</h1>
 <p class="meta">205–270／ローマ</p>
@@ -322,13 +379,13 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 </svg></div>
 
 <section><b>受け取った問い</b><p>プラトンのイデアと、そのイデアを見る魂と、目の前の世界は、どうつながっているのか。</p></section>
-<section><b>出した答え</b><p>頂点に何ものでもない「一者」があり、そこから知性が、知性から魂が、魂から感覚の世界が溢れ出る。下へ行くほど散らばり、上へ行くほど一つにまとまる。人は思考を研ぎ澄ませて逆をたどり、一者と合一しうる。</p></section>
+<section><b>出した答え</b><p>頂点に何ものでもない「一者」があり、そこから知性が、知性から魂が、魂から感覚の世界が溢れ出る。下へ行くほど散らばり、上へ行くほど一つにまとまる。人は思考を研ぎ澄ませて知性まで逆をたどれる。一者に触れるのは、そこから自分を手放して居合わせることによる。</p></section>
 <section><b>主著</b><p>『エネアデス』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜対話篇にある断片的な示唆を受け取り、一と知性と魂の階層構造として組み直した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜知性が自らを思考するという規定を受け取り、階層の第二位に置いた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html">ポルフュリオス</a><span class="yr2">234–305頃</span>｜講義を聴いて論文を編集し、その体系を受け継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html">アウグスティヌス</a><span class="yr2">354–430</span>｜一者から溢れ出る階層と、内へ還る道筋を受け取り、神と魂の関係として読み替えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%8A%E3%83%BC.html">イブン・シーナー</a><span class="yr2">980–1037</span>｜一者から段階を追って流れ出る構図を受け取り、必然的存在者と知性の階層として書き直した。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『エネアデス』V巻1論文・VI巻9論文。プラトン自身が階層を体系として説いたわけではないという点は、研究者の一致するところ。</p>
+<p class="ura"><b>裏づけ</b>『エネアデス』V巻1論文・VI巻9論文4章-11章（一者に触れるのは知識と知性作用を超えた現前による）、VI巻7論文36章（一者について教わる道と、一者へ上っていく道を分けている）、I巻3論文（弁証術は魂を知性まで引き上げる）。プラトン自身が階層を体系として説いたわけではないという点は、研究者の一致するところ。</p>
 
 <nav class="tonari"><a href="%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%AA%E3%82%B3%E3%82%B9.html"><span class="k">同じ時代のひとつ前</span>セクストス・エンペイリコス</a><a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>ポルフュリオス</a><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><span class="k">合理・観念のひとつ前</span>プラトン</a><a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html"><span class="k">合理・観念のつぎ</span>ポルフュリオス</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

@@ -75,6 +75,55 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
 .findhint{margin:6px 0 12px;font-size:11.5px;color:var(--muted);line-height:1.6}
 
+/* 人物ページ用。パンくずの右端に小さく置き、触ったときだけ広がる */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
+  clip-path:inset(50%);white-space:nowrap}
+.crumbrow{display:flex;align-items:flex-start;justify-content:space-between;
+  gap:16px;margin:0 0 18px}
+.crumbrow .crumb{margin:0;padding-top:5px}
+.findwrap.mini{margin:0;flex:none}
+.findwrap.mini .findbox{display:flex;align-items:center;gap:7px;
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:999px;
+  padding:0 12px;transition:border-color .15s,box-shadow .15s,background .15s}
+.findwrap.mini .findbox:focus-within{border-color:var(--ink);background:var(--bg);
+  box-shadow:0 0 0 3px var(--rule)}
+.findwrap.mini svg{width:14px;height:14px;flex:none;display:block;
+  fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;transition:stroke .15s}
+.findwrap.mini .findbox:focus-within svg{stroke:var(--ink)}
+.findwrap.mini #find{width:104px;padding:7px 0;font-size:13.5px;
+  border:0;border-radius:0;background:none;box-shadow:none;
+  transition:width .18s ease}
+.findwrap.mini #find:focus{width:236px;border:0;box-shadow:none}
+.findwrap.mini #find::-webkit-search-cancel-button{-webkit-appearance:none}
+.findwrap.mini .find-list{left:auto;right:0;width:300px;margin-top:6px}
+
+.danwrap{background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;
+  padding:11px 14px 12px;margin:0 0 10px}
+.danhead{display:flex;align-items:baseline;gap:12px;margin:0 0 9px}
+.danhead .k{font-size:16px;color:var(--ink);font-weight:700;letter-spacing:.09em;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.danhead .s{font-size:11.5px;color:var(--muted)}
+.danbtns{display:flex;flex-wrap:wrap;gap:6px}
+.dn{display:flex;flex-direction:column;align-items:flex-start;gap:1px;
+  font-size:14px;font-weight:700;padding:7px 14px;border-radius:3px;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  cursor:pointer;font-family:inherit;line-height:1.35;letter-spacing:.02em}
+.dn i{font-style:normal;font-size:11px;font-weight:400;color:var(--muted)}
+.dn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dn:hover i{color:var(--bg)}
+.dn.active{background:var(--ink);color:var(--bg);border-color:var(--ink);
+  box-shadow:0 0 0 3px var(--rule)}
+.dn.active i{color:var(--bg);opacity:.75}
+body[data-dan="1"] .node[data-d="2"], body[data-dan="1"] .edge[data-d="2"],
+body[data-dan="1"] .card[data-d="2"],
+body[data-dan="1"] .node[data-d="3"], body[data-dan="1"] .edge[data-d="3"],
+body[data-dan="1"] .card[data-d="3"],
+body[data-dan="2"] .node[data-d="3"], body[data-dan="2"] .edge[data-d="3"],
+body[data-dan="2"] .card[data-d="3"]{display:none}
+.node.neu rect{animation:neu 2.2s ease-out 1}
+@keyframes neu{0%{stroke-width:5}60%{stroke-width:5}100%{stroke-width:1.4}}
+.card.neu{animation:neuc 2.2s ease-out 1}
+@keyframes neuc{0%{background:var(--surface-2)}60%{background:var(--surface-2)}100%{background:transparent}}
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -284,22 +333,30 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .wrap{padding:20px 14px 60px}
   #panel{right:0;left:0;bottom:0;width:100%;border-radius:12px 12px 0 0;max-height:64vh}
   .hito h1{font-size:26px} .hito .lede{font-size:16px}
+  .crumbrow{flex-direction:column;gap:10px}
+  .crumbrow .crumb{padding-top:0}
+  .findwrap.mini{width:100%}
+  .findwrap.mini #find,.findwrap.mini #find:focus{width:100%;flex:1}
+  .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
 </head>
 <body>
 <div class="wrap narrow hito">
+<div class="crumbrow">
 <p class="crumb"><a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>
  ／ <a href="../西洋哲学史マップ.html#時代-古代">古代</a>
  ／ <a href="../西洋哲学史マップ.html#系統-生き方・実存">生き方・実存</a></p>
-
-<div class="findwrap">
-  <label class="k" for="find">名前でさがす</label>
-  <input id="find" type="search" autocomplete="off" spellcheck="false"
-         placeholder="カント、ヒューム、アーレント…" aria-describedby="findHint">
+<div class="findwrap mini">
+  <label class="vh" for="find">名前でさがす</label>
+  <div class="findbox">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14"/></svg>
+    <input id="find" type="search" autocomplete="off" spellcheck="false"
+           placeholder="さがす" title="ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）">
+  </div>
   <div id="findList" class="find-list" hidden></div>
 </div>
-<p id="findHint" class="findhint">ひらがなでも、うろ覚えのつづりでも引けます（アーレント→アレント）。</p>
+</div>
 
 <h1>ソクラテス</h1>
 <p class="meta">前470–前399／アテナイ</p>
@@ -324,13 +381,13 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 </svg></div>
 
 <section><b>受け取った問い</b><p>自然哲学は互いに食い違う答えを並べたまま決着していない。では人は何を知っていると言えるのか。</p></section>
-<section><b>出した答え</b><p>対話の相手に「勇気とは何か」「徳とは何か」を答えさせ、その答えの筋を追って矛盾に行き着かせた。知らないことを知っていると思い込んでいる状態を崩すところから始め、そこで止めた。自分から教説を立てることをしなかった。</p></section>
+<section><b>出した答え</b><p>対話の相手に「勇気とは何か」「徳とは何か」を答えさせ、その答えの筋を追って矛盾に行き着かせた。知らないことを知っていると思い込んでいる状態を崩すところから始めた。徳とは知識であり、誰も進んで悪を為すことはないとも説いた。</p></section>
 <section><b>主著</b><p>著作を残さなかった</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%BF%E3%83%AC%E3%82%B9.html">タレス</a><span class="yr2">前624–前546頃</span>｜世界が何からできているかを問う道から離れ、人が何をなすべきかへ問いを移した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜定義を問い詰める対話の方法をそのまま受け取り、対話篇の主役に据えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263頃</span>｜徳だけが善であり、それさえあれば幸福だという線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%86%E3%83%88%E3%82%B9.html">エピクテトス</a><span class="yr2">50–135頃</span>｜対話によって相手の思い込みを崩す進め方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html">キルケゴール</a><span class="yr2">1813–1855</span>｜教説を授けず相手を決断の前に立たせる、間接的な語り方を引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜理性で徳を定義しようとした構えを、生を弱らせる始まりとして退けた。</li></ul>
 
-<p class="ura"><b>裏づけ</b>プラトン『ソクラテスの弁明』、クセノフォン『ソクラテスの思い出』、アリストファネス『雲』。本人の著作がないため、主張の中身は他人の記述を通した像。タレスへの1本はこちらの整理。「哲学を天から呼び下ろした」（キケロ『トゥスクルム荘対談』V巻10-11）も『パイドン』96a-99d も、自然学の側の相手をタレスとは名指ししていない。</p>
+<p class="ura"><b>裏づけ</b>プラトン『ソクラテスの弁明』、クセノフォン『ソクラテスの思い出』、アリストファネス『雲』。本人の著作がないため、主張の中身は他人の記述を通した像。「徳は知識」「誰も進んで過ちを犯さない」はアリストテレス『ニコマコス倫理学』1145b23-27 が名指しで扱うもの。教説を立てない人物という像はプラトンの初期対話篇からの再構成で、証言の系統ごとに姿が違う。タレスへの1本はこちらの整理。「哲学を天から呼び下ろした」（キケロ『トゥスクルム荘対談』V巻10-11）も『パイドン』96a-99d も、自然学の側の相手をタレスとは名指ししていない。</p>
 
 <nav class="tonari"><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%A8%E3%83%AC%E3%82%A2%EF%BC%89.html"><span class="k">同じ時代のひとつ前</span>ゼノン（エレア）</a><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>デモクリトス</a><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html"><span class="k">生き方・実存のつぎ</span>ピュロン</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 
