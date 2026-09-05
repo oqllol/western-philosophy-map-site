@@ -56,7 +56,6 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.oppose .sw{border-top-style:dotted}
 
 .findwrap{position:relative;margin:0 0 12px}
-.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
 #find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
   background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
   padding:10px 13px;line-height:1.5;-webkit-appearance:none}
@@ -73,14 +72,17 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
 .find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
 .find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
-.findhint{margin:6px 0 12px;font-size:11.5px;color:var(--muted);line-height:1.6}
 
-/* 人物ページ用。パンくずの右端に小さく置き、触ったときだけ広がる */
+/* パンくず・見出しの右端に小さく置き、触ったときだけ広がる */
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
   clip-path:inset(50%);white-space:nowrap}
 .crumbrow{display:flex;align-items:flex-start;justify-content:space-between;
   gap:16px;margin:0 0 18px}
 .crumbrow .crumb{margin:0;padding-top:5px}
+.htop{margin:0 0 14px}
+.htop .hleft{min-width:0}
+.htop .sub{margin:0}
+.htop .findwrap.mini{padding-top:5px}
 .findwrap.mini{margin:0;flex:none}
 .findwrap.mini .findbox{display:flex;align-items:center;gap:7px;
   background:var(--surface);border:1px solid var(--rule-strong);border-radius:999px;
