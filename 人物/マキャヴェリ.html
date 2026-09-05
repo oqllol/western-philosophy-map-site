@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,31 +297,29 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-歴史と社会の学">歴史と社会の学</a></p>
 <p class="lede">政治を、あるべき姿からではなく、人が現にどう振る舞うかから論じ直した。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 704 246" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M184.0,58.0 C184.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,58.0 C352.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
-<path class="edge invert" marker-end="url(#ya-invert)" d="M520.0,58.0 C520.0,73.0 352.0,73.0 352.0,88.0"><title>転回</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,132.0 C352.0,147.0 100.0,147.0 100.0,162.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 604.0,147.0 604.0,162.0"><title>継承</title></path>
-<a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><g class="node c1 "><rect x="108.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="34.0" text-anchor="middle" font-size="13.5">プラトン</text><text class="yr" x="184.0" y="49.0" text-anchor="middle">前427–前347</text></g></a>
-<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="276.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="352.0" y="49.0" text-anchor="middle">1225–1274</text></g></a>
-<a href="%E3%82%AD%E3%82%B1%E3%83%AD.html"><g class="node c4 "><rect x="444.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="520.0" y="34.0" text-anchor="middle" font-size="13.5">キケロ</text><text class="yr" x="520.0" y="49.0" text-anchor="middle">前106–前43</text></g></a>
-<a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><g class="node c4 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">グロティウス</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">1583–1645</text></g></a>
-<a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html"><g class="node c4 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">ホッブズ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1588–1679</text></g></a>
-<a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html"><g class="node c4 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">モンテスキュー</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1689–1755</text></g></a>
-<a href="%E3%83%AB%E3%82%BD%E3%83%BC.html"><g class="node c4 "><rect x="528.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="182.0" text-anchor="middle" font-size="13.5">ルソー</text><text class="yr" x="604.0" y="197.0" text-anchor="middle">1712–1778</text></g></a>
-<g class="node c4 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">マキャヴェリ</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1469–1527</text></g>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
+<path class="edge invert" marker-end="url(#ya-invert)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>転回</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 100.0,147.0 100.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
+<a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><g class="node c1 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">プラトン</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">前427–前347</text></g></a>
+<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1225–1274頃</text></g></a>
+<a href="%E3%82%AD%E3%82%B1%E3%83%AD.html"><g class="node c4 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">キケロ</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">前106–前43</text></g></a>
+<a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html"><g class="node c4 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">ホッブズ</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">1588–1679</text></g></a>
+<a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html"><g class="node c4 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">モンテスキュー</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1689–1755</text></g></a>
+<a href="%E3%83%AB%E3%82%BD%E3%83%BC.html"><g class="node c4 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">ルソー</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1712–1778</text></g></a>
+<g class="node c4 self"><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="13.5">マキャヴェリ</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1469–1527</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>イタリアの諸都市が外国の軍に踏み荒らされている。国を保つには何が要るのか。</p></section>
 <section><b>出した答え</b><p>人がどう生きるべきかから出発すると、人が現にどう生きているかを見失い、国を失う。君主は必要なとき善くないこともできなければならない。運命は行いの半分を握っているが、残り半分は人の側にある。共和政を論じたときには、党派どうしがぶつかり合うことこそが自由を保つとした。</p></section>
 <section><b>主著</b><p>『君主論』『ディスコルシ』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜あるべき国家の姿から政治を論じる道を退け、現に起きていることから始めた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274</span>｜政治を神の秩序と徳のうえに置く枠組みを外し、国を保つことそれ自体を尺度にした。</li><li><span class="rel invert">転回</span><a href="%E3%82%AD%E3%82%B1%E3%83%AD.html">キケロ</a><span class="yr2">前106–前43</span>｜ローマ共和政を手本にする枠組みと『義務について』の章立てを受け取ったまま、結論を逆にした。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜国を保つことだけを尺度にする立場を退け、戦うときにも従う規則があると論じた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜政治をあるべき姿からではなく、人が現にどう振る舞うかから論じる構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html">モンテスキュー</a><span class="yr2">1689–1755</span>｜制度を、現に起きていることから比べる進め方を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜『ディスコルシ』の共和政論を、君主への忠告という体裁の下にある本音として読み取った。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜あるべき国家の姿から政治を論じる道を退け、現に起きていることから始めた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274頃</span>｜政治を神の秩序と徳のうえに置く枠組みを外し、国を保つことそれ自体を尺度にした。</li><li><span class="rel invert">転回</span><a href="%E3%82%AD%E3%82%B1%E3%83%AD.html">キケロ</a><span class="yr2">前106–前43</span>｜ローマ共和政を手本にする枠組みと『義務について』の章立てを受け取ったまま、結論を逆にした。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜政治をあるべき姿からではなく、人が現にどう振る舞うかから論じる構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html">モンテスキュー</a><span class="yr2">1689–1755</span>｜制度を、現に起きていることから比べる進め方を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜『ディスコルシ』の共和政論を、君主への忠告という体裁の下にある本音として読み取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『君主論』15章・18章・25章、『ディスコルシ』I巻4章（党派の対立）。キケロ『義務について』を下敷きにしながら結論を反転させていることは、章の対応から広く指摘されている。</p>
 

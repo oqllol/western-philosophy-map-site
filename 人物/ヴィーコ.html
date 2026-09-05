@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -296,7 +315,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜数学に倣った確実さだけを知と認める構えを退け、人が作ったものの側に足場を置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html">ベーコン</a><span class="yr2">1561–1626</span>｜学問を根本から作り直すという構えと、事例を集めて上る手順を受け取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html">ディルタイ</a><span class="yr2">1833–1911</span>｜人が作ったものは人が知りうるという線を受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『新しい学』第2巻（詩的知恵）・第4巻（三つの時代）、『イタリア人の太古の知恵』（真なるものと作られたものは置き換わる）。生前はほとんど読まれず、19世紀にミシュレの訳で広く知られるようになった。</p>
+<p class="ura"><b>裏づけ</b>『新しい学』第2巻（詩的知恵）・第4巻（三つの時代をたどる行程）・第5巻（回帰）、『イタリア人の太古の知恵』（真なるものと作られたものは置き換わる）。生前はほとんど読まれず、19世紀にミシュレの訳で広く知られるようになった。</p>
 
 <nav class="tonari"><a href="%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84.html"><span class="k">同じ時代のひとつ前</span>ライプニッツ</a><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html"><span class="k">同じ時代のつぎ</span>バークリ</a><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html"><span class="k">社会・歴史のひとつ前</span>ホッブズ</a><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html"><span class="k">社会・歴史のつぎ</span>モンテスキュー</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -280,15 +299,13 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 
 <div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M184.0,58.0 C184.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,58.0 C352.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 100.0,147.0 100.0,162.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>批判</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,132.0 C268.0,147.0 436.0,147.0 436.0,162.0"><title>批判</title></path>
-<a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html"><g class="node c2 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">ベーコン</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1561–1626</text></g></a>
-<a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">ヒューム</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1711–1776</text></g></a>
-<a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
+<a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html"><g class="node c2 "><rect x="108.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="34.0" text-anchor="middle" font-size="13.5">ベーコン</text><text class="yr" x="184.0" y="49.0" text-anchor="middle">1561–1626</text></g></a>
+<a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html"><g class="node c2 "><rect x="276.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="34.0" text-anchor="middle" font-size="13.5">ヒューム</text><text class="yr" x="352.0" y="49.0" text-anchor="middle">1711–1776</text></g></a>
 <a href="%E3%83%9F%E3%83%AB.html"><g class="node c2 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">ミル</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">1806–1873</text></g></a>
 <a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html"><g class="node c5 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">ディルタイ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1833–1911</text></g></a>
 <a href="%E3%83%9B%E3%83%AB%E3%82%AF%E3%83%8F%E3%82%A4%E3%83%9E%E3%83%BC.html"><g class="node c4 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">ホルクハイマー</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1895–1973</text></g></a>
@@ -299,7 +316,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>知識ははじめ出来事を神々の意志で説明し、次に抽象的な力や本質で説明し、最後に観察できる現象どうしの規則的な関係だけを扱うようになる。物理学と化学は最後の段階に入ったが、社会はまだ入っていない。観察と比較と歴史によって社会の法則を扱う学問を作る。</p></section>
 <section><b>主著</b><p>『実証哲学講義』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html">ベーコン</a><span class="yr2">1561–1626</span>｜観察から出発して学問を作り直す構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜観察できる出来事どうしの規則的な結びつきだけを扱うという線を引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜経験の背後にあるものをめぐる議論を、扱えないものとして学問の外へ出した。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html">ベーコン</a><span class="yr2">1561–1626</span>｜観察から出発して学問を作り直す構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜観察できる出来事どうしの規則的な結びつきだけを扱うという線を引き継いだ。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9F%E3%83%AB.html">ミル</a><span class="yr2">1806–1873</span>｜社会を観察によって扱う学問という構想を受け取った。のちに個人の自由をめぐって距離を取っている。</li><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html">ディルタイ</a><span class="yr2">1833–1911</span>｜社会を自然科学と同じ方法で扱う道を退け、理解という別の方法を立てた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%9B%E3%83%AB%E3%82%AF%E3%83%8F%E3%82%A4%E3%83%9E%E3%83%BC.html">ホルクハイマー</a><span class="yr2">1895–1973</span>｜観察できる事実だけを扱うという構えを、いまある秩序を認めるだけのものとして退けた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『実証哲学講義』第1講（三段階の法則）・第47講以下。sociologie という語はここで作られた。</p>

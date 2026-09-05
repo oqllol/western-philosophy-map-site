@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -307,7 +326,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜世界に投げ出された人の在り方の分析を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html">フッサール</a><span class="yr2">1859–1938</span>｜意識はつねに何かへ向かうという規定を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html">キルケゴール</a><span class="yr2">1813–1855</span>｜選択と不安を中心に置く構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜後年、選択の自由を、階級と歴史の条件のなかへ置き直した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9C%E3%83%BC%E3%83%B4%E3%82%A9%E3%83%AF%E3%83%BC%E3%83%AB.html">ボーヴォワール</a><span class="yr2">1908–1986</span>｜人に決まった本質はなく、自分で作るほかないという立場を受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%9C%E3%83%BC%E3%83%B4%E3%82%A9%E3%83%AF%E3%83%BC%E3%83%AB.html">ボーヴォワール</a><span class="yr2">1908–1986</span>｜自由はどんな状況でも失われないという議論を受け取ったまま、その自由が現に使えるかどうかを見る側へ向きを変えた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AC%E3%83%B4%E3%82%A3%EF%BC%9D%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9.html">レヴィ＝ストロース</a><span class="yr2">1908–2009</span>｜歴史を作る主体を中心に置く構図を退け、意識されない構造の側から論じた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%9E%E3%83%BC%E3%83%89%E3%83%83%E3%82%AF.html">マードック</a><span class="yr2">1919–1999</span>｜道徳を、何ものにも支えられない選択の瞬間に置く構図を退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%95%E3%83%BC%E3%82%B3%E3%83%BC.html">フーコー</a><span class="yr2">1926–1984</span>｜歴史を作る主体としての人間を中心に置く構図を退けた。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『存在と無』第1部第2章（自己欺瞞）・第4部、『実存主義とは何か』（1946年の講演）、『弁証法的理性批判』（1960）。ハイデガー自身は『ヒューマニズムについて』（1947）でサルトルの読みを否定している。</p>
+<p class="ura"><b>裏づけ</b>『存在と無』第1部第2章（自己欺瞞）・第4部、『実存主義とは何か』（1945年10月29日の講演。刊行は1946年）、『弁証法的理性批判』（1960）。ハイデガー自身は『ヒューマニズムについて』（1947）でサルトルの読みを否定している。</p>
 
 <nav class="tonari"><a href="%E3%82%A2%E3%83%89%E3%83%AB%E3%83%8E.html"><span class="k">同じ時代のひとつ前</span>アドルノ</a><a href="%E3%82%A2%E3%83%AC%E3%83%B3%E3%83%88.html"><span class="k">同じ時代のつぎ</span>アレント</a><a href="%E3%82%AC%E3%83%80%E3%83%9E%E3%83%BC.html"><span class="k">生き方・実存のひとつ前</span>ガダマー</a><a href="%E3%83%AC%E3%83%B4%E3%82%A3%E3%83%8A%E3%82%B9.html"><span class="k">生き方・実存のつぎ</span>レヴィナス</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

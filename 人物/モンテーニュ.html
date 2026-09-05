@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -303,7 +322,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html">ピュロン</a><span class="yr2">前360–前270頃</span>｜判断を止める古代の懐疑を掘り起こし、宗教戦争のただ中で構えとして使った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%86%E3%83%88%E3%82%B9.html">エピクテトス</a><span class="yr2">50–135頃</span>｜自分に左右できないものへ執着しないという構えを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜学派の権威に寄りかかって語る学問を退け、自分の経験だけを持ち出した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%AA%E3%82%B3%E3%82%B9.html">セクストス・エンペイリコス</a><span class="yr2">160–210頃</span>｜1562年のラテン語訳を読み、判断を止める論法の型をそこから受け取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜すべてをいったん疑ってみる構えを受け取り、疑いに耐える一点を探すために使った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB.html">パスカル</a><span class="yr2">1623–1662</span>｜自分を観察して書く方法と、理性への疑いを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB.html">パスカル</a><span class="yr2">1623–1662</span>｜疑いのまま留まる構えを退け、賭けと信仰の側へ進んだ。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『エセー』II巻12「レーモン・スボン弁護」・III巻13、I巻31「食人種について」。ストア派からの摂取は、主にセネカとプルタルコスの読書を通じたもの。</p>
+<p class="ura"><b>裏づけ</b>『エセー』II巻12「レーモン・スボン弁護」・III巻13、I巻31「食人種について」。ストア派からの摂取は主にセネカの読書を通じたもので、プルタルコスからは道徳をめぐる逸話を多く取っている。</p>
 
 <nav class="tonari"><a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html"><span class="k">同じ時代のひとつ前</span>マキャヴェリ</a><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html"><span class="k">同じ時代のつぎ</span>ベーコン</a><a href="%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%AA%E3%82%B3%E3%82%B9.html"><span class="k">生き方・実存のひとつ前</span>セクストス・エンペイリコス</a><a href="%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB.html"><span class="k">生き方・実存のつぎ</span>パスカル</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

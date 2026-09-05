@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -286,15 +305,17 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,132.0 C352.0,147.0 268.0,147.0 268.0,162.0"><title>批判</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 604.0,147.0 604.0,162.0"><title>継承</title></path>
-<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M352.0,132.0 C352.0,184.0 268.0,184.0 268.0,236.0"><title>再発見</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,184.0 436.0,184.0 436.0,236.0"><title>継承</title></path>
+<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M352.0,132.0 C352.0,184.0 184.0,184.0 184.0,236.0"><title>再発見</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,184.0 352.0,184.0 352.0,236.0"><title>継承</title></path>
+<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M352.0,132.0 C352.0,184.0 520.0,184.0 520.0,236.0"><title>再発見</title></path>
 <a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html"><g class="node c2 "><rect x="276.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="34.0" text-anchor="middle" font-size="13.5">デモクリトス</text><text class="yr" x="352.0" y="49.0" text-anchor="middle">前460–前370頃</text></g></a>
-<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">前335–前263</text></g></a>
+<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">前335–前263頃</text></g></a>
 <a href="%E3%82%AD%E3%82%B1%E3%83%AD.html"><g class="node c4 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">キケロ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">前106–前43</text></g></a>
 <a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><g class="node c2 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">ルクレティウス</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">前99–前55頃</text></g></a>
 <a href="%E3%82%BB%E3%83%8D%E3%82%AB.html"><g class="node c5 "><rect x="528.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="182.0" text-anchor="middle" font-size="13.5">セネカ</text><text class="yr" x="604.0" y="197.0" text-anchor="middle">前4–65頃</text></g></a>
-<a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html"><g class="node c2 "><rect x="192.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="256.0" text-anchor="middle" font-size="13.5">ガッサンディ</text><text class="yr" x="268.0" y="271.0" text-anchor="middle">1592–1655</text></g></a>
-<a href="%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html"><g class="node c2 "><rect x="360.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="256.0" text-anchor="middle" font-size="13.5">ベンサム</text><text class="yr" x="436.0" y="271.0" text-anchor="middle">1748–1832</text></g></a>
+<a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html"><g class="node c2 "><rect x="108.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="256.0" text-anchor="middle" font-size="13.5">ガッサンディ</text><text class="yr" x="184.0" y="271.0" text-anchor="middle">1592–1655</text></g></a>
+<a href="%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html"><g class="node c2 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">ベンサム</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1748–1832</text></g></a>
+<a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html"><g class="node c4 "><rect x="444.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="520.0" y="256.0" text-anchor="middle" font-size="13.5">マルクス</text><text class="yr" x="520.0" y="271.0" text-anchor="middle">1818–1883</text></g></a>
 <g class="node c5 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">エピクロス</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">前341–前270</text></g>
 </svg></div>
 
@@ -303,7 +324,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『メノイケウス宛書簡』『主要教説』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a><span class="yr2">前460–前370頃</span>｜原子と空虚の自然像を受け取り、それを恐れを消すための道具として使った。</li><li><span class="rel invert">転回</span><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a><span class="yr2">前460–前370頃</span>｜すべてが原子の必然だとすると人の選択が消えるため、原子がわずかに逸れる余地を加えた。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel oppose">対立</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263</span>｜快を目的に置く生き方に対して、徳そのものを目的に置いた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AD%E3%82%B1%E3%83%AD.html">キケロ</a><span class="yr2">前106–前43</span>｜快を目的に置く生き方を、公共への義務を損なうものとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ルクレティウス</a><span class="yr2">前99–前55頃</span>｜自然像と、恐れを取り除くという目的をそのまま受け取り、詩の形にした。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%83%8D%E3%82%AB.html">セネカ</a><span class="yr2">前4–65頃</span>｜手紙のなかで繰り返し引用し、学派の違いを越えて使えるところを取った。</li><li><span class="rel rediscover">再発見</span><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html">ガッサンディ</a><span class="yr2">1592–1655</span>｜無神論として退けられていた原子論を掘り起こし、創造を加えて立て直した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html">ベンサム</a><span class="yr2">1748–1832</span>｜快と苦を行為の尺度とする立場を引き継ぎ、一人の平静から社会全体の総量へ広げた。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel oppose">対立</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263頃</span>｜快を目的に置く生き方に対して、徳そのものを目的に置いた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AD%E3%82%B1%E3%83%AD.html">キケロ</a><span class="yr2">前106–前43</span>｜快を目的に置く生き方を、公共への義務を損なうものとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ルクレティウス</a><span class="yr2">前99–前55頃</span>｜自然像と、恐れを取り除くという目的をそのまま受け取り、詩の形にした。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%83%8D%E3%82%AB.html">セネカ</a><span class="yr2">前4–65頃</span>｜手紙のなかで繰り返し引用し、学派の違いを越えて使えるところを取った。</li><li><span class="rel rediscover">再発見</span><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html">ガッサンディ</a><span class="yr2">1592–1655</span>｜無神論として退けられていた原子論を掘り起こし、創造を加えて立て直した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html">ベンサム</a><span class="yr2">1748–1832</span>｜快と苦を行為の尺度とする立場を引き継ぎ、一人の平静から社会全体の総量へ広げた。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜学位論文で原子がわずかに逸れるという説を取り上げ、すべてが必然に尽くされるわけではない自己意識のあらわれとして読んだ。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『メノイケウス宛書簡』124-127、ルクレティウス『物の本質について』II巻216以下（逸れの説）。</p>
 

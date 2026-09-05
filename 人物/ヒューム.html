@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -283,7 +302,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M100.0,58.0 C100.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,110.0 352.0,110.0 352.0,162.0"><title>批判</title></path>
-<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M604.0,58.0 C604.0,110.0 352.0,110.0 352.0,162.0"><title>再発見</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M604.0,58.0 C604.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 352.0,147.0 352.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,132.0 C436.0,147.0 352.0,147.0 352.0,162.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,221.0 100.0,221.0 100.0,236.0"><title>批判</title></path>
@@ -321,7 +340,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>経験に現れるのは、ある出来事のあとに別の出来事が続くことだけで、必ずそうなるという結びつき自体は一度も見えていない。因果は繰り返しによって生じた心の習慣。同じ検査を自我にかけると、知覚の束が見つかるだけで、それらを持つ「私」は見つからない。明日も自然が同じように動くという保証も、経験からは出てこない。</p></section>
 <section><b>主著</b><p>『人間本性論』『人間知性研究』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜経験を知の唯一の源泉とする規則を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜心の外にある実体を削る手つきを引き継ぎ、それを心そのものにも向けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜疑いに耐える「私」という土台を、束としての自我によって崩した。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html">ピュロン</a><span class="yr2">前360–前270頃</span>｜判断を止める古代の懐疑を掘り起こし、因果と自我の検査に使った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%AA%E3%82%B3%E3%82%B9.html">セクストス・エンペイリコス</a><span class="yr2">160–210頃</span>｜懐疑の論法の型を、近世に広まっていた訳を通じて受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5.html">マルブランシュ</a><span class="yr2">1638–1715</span>｜原因と結果の必然的な結びつきが観察されないという指摘を受け取った。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜経験を知の唯一の源泉とする規則を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜心の外にある実体を削る手つきを引き継ぎ、それを心そのものにも向けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜疑いに耐える「私」という土台を、束としての自我によって崩した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html">ピュロン</a><span class="yr2">前360–前270頃</span>｜判断を止める古代の懐疑の構えを受け取り、因果と自我の検査に使った。懐疑を徹底させること自体は、生きるうえで保てないものとして退けている。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%AA%E3%82%B3%E3%82%B9.html">セクストス・エンペイリコス</a><span class="yr2">160–210頃</span>｜懐疑の論法の型を、近世に広まっていた訳を通じて受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5.html">マルブランシュ</a><span class="yr2">1638–1715</span>｜原因と結果の必然的な結びつきが観察されないという指摘を受け取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%AA%E3%83%BC%E3%83%89.html">リード</a><span class="yr2">1710–1796</span>｜結論そのものを取らず、心にあるのは観念だけだという出発点のほうを退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%80%E3%83%A0%E3%83%BB%E3%82%B9%E3%83%9F%E3%82%B9.html">アダム・スミス</a><span class="yr2">1723–1790</span>｜道徳を理性ではなく感情と共感から説明する道筋を、親しい友人から直接受け取った。</li><li><span class="rel merge">合流</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜因果の必然性が経験から出ないという指摘を認め、その必然性を認識する側の形式に移した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html">ベンサム</a><span class="yr2">1748–1832</span>｜道徳を理性の命令ではなく感情と有用性から説明する道筋を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B3%E3%83%B3%E3%83%88.html">コント</a><span class="yr2">1798–1857</span>｜観察できる出来事どうしの規則的な結びつきだけを扱うという線を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%83%E3%83%8F.html">マッハ</a><span class="yr2">1838–1916</span>｜自我が知覚の束だという見方と、観察へ還元する構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%A0%E3%82%BA.html">ジェイムズ</a><span class="yr2">1842–1910</span>｜経験だけを材料にする構えを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%96%E3%83%A9%E3%83%83%E3%83%89%E3%83%AA%E3%83%BC.html">ブラッドリー</a><span class="yr2">1846–1924</span>｜経験を、切り離された印象の寄せ集めとする見方を退けた。</li><li><span class="rel invert">転回</span><a href="%E3%83%9D%E3%83%91%E3%83%BC.html">ポパー</a><span class="yr2">1902–1994</span>｜経験からは法則の必然性が出ないという指摘を受け取ったまま、確かめる方向をあきらめ、反証されうるかどうかへ向きを変えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html">クワイン</a><span class="yr2">1908–2000</span>｜経験に還元できないものを削り落とす手つきを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%95%E3%83%83%E3%83%88.html">フット</a><span class="yr2">1920–2010</span>｜道徳を感情の表明として説明する枠を退けた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『人間本性論』第1巻第3部第2-6節（因果）・第4部第6節（人格の同一性）、『人間知性研究』第4-5章。</p>

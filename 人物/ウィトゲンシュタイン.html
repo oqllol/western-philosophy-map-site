@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -305,7 +324,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『論理哲学論考』『哲学探究』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html">ラッセル</a><span class="yr2">1872–1970</span>｜論理によって言語の形を明らかにする方法を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html">ラッセル</a><span class="yr2">1872–1970</span>｜言語を理想的な論理の形へ整えていく方向を、後年に自分の前期ごと退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%AC%E3%83%BC%E3%82%B2.html">フレーゲ</a><span class="yr2">1848–1925</span>｜語の意味を文全体のなかで考える構えを引き継いだ。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜前期の、語りうるものと語りえないものを分ける線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html">オースティン</a><span class="yr2">1911–1960</span>｜語の意味を使い方から見る後期の立場と近い構えを、別の道から取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%B3%E3%82%B9%E3%82%B3%E3%83%A0.html">アンスコム</a><span class="yr2">1919–2001</span>｜後期の考え方を弟子として直接受け取り、遺稿の編集と英訳を担った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html">パトナム</a><span class="yr2">1926–2016</span>｜語の意味を、人が共にしている実践のなかで見る立場を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html">ローティ</a><span class="yr2">1931–2007</span>｜語の意味を使い方から見る後期の立場を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AF%E3%83%AA%E3%83%97%E3%82%AD.html">クリプキ</a><span class="yr2">1940–2022</span>｜規則に従うことをめぐる後期の議論を読み直し、規則が行為を決めきらないという問いとして立て直した。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜前期の、語りうるものと語りえないものを分ける線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html">オースティン</a><span class="yr2">1911–1960</span>｜語の意味を使い方から見る立場を受け取った。「語の意味」（1940）は『青色本』への応答として書かれている。本人は距離を取り、自分が拠るのはムーアだと語っていた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%B3%E3%82%B9%E3%82%B3%E3%83%A0.html">アンスコム</a><span class="yr2">1919–2001</span>｜後期の考え方を弟子として直接受け取り、遺稿の編集と英訳を担った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html">パトナム</a><span class="yr2">1926–2016</span>｜語の意味を、人が共にしている実践のなかで見る立場を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html">ローティ</a><span class="yr2">1931–2007</span>｜語の意味を使い方から見る後期の立場を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AF%E3%83%AA%E3%83%97%E3%82%AD.html">クリプキ</a><span class="yr2">1940–2022</span>｜規則に従うことをめぐる後期の議論を読み直し、規則が行為を決めきらないという問いとして立て直した。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『論理哲学論考』4.01・6.54・7、『哲学探究』§43（意味は使用）・§66-67（家族的類似）・§243以下（私的言語）。</p>
 

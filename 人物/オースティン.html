@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,24 +297,22 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-分析哲学">分析哲学</a></p>
 <p class="lede">言葉には、事実を述べるだけでなく、言うことで何かを行う使い方があるとした。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 520 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>批判</title></path>
-<a href="%E3%83%A0%E3%83%BC%E3%82%A2.html"><g class="node c3 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">ムーア</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1873–1958</text></g></a>
-<a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html"><g class="node c3 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="12">ウィトゲンシュタイン</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1889–1951</text></g></a>
-<a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><g class="node c3 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1891–1970</text></g></a>
-<a href="%E3%83%87%E3%83%AA%E3%83%80.html"><g class="node c3 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">デリダ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1930–2004</text></g></a>
-<g class="node c3 self"><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="13.5">オースティン</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1911–1960</text></g>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M176.0,58.0 C176.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M260.0,132.0 C260.0,147.0 260.0,147.0 260.0,162.0"><title>批判</title></path>
+<a href="%E3%83%A0%E3%83%BC%E3%82%A2.html"><g class="node c3 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="13.5">ムーア</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">1873–1958</text></g></a>
+<a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html"><g class="node c3 "><rect x="268.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="34.0" text-anchor="middle" font-size="12">ウィトゲンシュタイン</text><text class="yr" x="344.0" y="49.0" text-anchor="middle">1889–1951</text></g></a>
+<a href="%E3%83%87%E3%83%AA%E3%83%80.html"><g class="node c3 "><rect x="184.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="182.0" text-anchor="middle" font-size="13.5">デリダ</text><text class="yr" x="260.0" y="197.0" text-anchor="middle">1930–2004</text></g></a>
+<g class="node c3 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">オースティン</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">1911–1960</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>哲学は、文が真か偽かばかりを問題にしてきた。「約束する」「命名する」は真でも偽でもない。あれは何をしているのか。</p></section>
 <section><b>出した答え</b><p>「この船を〇〇と命名する」は、事実の報告ではなく、言うことがそのまま行いになっている。うまくいくかどうかは、真偽ではなく、場面の条件が整っているかで決まる。よく見ると、事実を述べる文も同じように何かを行っている。日常の言葉が長い時間をかけて作ってきた区別は、哲学者が机の上で作る区別より細かい。</p></section>
 <section><b>主著</b><p>『言語と行為』『哲学論文集』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A0%E3%83%BC%E3%82%A2.html">ムーア</a><span class="yr2">1873–1958</span>｜常識と日常の言い方から始める構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html">ウィトゲンシュタイン</a><span class="yr2">1889–1951</span>｜語の意味を使い方から見る後期の立場と近い構えを、別の道から取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜文の意味を、経験で確かめる手続きに結びつける枠を退けた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A0%E3%83%BC%E3%82%A2.html">ムーア</a><span class="yr2">1873–1958</span>｜常識と日常の言い方から始める構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html">ウィトゲンシュタイン</a><span class="yr2">1889–1951</span>｜語の意味を使い方から見る立場を受け取った。「語の意味」（1940）は『青色本』への応答として書かれている。本人は距離を取り、自分が拠るのはムーアだと語っていた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%83%AA%E3%83%80.html">デリダ</a><span class="yr2">1930–2004</span>｜言うことが行いになる場面を論じながら、うまくいかない例を脇へ置く進め方を退けた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『言語と行為』（1955年の講義、1962刊）第1-2講、「弁解の弁」（1956）。デリダとサールの論争は、この講義の読み方をめぐって起きている。</p>

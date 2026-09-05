@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -289,7 +308,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a href="%E3%83%98%E3%83%BC%E3%82%B2%E3%83%AB.html"><g class="node c1 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">ヘーゲル</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1770–1831</text></g></a>
 <a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html"><g class="node c5 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">ハイデガー</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1889–1976</text></g></a>
 <a href="%E3%83%95%E3%83%AD%E3%82%A4%E3%83%88.html"><g class="node c5 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">フロイト</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1856–1939</text></g></a>
-<a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html"><g class="node c4 "><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">ハーバーマス</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1929–</text></g></a>
+<a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html"><g class="node c4 "><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">ハーバーマス</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1929–2026</text></g></a>
 <g class="node c4 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">マルクーゼ</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1898–1979</text></g>
 </svg></div>
 
@@ -298,7 +317,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『一次元的人間』『エロス的文明』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜物を作り分け合う仕組みから社会を読む枠組みを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%98%E3%83%BC%E3%82%B2%E3%83%AB.html">ヘーゲル</a><span class="yr2">1770–1831</span>｜否定の力が歴史を動かすという見方を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜学生として、人が世界のなかに投げ込まれている在り方の分析を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%AD%E3%82%A4%E3%83%88.html">フロイト</a><span class="yr2">1856–1939</span>｜欲動が抑えられて文明ができるという見方を受け取り、その抑えが必要以上に積まれていると論じた。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–</span>｜豊かな社会が反対する力を吸い上げるという分析を受け取った。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–2026</span>｜豊かな社会が反対する力を吸い上げるという分析を受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『エロス的文明』（1955）第2章（余剰抑圧）、『一次元的人間』（1964）序論・第1章。1960年代の学生運動で広く読まれた。</p>
 

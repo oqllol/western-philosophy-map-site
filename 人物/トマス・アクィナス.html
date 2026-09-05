@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -274,7 +293,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
  ／ <a href="../西洋哲学史マップ.html#系統-信仰・神学">信仰・神学</a></p>
 
 <h1>トマス・アクィナス</h1>
-<p class="meta">1225–1274／パリ／ナポリ</p>
+<p class="meta">1225–1274頃／パリ／ナポリ</p>
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-アリストテレスとスコラ学">アリストテレスとスコラ学</a></p>
 <p class="lede">イスラム世界経由で戻ってきたアリストテレスを使い、理性で届く範囲と信仰の範囲を分けた。</p>
 
@@ -303,14 +322,14 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html"><g class="node c4 "><rect x="360.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="256.0" text-anchor="middle" font-size="13.5">マキャヴェリ</text><text class="yr" x="436.0" y="271.0" text-anchor="middle">1469–1527</text></g></a>
 <a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><g class="node c4 "><rect x="528.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="256.0" text-anchor="middle" font-size="13.5">グロティウス</text><text class="yr" x="604.0" y="271.0" text-anchor="middle">1583–1645</text></g></a>
 <a href="%E3%83%96%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8E.html"><g class="node c1 "><rect x="276.0" y="310.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="330.0" text-anchor="middle" font-size="13.5">ブレンターノ</text><text class="yr" x="352.0" y="345.0" text-anchor="middle">1838–1917</text></g></a>
-<g class="node c6 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1225–1274</text></g>
+<g class="node c6 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1225–1274頃</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>異教徒の哲学者アリストテレスの自然学が大学に流れ込んできた。教会はこれを禁じるか、取り込むか。</p></section>
 <section><b>出した答え</b><p>理性だけで届く範囲（神が存在すること、世界の秩序）と、啓示がなければ届かない範囲（三位一体、受肉）を線引きし、前者ではアリストテレスの方法をそのまま使う。恩寵は自然を壊さず完成させる。神の存在は、運動・原因・偶然性・段階・目的という五つの道筋からたどれる。</p></section>
 <section><b>主著</b><p>『神学大全』『対異教徒大全』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜千五百年を隔ててアラビア語訳経由で戻った著作に註解を書き、神学の骨組みに組み入れた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html">アウグスティヌス</a><span class="yr2">354–430</span>｜恩寵と意志についての枠組みを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜魂が身体に閉じ込められているという見方を退け、魂を身体の形相と規定した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%8A%E3%83%BC.html">イブン・シーナー</a><span class="yr2">980–1037</span>｜何であるかと現に在ることを分ける議論を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%89.html">イブン・ルシュド</a><span class="yr2">1126–1198</span>｜その註解を通じてアリストテレスの原典を読んだ。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%89.html">イブン・ルシュド</a><span class="yr2">1126–1198</span>｜人が考える知性は個人を超えてひとつだという説を、個々の魂の在り方と両立しないとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%82%A4%E3%83%A2%E3%83%8B%E3%83%87%E3%82%B9.html">マイモニデス</a><span class="yr2">1138–1204</span>｜律法と学問を突き合わせる進め方を受け取り、しばしば名を挙げて引いた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜千五百年を隔ててアラビア語訳経由で戻った著作に註解を書き、神学の骨組みに組み入れた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html">アウグスティヌス</a><span class="yr2">354–430</span>｜恩寵と意志についての枠組みを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜魂が身体に閉じ込められているという見方を退け、魂を身体の形相と規定した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%8A%E3%83%BC.html">イブン・シーナー</a><span class="yr2">980–1037</span>｜何であるかと現に在ることを分ける議論を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%89.html">イブン・ルシュド</a><span class="yr2">1126–1198</span>｜アリストテレスを読むときの論点と、向き合うべき解釈を、その大註解から受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%89.html">イブン・ルシュド</a><span class="yr2">1126–1198</span>｜人が考える知性は個人を超えてひとつだという説を、個々の魂の在り方と両立しないとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%82%A4%E3%83%A2%E3%83%8B%E3%83%87%E3%82%B9.html">マイモニデス</a><span class="yr2">1138–1204</span>｜律法と学問を突き合わせる進め方を受け取り、しばしば名を挙げて引いた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html">ドゥンス・スコトゥス</a><span class="yr2">1266–1308頃</span>｜神と被造物とで在るという語が別の意味になる扱いを退け、同じ意味で使えるとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html">オッカム</a><span class="yr2">1287–1347頃</span>｜理性で神の秩序をたどれる範囲を大きく削り、信仰の領分と切り離した。</li><li><span class="rel criticize">批判</span><a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html">マキャヴェリ</a><span class="yr2">1469–1527</span>｜政治を神の秩序と徳のうえに置く枠組みを外し、国を保つことそれ自体を尺度にした。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜理性で届く範囲に自然法を置く枠組みを受け取った。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%96%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8E.html">ブレンターノ</a><span class="yr2">1838–1917</span>｜スコラ学の「志向的に内に在る」という言い方を掘り起こして立て直した。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『神学大全』第1部第2問3項（五つの道）・第1部第76問1項（魂は身体の形相）、『対異教徒大全』I巻3-8章。</p>

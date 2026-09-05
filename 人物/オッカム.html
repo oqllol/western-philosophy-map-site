@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,25 +297,21 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-アリストテレスとスコラ学">アリストテレスとスコラ学</a></p>
 <p class="lede">「人間そのもの」のような普遍は名前にすぎず、在るのは個々のものだけだとした。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 704 172" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 520 172" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,58.0 C268.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M597.0,58.0 C597.0,73.0 345.0,73.0 345.0,88.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M611.0,58.0 C611.0,73.0 359.0,73.0 359.0,88.0"><title>批判</title></path>
-<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1225–1274</text></g></a>
-<a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
-<a href="%E3%82%A2%E3%83%99%E3%83%A9%E3%83%BC%E3%83%AB.html"><g class="node c6 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">アベラール</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1079–1142</text></g></a>
-<a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html"><g class="node c6 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="12">ドゥンス・スコトゥス</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1266–1308頃</text></g></a>
-<g class="node c6 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">オッカム</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1287–1347頃</text></g>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M176.0,58.0 C176.0,73.0 260.0,73.0 260.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M337.0,58.0 C337.0,73.0 253.0,73.0 253.0,88.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M351.0,58.0 C351.0,73.0 267.0,73.0 267.0,88.0"><title>批判</title></path>
+<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">1225–1274頃</text></g></a>
+<a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html"><g class="node c6 "><rect x="268.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="34.0" text-anchor="middle" font-size="12">ドゥンス・スコトゥス</text><text class="yr" x="344.0" y="49.0" text-anchor="middle">1266–1308頃</text></g></a>
+<g class="node c6 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">オッカム</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">1287–1347頃</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>個物のうちに共通の本質が実在すると認めると、神は世界をこう創るほかなかったことになる。神の全能はどこへ行くのか。</p></section>
 <section><b>出した答え</b><p>在るのは個々のものだけで、普遍は似たものをまとめて指す心の中の記号。必要なしに存在するものを増やしてはならない。神は世界を別様にも創りえた以上、世界の秩序を必然として理性でたどることはできない。信仰の中身は理性の外に置き、そのぶん自然の観察は神学から切り離す。</p></section>
 <section><b>主著</b><p>『論理学大全』『命題集註解』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274</span>｜理性で神の秩序をたどれる範囲を大きく削り、信仰の領分と切り離した。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜個物のうちに共通の形相が実在するという見方を退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%99%E3%83%A9%E3%83%BC%E3%83%AB.html">アベラール</a><span class="yr2">1079–1142</span>｜普遍を語の側で説明する道筋を受け取り、さらに削ぎ落とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html">ドゥンス・スコトゥス</a><span class="yr2">1266–1308頃</span>｜在るという語が神にも被造物にも同じ意味で使えるという線を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html">ドゥンス・スコトゥス</a><span class="yr2">1266–1308頃</span>｜個物を「この一つ」にしている固有の在り方を、要らない仮定として削り落とした。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274頃</span>｜理性で神の秩序をたどれる範囲を大きく削り、信仰の領分と切り離した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html">ドゥンス・スコトゥス</a><span class="yr2">1266–1308頃</span>｜在るという語が神にも被造物にも同じ意味で使えるという線を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%89%E3%82%A5%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%88%E3%82%A5%E3%82%B9.html">ドゥンス・スコトゥス</a><span class="yr2">1266–1308頃</span>｜個物を「この一つ」にしている固有の在り方を、要らない仮定として削り落とした。</li></ul>
 
 
 <p class="ura"><b>裏づけ</b>『論理学大全』I部14-17章（普遍論）、『命題集註解』第1巻。「オッカムの剃刀」の呼び名は後代のもので、本人の言い回しは「必要なしに多を措定してはならない」に近い。</p>

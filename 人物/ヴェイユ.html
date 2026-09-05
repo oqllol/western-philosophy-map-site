@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -297,7 +316,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜善のイデアと洞窟の比喩を掘り起こし、注意と恩寵をめぐる議論として読み直した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜労働のなかで人が自分から切り離されるという分析を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜階級が入れ替われば解決するという見通しを退け、大きな組織そのものが人を押し潰すと論じた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%BC%E3%83%89%E3%83%83%E3%82%AF.html">マードック</a><span class="yr2">1919–1999</span>｜注意を向けることが愛と同じ働きをするという考えを受け取り、道徳の中心に据えた。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『工場日記』（1934-35）、「学校での勉強を神への愛のために用いることについての省察」（注意について）、『根をもつこと』（1943）。存命中はほとんど公刊されず、没後にカミュらが編んだ。</p>
+<p class="ura"><b>裏づけ</b>『工場日記』（1934-35）、「学校での勉強を神への愛のために用いることについての省察」（注意について）、『根をもつこと』（1943年に執筆、1949年刊）。存命中はほとんど公刊されず、『重力と恩寵』（1947）はノートを託されたティボンが編み、『根をもつこと』以降の7冊はカミュが叢書として出した。</p>
 
 <nav class="tonari"><a href="%E3%83%AC%E3%83%B4%E3%82%A3%EF%BC%9D%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9.html"><span class="k">同じ時代のひとつ前</span>レヴィ＝ストロース</a><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html"><span class="k">同じ時代のつぎ</span>オースティン</a><a href="%E3%83%A1%E3%83%AB%E3%83%AD%EF%BC%9D%E3%83%9D%E3%83%B3%E3%83%86%E3%82%A3.html"><span class="k">生き方・実存のひとつ前</span>メルロ＝ポンティ</a><a href="%E3%83%AA%E3%82%AF%E3%83%BC%E3%83%AB.html"><span class="k">生き方・実存のつぎ</span>リクール</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

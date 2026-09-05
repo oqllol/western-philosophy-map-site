@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -280,7 +299,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 
 <div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M184.0,58.0 C184.0,73.0 268.0,73.0 268.0,88.0"><title>再発見</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M184.0,58.0 C184.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,58.0 C352.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 100.0,147.0 100.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
@@ -297,7 +316,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>頂点に何ものでもない「一者」があり、そこから知性が、知性から魂が、魂から感覚の世界が溢れ出る。下へ行くほど散らばり、上へ行くほど一つにまとまる。人は思考を研ぎ澄ませて逆をたどり、一者と合一しうる。</p></section>
 <section><b>主著</b><p>『エネアデス』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜六百年を隔てて対話篇を読み直し、断片的な示唆を階層構造として組み直した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜知性が自らを思考するという規定を受け取り、階層の第二位に置いた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜対話篇にある断片的な示唆を受け取り、一と知性と魂の階層構造として組み直した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜知性が自らを思考するという規定を受け取り、階層の第二位に置いた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html">ポルフュリオス</a><span class="yr2">234–305頃</span>｜講義を聴いて論文を編集し、その体系を受け継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html">アウグスティヌス</a><span class="yr2">354–430</span>｜一者から溢れ出る階層と、内へ還る道筋を受け取り、神と魂の関係として読み替えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A4%E3%83%96%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%8A%E3%83%BC.html">イブン・シーナー</a><span class="yr2">980–1037</span>｜一者から段階を追って流れ出る構図を受け取り、必然的存在者と知性の階層として書き直した。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『エネアデス』V巻1論文・VI巻9論文。プラトン自身が階層を体系として説いたわけではないという点は、研究者の一致するところ。</p>

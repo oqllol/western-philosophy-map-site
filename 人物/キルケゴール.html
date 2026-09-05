@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -299,10 +318,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>真理は誰にでも当てはまる命題としてではなく、その人がそれに賭けて生きているかどうかとして現れる。人生には快を追う生き方、義務に従う生き方、信仰に跳ぶ生き方があり、次へ移るのは論証によらず飛躍による。不安とは、何でも選べてしまうことがもたらすめまい。</p></section>
 <section><b>主著</b><p>『あれか、これか』『おそれとおののき』『死に至る病』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%98%E3%83%BC%E3%82%B2%E3%83%AB.html">ヘーゲル</a><span class="yr2">1770–1831</span>｜歴史を貫く理性の体系を退け、体系に収まらない単独の私を置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BD%E3%82%AF%E3%83%A9%E3%83%86%E3%82%B9.html">ソクラテス</a><span class="yr2">前470–前399</span>｜教説を授けず相手を決断の前に立たせる、間接的な語り方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB.html">パスカル</a><span class="yr2">1623–1662</span>｜理性が届かないところで賭けるほかないという構えを受け取った。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%98%E3%83%BC%E3%82%B2%E3%83%AB.html">ヘーゲル</a><span class="yr2">1770–1831</span>｜歴史を貫く理性の体系を退け、体系に収まらない単独の私を置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BD%E3%82%AF%E3%83%A9%E3%83%86%E3%82%B9.html">ソクラテス</a><span class="yr2">前470–前399</span>｜教説を授けず相手を決断の前に立たせる、間接的な語り方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%82%B9%E3%82%AB%E3%83%AB.html">パスカル</a><span class="yr2">1623–1662</span>｜理性が届かないところで賭けるほかないという構えを受け取った。名を挙げるのは1845年からで、日誌にまとまるのは晩年。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A4%E3%82%B9%E3%83%91%E3%83%BC%E3%82%B9.html">ヤスパース</a><span class="yr2">1883–1969</span>｜体系に収まらない単独の私という主題を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜不安と、自分の終わりを引き受ける決断という主題を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜選択と不安を中心に置く構えを受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『死に至る病』第一編、『おそれとおののき』、『非学問的あとがき』。学位論文『イロニーの概念』はソクラテス論。</p>
+<p class="ura"><b>裏づけ</b>『死に至る病』第一編、『おそれとおののき』、『非学問的あとがき』、『不安の概念』（1844。不安は自由のめまい）。学位論文『イロニーの概念』はソクラテス論。</p>
 
 <nav class="tonari"><a href="%E3%83%9F%E3%83%AB.html"><span class="k">同じ時代のひとつ前</span>ミル</a><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>マルクス</a><a href="%E3%82%B7%E3%83%A5%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%9E%E3%83%8F%E3%83%BC.html"><span class="k">生き方・実存のひとつ前</span>シュライアマハー</a><a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html"><span class="k">生き方・実存のつぎ</span>ディルタイ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -293,7 +312,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html"><g class="node c5 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">ニーチェ</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1844–1900</text></g></a>
 <a href="%E3%83%9B%E3%83%AB%E3%82%AF%E3%83%8F%E3%82%A4%E3%83%9E%E3%83%BC.html"><g class="node c4 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">ホルクハイマー</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1895–1973</text></g></a>
 <a href="%E3%83%99%E3%83%B3%E3%83%A4%E3%83%9F%E3%83%B3.html"><g class="node c4 "><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">ベンヤミン</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1892–1940</text></g></a>
-<a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html"><g class="node c4 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">ハーバーマス</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1929–</text></g></a>
+<a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html"><g class="node c4 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">ハーバーマス</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1929–2026</text></g></a>
 <g class="node c4 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">アドルノ</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1903–1969</text></g>
 </svg></div>
 
@@ -302,7 +321,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『啓蒙の弁証法』（ホルクハイマーとの共著）『否定弁証法』『ミニマ・モラリア』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜社会の仕組みが人の意識を条件づけるという見立てを受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%98%E3%83%BC%E3%82%B2%E3%83%AB.html">ヘーゲル</a><span class="yr2">1770–1831</span>｜対立を通じて進む運動を受け取ったまま、最後にひとつのまとまりへ至る部分を外した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜理性と道徳の出どころを疑ってかかる構えを引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%AB%E3%82%AF%E3%83%8F%E3%82%A4%E3%83%9E%E3%83%BC.html">ホルクハイマー</a><span class="yr2">1895–1973</span>｜社会を変えるための理論という枠組みを受け取り、『啓蒙の弁証法』を共に書いた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%B3%E3%83%A4%E3%83%9F%E3%83%B3.html">ベンヤミン</a><span class="yr2">1892–1940</span>｜複製と文化についての分析を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%99%E3%83%B3%E3%83%A4%E3%83%9F%E3%83%B3.html">ベンヤミン</a><span class="yr2">1892–1940</span>｜複製が芸術を政治へ開くという見通しを退け、文化産業の側面を強く見た。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–</span>｜理性が支配の道具になる過程の分析を、助手として直接受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–</span>｜理性そのものを疑いきる結論を退け、話し合いの側に理性を立て直した。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–2026</span>｜理性が支配の道具になる過程の分析を、助手として直接受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–2026</span>｜理性そのものを疑いきる結論を退け、話し合いの側に理性を立て直した。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『啓蒙の弁証法』「啓蒙の概念」「文化産業」、『否定弁証法』序論。「アウシュヴィッツのあとで詩を書くことは野蛮である」は『プリズメン』の一節で、本人が後に条件をつけて言い直している。</p>
 

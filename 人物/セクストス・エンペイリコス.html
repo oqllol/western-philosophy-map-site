@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -274,19 +293,17 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
  ／ <a href="../西洋哲学史マップ.html#系統-生き方・実存">生き方・実存</a></p>
 
 <h1>セクストス・エンペイリコス</h1>
-<p class="meta">160–210頃／アレクサンドリア／ローマ</p>
+<p class="meta">160–210頃／不明（アレクサンドリア・ローマ・アテナイの諸説）</p>
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-懐疑主義">懐疑主義</a></p>
 <p class="lede">古代の懐疑をひとつの手引きにまとめ、その本が千三百年後の近世を揺らした。</p>
 
 <div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M184.0,58.0 C184.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,58.0 C352.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 100.0,147.0 100.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
-<a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html"><g class="node c5 "><rect x="108.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="34.0" text-anchor="middle" font-size="13.5">ピュロン</text><text class="yr" x="184.0" y="49.0" text-anchor="middle">前360–前270頃</text></g></a>
-<a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="276.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="352.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
+<a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html"><g class="node c5 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">ピュロン</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">前360–前270頃</text></g></a>
 <a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html"><g class="node c5 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">モンテーニュ</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">1533–1592</text></g></a>
 <a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html"><g class="node c1 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">デカルト</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1596–1650</text></g></a>
 <a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html"><g class="node c2 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">ヒューム</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1711–1776</text></g></a>
@@ -297,7 +314,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>何を主張されても同じ強さの反対を立てられる、その型を数え上げた（十の方式・五つの方式）。同じ蜜が健康な人には甘く、黄疸の人には苦い。どちらが本当かを決める基準を出そうとすると、その基準を正しいと示す別の基準が要り、果てしなくなる。判断を止めると、求めていたわけでもない平静が後からついてくる。</p></section>
 <section><b>主著</b><p>『ピュロン主義哲学の概要』『学者たちへの論駁』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html">ピュロン</a><span class="yr2">前360–前270頃</span>｜判断を止める構えを受け取り、使える論法の型として整理した。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜証明を重ねて学問を建てる運びを、出発点そのものを証明できないという一点から崩した。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html">ピュロン</a><span class="yr2">前360–前270頃</span>｜判断を止める構えを受け取り、使える論法の型として整理した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html">モンテーニュ</a><span class="yr2">1533–1592</span>｜1562年のラテン語訳を読み、判断を止める論法の型をそこから受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜当時広まっていた古代懐疑の論法を受け取り、疑いを徹底させる道具として使った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜懐疑の論法の型を、近世に広まっていた訳を通じて受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『ピュロン主義哲学の概要』I巻36-186（十の方式・五つの方式）、『学者たちへの論駁』。1562年にアンリ・エティエンヌのラテン語訳が出て、モンテーニュ・デカルト・ヒュームが読む経路になった。</p>

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -282,7 +301,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M169.0,58.0 C169.0,73.0 253.0,73.0 253.0,88.0"><title>継承</title></path>
 <path class="edge invert" marker-end="url(#ya-invert)" d="M183.0,58.0 C183.0,73.0 267.0,73.0 267.0,88.0"><title>転回</title></path>
-<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>再発見</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M253.0,132.0 C253.0,147.0 169.0,147.0 169.0,162.0"><title>継承</title></path>
 <path class="edge invert" marker-end="url(#ya-invert)" d="M267.0,132.0 C267.0,147.0 183.0,147.0 183.0,162.0"><title>転回</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M260.0,132.0 C260.0,147.0 344.0,147.0 344.0,162.0"><title>継承</title></path>
@@ -297,10 +316,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>自分の体を内側から感じるとき、人はすでに物自体に触れている。それが意志。世界全体が同じ意志の現れで、意志には目的も終点もないため、満たされない渇きが苦しみを生み続ける。芸術に没入する時間と、他人の苦しみへの共感、そして意志そのものを鎮めることだけが出口になる。</p></section>
 <section><b>主著</b><p>『意志と表象としての世界』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜現れと物自体の区別を受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜届かないはずの物自体を、内側から感じられる意志として名指し、理性の座に据えた。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜イデアを、意志が段階を追って現れる形として読み直した。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜現れと物自体の区別を受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜届かないはずの物自体を、内側から感じられる意志として名指し、理性の座に据えた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜イデアを受け取り、意志が段階を追って現れる形として読み直した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜世界の底にあるのは目的を持たない意志だという見立てを受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜意志を鎮めて苦から降りる結論をひっくり返し、意志を肯定する側へ移した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%AD%E3%82%A4%E3%83%88.html">フロイト</a><span class="yr2">1856–1939</span>｜人を動かしているのは理性ではなく意志だという見立てを受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『意志と表象としての世界』第2巻18-21節・第3巻・第4巻。ウパニシャッドと仏教からの摂取は本人が序文で明言している。</p>
+<p class="ura"><b>裏づけ</b>『意志と表象としての世界』第2巻18-21節・第3巻・第4巻。ウパニシャッドからの摂取は、本人が初版序文でカント・プラトンと並べて挙げている。仏教は序文に出てこず、本格的に触れたのは初版より後になる。</p>
 
 <nav class="tonari"><a href="%E3%82%B7%E3%82%A7%E3%83%AA%E3%83%B3%E3%82%B0.html"><span class="k">同じ時代のひとつ前</span>シェリング</a><a href="%E3%82%B3%E3%83%B3%E3%83%88.html"><span class="k">同じ時代のつぎ</span>コント</a><a href="%E3%82%B7%E3%82%A7%E3%83%AA%E3%83%B3%E3%82%B0.html"><span class="k">合理・観念のひとつ前</span>シェリング</a><a href="%E3%83%96%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8E.html"><span class="k">合理・観念のつぎ</span>ブレンターノ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -293,12 +312,12 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 
 <section><b>受け取った問い</b><p>アリストテレスの自然学が崩れつつある。代わりに何を置くのか。古代の原子論は無神論として葬られたままでよいのか。</p></section>
 <section><b>出した答え</b><p>原子論から、原子が永遠であることと世界が偶然にできたことを外す。神が原子を創り、運動を与えたとすれば信仰と両立する。感覚が知識の唯一の入口で、そこを通らないものを理性だけで立てることはできない。</p></section>
-<section><b>主著</b><p>『エピクロスの哲学大全』『パラドクサ』</p></section>
+<section><b>主著</b><p>『哲学集成』『エピクロスの哲学大全』『アリストテレス派への逆説的論駁』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜無神論として退けられていた原子論を掘り起こし、創造を加えて立て直した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ルクレティウス</a><span class="yr2">前99–前55頃</span>｜原子と空虚の自然像を、その詩を通じて受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜『省察』への反論を寄せ、生得の観念と、精神だけを別の実体とする区分を退けた。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜原子論を信仰と両立する形に直した仕事を、パリでの交流を通じて受け取った。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜パリのメルセンヌの集まりで練られた、自然を物体の運動として説明する構えを、交流を通じて受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『エピクロスの哲学大全』、『省察』第五反論とデカルトの答弁、『パラドクサ』。ホッブズとボイルは、この経路で原子論に触れている。</p>
+<p class="ura"><b>裏づけ</b>『エピクロスの哲学大全』、『省察』第五反論とデカルトの答弁、『アリストテレス派への逆説的論駁』（1624）。ホッブズとボイルは、この経路で原子論に触れている。</p>
 
 <nav class="tonari"><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html"><span class="k">同じ時代のひとつ前</span>ホッブズ</a><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html"><span class="k">同じ時代のつぎ</span>デカルト</a><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html"><span class="k">自然・経験のひとつ前</span>ベーコン</a><a href="%E3%83%AD%E3%83%83%E3%82%AF.html"><span class="k">自然・経験のつぎ</span>ロック</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

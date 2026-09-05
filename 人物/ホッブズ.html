@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -309,10 +328,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>世界にあるのは動いている物体だけで、感覚も欲望も物体の運動。政府がない状態では、各人が自分の生命を守る権利を全面的に持ち、そのために万人が万人に対して争う。人々は自分の権利を一人の主権者へ渡す契約を結び、その約束の集積が国家を成り立たせる。権威の源は神の任命ではなく、生き延びたい者どうしの取り決め。</p></section>
 <section><b>主著</b><p>『リヴァイアサン』『物体論』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a><span class="yr2">前460–前370頃</span>｜世界を物体と運動だけで説明する構えを、同時代に復活した原子論を通じて受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜人は生まれつき国家を作る動物だという前提を退け、国家を人が作った人工物とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html">マキャヴェリ</a><span class="yr2">1469–1527</span>｜政治をあるべき姿からではなく、人が現にどう振る舞うかから論じる構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html">ガッサンディ</a><span class="yr2">1592–1655</span>｜原子論を信仰と両立する形に直した仕事を、パリでの交流を通じて受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜自然法を理性から導く進め方を受け取った。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a><span class="yr2">前460–前370頃</span>｜世界を物体と運動だけで説明する構えを受け取った。ただし原子と空虚は退け、空の場所のない充ちた世界として書いている。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜人は生まれつき国家を作る動物だという前提を退け、国家を人が作った人工物とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html">マキャヴェリ</a><span class="yr2">1469–1527</span>｜政治をあるべき姿からではなく、人が現にどう振る舞うかから論じる構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html">ガッサンディ</a><span class="yr2">1592–1655</span>｜パリのメルセンヌの集まりで練られた、自然を物体の運動として説明する構えを、交流を通じて受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜自然法を理性から導く進め方を受け取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%B9%E3%83%94%E3%83%8E%E3%82%B6.html">スピノザ</a><span class="yr2">1632–1677</span>｜自然権と国家を人の取り決めから導く枠組みを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜統治の正当性を人々の取り決めに求める枠組みを引き継いだ。</li><li><span class="rel invert">転回</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜同じ契約の枠組みを使いながら、主権者に渡す権利を限定し、抵抗する権利を人々の側に残した。</li><li><span class="rel criticize">批判</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html">モンテスキュー</a><span class="yr2">1689–1755</span>｜自然状態を万人の闘争とする前提を退け、人ははじめ怯えて互いを避けると論じた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜自然状態から契約によって国家を導く道筋を引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜自然状態を万人の闘争とする前提を退け、争いは社会が生んだものだとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%80%E3%83%A0%E3%83%BB%E3%82%B9%E3%83%9F%E3%82%B9.html">アダム・スミス</a><span class="yr2">1723–1790</span>｜自己保存だけから社会を導く構図を退け、共感を人の側の出発点に置いた。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『リヴァイアサン』第13章（自然状態）・第17章（コモンウェルスの生成）。ガリレオとの面会（1636）とガッサンディらによる原子論復活を経路として数えるのは、思想史研究の通説にもとづく。</p>
+<p class="ura"><b>裏づけ</b>『リヴァイアサン』第13章（自然状態）・第17章（コモンウェルスの生成）。ガリレオとの面会（1636）とパリのメルセンヌの集まりを経路として数えるのは、思想史研究の通説にもとづく。原子と空虚のほうは『物体論』第26章で退けている。グロティウスからの1本はこちらの整理で、直接の受容とみるか同時代の並行とみるかは研究が割れている。</p>
 
 <nav class="tonari"><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">同じ時代のひとつ前</span>グロティウス</a><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html"><span class="k">同じ時代のつぎ</span>ガッサンディ</a><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">社会・歴史のひとつ前</span>グロティウス</a><a href="%E3%83%B4%E3%82%A3%E3%83%BC%E3%82%B3.html"><span class="k">社会・歴史のつぎ</span>ヴィーコ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

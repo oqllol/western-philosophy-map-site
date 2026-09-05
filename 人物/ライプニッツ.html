@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -281,7 +300,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
-<path class="edge oppose" marker-end="url(#ya-oppose)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>対立</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
 <path class="edge merge" marker-end="url(#ya-merge)" d="M261.0,132.0 C261.0,147.0 177.0,147.0 177.0,162.0"><title>合流</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M275.0,132.0 C275.0,147.0 191.0,147.0 191.0,162.0"><title>批判</title></path>
@@ -298,7 +317,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>分割できるものは究極の単位ではない。世界の要素は広がりを持たない単純な実体（モナド）で、それぞれが宇宙全体を自分の視点から映している。モナドどうしは直接やりとりせず、神があらかじめすべてを合わせて創ったので、外から見ると相互作用しているように見える。この世界は、ありえた世界のうちで最善のもの。</p></section>
 <section><b>主著</b><p>『モナドロジー』『人間知性新論』『弁神論』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜広がりだけを物体の本質とする規定を退け、力と単純な実体を持ち込んだ。</li><li><span class="rel oppose">対立</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜心は白紙だという主張に、知性そのものは白紙ではないと応じ、章ごとに反論する書物を用意した。</li><li><span class="rel criticize">批判</span><a href="%E3%82%B9%E3%83%94%E3%83%8E%E3%82%B6.html">スピノザ</a><span class="yr2">1632–1677</span>｜すべてが必然だという結論を退け、神が最善のものを選んだという余地を残した。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜広がりだけを物体の本質とする規定を退け、力と単純な実体を持ち込んだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜心は白紙だという主張に、知性そのものは白紙ではないと応じ、章ごとに反論する書物を用意した。</li><li><span class="rel criticize">批判</span><a href="%E3%82%B9%E3%83%94%E3%83%8E%E3%82%B6.html">スピノザ</a><span class="yr2">1632–1677</span>｜すべてが必然だという結論を退け、神が最善のものを選んだという余地を残した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel merge">合流</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜経験によらずに成り立つ認識があるという線を受け取り、その範囲を経験の内側に限った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜経験の外にある実体を理性だけで論じる議論を、成り立たないものとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%98%E3%83%83%E3%83%89.html">ホワイトヘッド</a><span class="yr2">1861–1947</span>｜世界の要素がそれぞれ全体を映すという構図を受け取り、持続する実体から出来事へ置き換えた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『モナドロジー』1-7節・56節、『人間知性新論』序文。『人間知性新論』はロックの死を受けて生前は公刊されなかった。</p>

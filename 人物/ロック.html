@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -285,7 +304,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge invert" marker-end="url(#ya-invert)" d="M275.0,58.0 C275.0,73.0 359.0,73.0 359.0,88.0"><title>転回</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M604.0,58.0 C604.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
-<path class="edge oppose" marker-end="url(#ya-oppose)" d="M352.0,132.0 C352.0,147.0 100.0,147.0 100.0,162.0"><title>対立</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,132.0 C352.0,147.0 100.0,147.0 100.0,162.0"><title>批判</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M345.0,132.0 C345.0,147.0 261.0,147.0 261.0,162.0"><title>継承</title></path>
 <path class="edge invert" marker-end="url(#ya-invert)" d="M359.0,132.0 C359.0,147.0 275.0,147.0 275.0,162.0"><title>転回</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
@@ -314,7 +333,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『人間知性論』『統治二論』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜生得の観念から出発する道を退け、出発点を経験に移した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜統治の正当性を人々の取り決めに求める枠組みを引き継いだ。</li><li><span class="rel invert">転回</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜同じ契約の枠組みを使いながら、主権者に渡す権利を限定し、抵抗する権利を人々の側に残した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html">ベーコン</a><span class="yr2">1561–1626</span>｜観察から出発して知識を組み立てる方法を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜自然法を理性から導く進め方を受け取った。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel oppose">対立</span><a href="%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84.html">ライプニッツ</a><span class="yr2">1646–1716</span>｜心は白紙だという主張に、知性そのものは白紙ではないと応じ、章ごとに反論する書物を用意した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜知識の材料は観念だけだという出発点をそのまま受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜同じ出発点から進んで、観念の背後にある物質という残りを削り落とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html">モンテスキュー</a><span class="yr2">1689–1755</span>｜統治の権力を分けて考える枠組みを受け取り、裁く力を独立した三つめの権力として立てた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AA%E3%83%BC%E3%83%89.html">リード</a><span class="yr2">1710–1796</span>｜観念を経由して外界を知るという枠組みを、懐疑に行き着く元として退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜経験を知の唯一の源泉とする規則を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜所有権を自然の権利として先に置く構図を退け、所有こそ不平等の始まりだとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html">セラーズ</a><span class="yr2">1912–1989</span>｜観念という与件から知識を組み立てる枠を退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8E%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF.html">ノージック</a><span class="yr2">1938–2002</span>｜自分の労働から所有が生じるという枠組みを受け取り、手に入れ方の正しさとして立て直した。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84.html">ライプニッツ</a><span class="yr2">1646–1716</span>｜心は白紙だという主張に、知性そのものは白紙ではないと応じ、章ごとに反論する書物を用意した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜知識の材料は観念だけだという出発点をそのまま受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜同じ出発点から進んで、観念の背後にある物質という残りを削り落とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html">モンテスキュー</a><span class="yr2">1689–1755</span>｜統治の権力を分けて考える枠組みを受け取り、裁く力を独立した三つめの権力として立てた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AA%E3%83%BC%E3%83%89.html">リード</a><span class="yr2">1710–1796</span>｜観念を経由して外界を知るという枠組みを、懐疑に行き着く元として退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜経験を知の唯一の源泉とする規則を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜所有権を自然の権利として先に置く構図を退け、所有こそ不平等の始まりだとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html">セラーズ</a><span class="yr2">1912–1989</span>｜観念という与件から知識を組み立てる枠を退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8E%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF.html">ノージック</a><span class="yr2">1938–2002</span>｜自分の労働から所有が生じるという枠組みを受け取り、手に入れ方の正しさとして立て直した。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『人間知性論』第1巻（生得観念の否定）・第2巻1章2節（白紙と二つの源泉）、『統治二論』後篇第19章（政府の解体）。</p>
 

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,19 +297,17 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-プラグマティズム">プラグマティズム</a></p>
 <p class="lede">ある考えの意味は、それを認めたときに実際に何が起きるかに尽きるとした。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 520 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M184.0,58.0 C184.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,58.0 C352.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 100.0,147.0 100.0,162.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
-<a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html"><g class="node c1 "><rect x="108.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="34.0" text-anchor="middle" font-size="13.5">デカルト</text><text class="yr" x="184.0" y="49.0" text-anchor="middle">1596–1650</text></g></a>
-<a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="276.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="352.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
-<a href="%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%A0%E3%82%BA.html"><g class="node c2 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">ジェイムズ</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">1842–1910</text></g></a>
-<a href="%E3%83%87%E3%83%A5%E3%83%BC%E3%82%A4.html"><g class="node c2 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">デューイ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1859–1952</text></g></a>
-<a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html"><g class="node c3 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">クワイン</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1908–2000</text></g></a>
-<g class="node c2 self"><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="13.5">パース</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1839–1914</text></g>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M176.0,58.0 C176.0,73.0 260.0,73.0 260.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M260.0,132.0 C260.0,147.0 176.0,147.0 176.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M260.0,132.0 C260.0,147.0 344.0,147.0 344.0,162.0"><title>継承</title></path>
+<a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html"><g class="node c1 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="13.5">デカルト</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">1596–1650</text></g></a>
+<a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="268.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="344.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
+<a href="%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%A0%E3%82%BA.html"><g class="node c2 "><rect x="100.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="182.0" text-anchor="middle" font-size="13.5">ジェイムズ</text><text class="yr" x="176.0" y="197.0" text-anchor="middle">1842–1910</text></g></a>
+<a href="%E3%83%87%E3%83%A5%E3%83%BC%E3%82%A4.html"><g class="node c2 "><rect x="268.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="182.0" text-anchor="middle" font-size="13.5">デューイ</text><text class="yr" x="344.0" y="197.0" text-anchor="middle">1859–1952</text></g></a>
+<g class="node c2 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">パース</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">1839–1914</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>二つの説がどんな場合にも同じ結果しか生まないなら、それらは本当に別々の説なのか。</p></section>
@@ -298,7 +315,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>論文「概念を明晰にする方法」「四つの能力の否定のいくつかの帰結」</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜すべてをいったん疑う方法を退け、探究は現に持っている信念のなかの疑いからしか始まらないと論じた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜概念を経験しうる範囲に結びつける構えを受け取った。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%A0%E3%82%BA.html">ジェイムズ</a><span class="yr2">1842–1910</span>｜観念の意味を実際上の帰結から測る考え方を受け取り、真理そのものへ広げた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A5%E3%83%BC%E3%82%A4.html">デューイ</a><span class="yr2">1859–1952</span>｜探究が疑いから始まり信念に落ち着くという枠組みを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html">クワイン</a><span class="yr2">1908–2000</span>｜知識を、実際上の帰結と探究の営みから見る構えを受け取った。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%B8%E3%82%A7%E3%82%A4%E3%83%A0%E3%82%BA.html">ジェイムズ</a><span class="yr2">1842–1910</span>｜観念の意味を実際上の帰結から測る考え方を受け取り、真理そのものへ広げた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A5%E3%83%BC%E3%82%A4.html">デューイ</a><span class="yr2">1859–1952</span>｜探究が疑いから始まり信念に落ち着くという枠組みを受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>「概念を明晰にする方法」（Popular Science Monthly, 1878）、「四つの能力の否定のいくつかの帰結」（1868）。</p>
 

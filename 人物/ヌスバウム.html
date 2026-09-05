@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,27 +297,29 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-徳倫理の再興">徳倫理の再興</a></p>
 <p class="lede">人が実際に何をなしうるかで社会を測るべきだとし、感情と文学を倫理の中心に戻した。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 704 172" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 704 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
-<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M268.0,58.0 C268.0,73.0 352.0,73.0 352.0,88.0"><title>再発見</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M604.0,58.0 C604.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,110.0 352.0,110.0 352.0,162.0"><title>批判</title></path>
+<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M268.0,58.0 C268.0,110.0 352.0,110.0 352.0,162.0"><title>再発見</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M604.0,58.0 C604.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 352.0,147.0 352.0,162.0"><title>継承</title></path>
 <a href="%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%BA.html"><g class="node c4 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">ロールズ</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1921–2002</text></g></a>
 <a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
 <a href="%E3%83%9F%E3%83%AB.html"><g class="node c2 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">ミル</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1806–1873</text></g></a>
 <a href="%E3%82%BB%E3%83%B3.html"><g class="node c4 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">セン</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1933–</text></g></a>
-<g class="node c4 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">ヌスバウム</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1947–</text></g>
+<a href="%E3%83%9E%E3%83%BC%E3%83%89%E3%83%83%E3%82%AF.html"><g class="node c5 "><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">マードック</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1919–1999</text></g></a>
+<g class="node c4 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">ヌスバウム</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1947–</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>豊かさを国内総生産で測ると、同じ額でも人によってできることがまるで違う。何を測ればよいのか。</p></section>
 <section><b>出した答え</b><p>測るべきは、資源の量でも満足の度合いでもなく、その人が実際に選んで行える幅。生命、身体の健康、感覚と想像、感情、実践理性、他者との関係、遊びなど、どの社会でも下回ってはならない項目がある。感情は判断を曇らせるものではなく、何が自分にとって重いかについての判断そのもの。小説を読むことは、他人の立場を思い描く訓練になる。</p></section>
 <section><b>主著</b><p>『善さのもろさ』『詩的正義』『女性と人間開発』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%BA.html">ロールズ</a><span class="yr2">1921–2002</span>｜資源の分け方で正義を測る枠を、同じ資源からできることが人によって違うという点で退けた。</li><li><span class="rel rediscover">再発見</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜人の善さを、その人が持つ力の発揮として捉える議論を掘り起こした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9F%E3%83%AB.html">ミル</a><span class="yr2">1806–1873</span>｜快の質の違いを認める構えと、個人の自由を守る線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%83%B3.html">セン</a><span class="yr2">1933–</span>｜その人が実際になしうることで測るという考えを、共同研究のなかで受け取った。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%BA.html">ロールズ</a><span class="yr2">1921–2002</span>｜資源の分け方で正義を測る枠を、同じ資源からできることが人によって違うという点で退けた。</li><li><span class="rel rediscover">再発見</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜人の善さを、その人が持つ力の発揮として捉える議論を掘り起こした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9F%E3%83%AB.html">ミル</a><span class="yr2">1806–1873</span>｜快の質の違いを認める構えと、個人の自由を守る線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BB%E3%83%B3.html">セン</a><span class="yr2">1933–</span>｜その人が実際になしうることで測るという考えを、共同研究のなかで受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%BC%E3%83%89%E3%83%83%E3%82%AF.html">マードック</a><span class="yr2">1919–1999</span>｜他人へ注意を向けることを道徳の中心に置く見方と、小説を読むことがその訓練になるという議論を受け取った。</li></ul>
 
 
-<p class="ura"><b>裏づけ</b>『善さのもろさ』（1986）、『詩的正義』（1995）、『女性と人間開発』（2000）第1章（項目の一覧）。アマルティア・センとの共同研究から出ている。</p>
+<p class="ura"><b>裏づけ</b>『善さのもろさ』（1986）、『詩的正義』（1995）、『女性と人間開発』（2000）第1章（項目の一覧）。アマルティア・センとの共同研究から出ている。マードックについては「愛と視ること——エロスと個人をめぐるアイリス・マードック」（1996）。善をプラトンの側から見るマードックと、アリストテレスの側から見るヌスバウムとでは行き先が違う。この食い違いを残したうえで受け取りの線を引くのは、こちらの整理。</p>
 
 <nav class="tonari"><a href="%E3%82%AF%E3%83%AA%E3%83%97%E3%82%AD.html"><span class="k">同じ時代のひとつ前</span>クリプキ</a><a href="%E3%83%8E%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF.html"><span class="k">社会・歴史のひとつ前</span>ノージック</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

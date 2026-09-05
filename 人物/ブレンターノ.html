@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -285,7 +304,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
 <a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
-<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1225–1274</text></g></a>
+<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1225–1274頃</text></g></a>
 <a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
 <a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html"><g class="node c1 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">フッサール</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1859–1938</text></g></a>
 <g class="node c1 self"><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="13.5">ブレンターノ</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1838–1917</text></g>
@@ -295,7 +314,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>心の働きは、つねに何かについての働き。見るときは何かを見ており、望むときは何かを望んでいる。この向かう働きは物理の現象には無く、心の側だけの目印になる。心を内側から丁寧に記述すれば、心理学を厳密な学問にできる。</p></section>
 <section><b>主著</b><p>『経験的立場からの心理学』『アリストテレスにおける存在の多義性について』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜『デ・アニマ』と存在の多義性をめぐる議論を掘り起こし、心を記述する枠組みに使った。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274</span>｜スコラ学の「志向的に内に在る」という言い方を掘り起こして立て直した。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜経験の外へ出る議論を退け、心を経験の側から記述する道を取った。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel rediscover">再発見</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜『デ・アニマ』と存在の多義性をめぐる議論を掘り起こし、心を記述する枠組みに使った。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274頃</span>｜スコラ学の「志向的に内に在る」という言い方を掘り起こして立て直した。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜経験の外へ出る議論を退け、心を経験の側から記述する道を取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html">フッサール</a><span class="yr2">1859–1938</span>｜心の働きがつねに何かへ向かうという規定を、講義で直接受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『経験的立場からの心理学』第2巻第1章（心的現象と物理的現象の区別）。フッサール、マイノング、トヴァルドフスキがこの講義から出ている。</p>

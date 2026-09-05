@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,25 +297,21 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-アリストテレスとスコラ学">アリストテレスとスコラ学</a></p>
 <p class="lede">普遍は物でも単なる声でもなく、語が意味する共通の在り方だとした。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 520 172" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
-<a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><g class="node c6 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">ボエティウス</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">477–524頃</text></g></a>
-<a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
-<a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><g class="node c1 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">プラトン</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">前427–前347</text></g></a>
-<a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html"><g class="node c6 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">オッカム</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1287–1347頃</text></g></a>
-<g class="node c6 self"><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="13.5">アベラール</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1079–1142</text></g>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M176.0,58.0 C176.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
+<a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><g class="node c6 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="13.5">ボエティウス</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">477–524頃</text></g></a>
+<a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="268.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="344.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
+<g class="node c6 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">アベラール</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">1079–1142</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>「人間」という語は、個々の人とは別に在る何かを指しているのか、それとも口から出る音にすぎないのか。</p></section>
 <section><b>出した答え</b><p>「人間」という語は、個々の人が共通して持つ在り方を意味している。物として別に在るのでもなく、意味のない音でもない。教父たちの食い違う文章を並べて矛盾を突きつけ、読む者に判断させる書き方を取った。罪は行為そのものではなく、悪いと知りながら同意する心のうちにある。</p></section>
 <section><b>主著</b><p>『しかりと否』『倫理学（汝自身を知れ）』『ポルフュリオス註解』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ボエティウス</a><span class="yr2">477–524頃</span>｜普遍をめぐる問いの立て方を、その註解から受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜ボエティウス訳の論理学を受け取り、語と物の関係を詰めた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜普遍が個物と離れて実在するという見方を退けた。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html">オッカム</a><span class="yr2">1287–1347頃</span>｜普遍を語の側で説明する道筋を受け取り、さらに削ぎ落とした。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ボエティウス</a><span class="yr2">477–524頃</span>｜普遍をめぐる問いの立て方を、その註解から受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜ボエティウス訳の論理学を受け取り、語と物の関係を詰めた。</li></ul>
+
 
 <p class="ura"><b>裏づけ</b>『ポルフュリオス註解』、『しかりと否』序文、『倫理学』1章。普遍論争の発端は、ボエティウスがポルフュリオスの序文を訳した箇所にある。</p>
 

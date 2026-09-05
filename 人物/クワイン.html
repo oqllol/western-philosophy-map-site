@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,34 +297,32 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-プラグマティズム">プラグマティズム</a><a href="../西洋哲学史マップ.html#系譜-分析哲学">分析哲学</a></p>
 <p class="lede">意味だけで決まる真理という区分を崩し、知識の全体がひとつの網だとした。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 704 320" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 704 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,110.0 352.0,110.0 352.0,162.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M604.0,58.0 C604.0,110.0 352.0,110.0 352.0,162.0"><title>批判</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,132.0 C352.0,147.0 352.0,147.0 352.0,162.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M345.0,206.0 C345.0,221.0 177.0,221.0 177.0,236.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M359.0,206.0 C359.0,221.0 191.0,221.0 191.0,236.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M345.0,206.0 C345.0,221.0 345.0,221.0 345.0,236.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M359.0,206.0 C359.0,221.0 359.0,221.0 359.0,236.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,206.0 C352.0,221.0 520.0,221.0 520.0,236.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M604.0,58.0 C604.0,73.0 352.0,73.0 352.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M345.0,132.0 C345.0,147.0 177.0,147.0 177.0,162.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M359.0,132.0 C359.0,147.0 191.0,147.0 191.0,162.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M345.0,132.0 C345.0,147.0 345.0,147.0 345.0,162.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M359.0,132.0 C359.0,147.0 359.0,147.0 359.0,162.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,132.0 C352.0,147.0 520.0,147.0 520.0,162.0"><title>継承</title></path>
 <a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
 <a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">ヒューム</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1711–1776</text></g></a>
-<a href="%E3%83%91%E3%83%BC%E3%82%B9.html"><g class="node c2 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">パース</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1839–1914</text></g></a>
-<a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html"><g class="node c3 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">ラッセル</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1872–1970</text></g></a>
-<a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><g class="node c3 "><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1891–1970</text></g></a>
-<a href="%E3%83%87%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%89%E3%82%BD%E3%83%B3.html"><g class="node c3 "><rect x="108.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="256.0" text-anchor="middle" font-size="13.5">デイヴィドソン</text><text class="yr" x="184.0" y="271.0" text-anchor="middle">1917–2003</text></g></a>
-<a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html"><g class="node c3 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">パトナム</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1926–2016</text></g></a>
-<a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html"><g class="node c3 "><rect x="444.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="520.0" y="256.0" text-anchor="middle" font-size="13.5">ローティ</text><text class="yr" x="520.0" y="271.0" text-anchor="middle">1931–2007</text></g></a>
-<g class="node c3 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">クワイン</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1908–2000</text></g>
+<a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html"><g class="node c3 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">ラッセル</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1872–1970</text></g></a>
+<a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><g class="node c3 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1891–1970</text></g></a>
+<a href="%E3%83%87%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%89%E3%82%BD%E3%83%B3.html"><g class="node c3 "><rect x="108.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="184.0" y="182.0" text-anchor="middle" font-size="13.5">デイヴィドソン</text><text class="yr" x="184.0" y="197.0" text-anchor="middle">1917–2003</text></g></a>
+<a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html"><g class="node c3 "><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">パトナム</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1926–2016</text></g></a>
+<a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html"><g class="node c3 "><rect x="444.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="520.0" y="182.0" text-anchor="middle" font-size="13.5">ローティ</text><text class="yr" x="520.0" y="197.0" text-anchor="middle">1931–2007</text></g></a>
+<g class="node c3 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">クワイン</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1908–2000</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>意味だけで真になる文と、経験で確かめる文を分ける線引きが前提とされている。その線は本当に引けるのか。</p></section>
 <section><b>出した答え</b><p>「独身者は結婚していない」が意味だけで真だと言うには、同義であることを説明しなければならないが、その説明はまた同じ区分へ戻ってしまう。文はひとつずつ経験と突き合わされるのではなく、知識の全体がまとまって経験に触れる。合わないところが出たとき、どこを直すかには幅があり、論理法則さえ原理としては直しうる。</p></section>
 <section><b>主著</b><p>論文「経験主義のふたつのドグマ」、『ことばと対象』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜分析と総合という区別を、根拠のないまま受け継がれてきたものとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜経験に還元できないものを削り落とす手つきを引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%83%BC%E3%82%B9.html">パース</a><span class="yr2">1839–1914</span>｜知識を、実際上の帰結と探究の営みから見る構えを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html">ラッセル</a><span class="yr2">1872–1970</span>｜文をひとつずつ経験へ還元していく道を退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜意味だけで決まる文と経験で確かめる文を分ける枠組みを、師の立場ごと退けた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜分析と総合という区別を、根拠のないまま受け継がれてきたものとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜経験に還元できないものを削り落とす手つきを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html">ラッセル</a><span class="yr2">1872–1970</span>｜文をひとつずつ経験へ還元していく道を退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜意味だけで決まる文と経験で確かめる文を分ける枠組みを、師の立場ごと退けた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%89%E3%82%BD%E3%83%B3.html">デイヴィドソン</a><span class="yr2">1917–2003</span>｜知識をひとつの網として見る立場と、知らない言語を訳す場面から考える進め方を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%89%E3%82%BD%E3%83%B3.html">デイヴィドソン</a><span class="yr2">1917–2003</span>｜枠組みと中身を分ける見方を、経験主義に残った最後の教条として退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html">パトナム</a><span class="yr2">1926–2016</span>｜知識をひとつの網として見る立場を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html">パトナム</a><span class="yr2">1926–2016</span>｜意味を行動へ還元する道を退け、指すものを外の世界の側に置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html">ローティ</a><span class="yr2">1931–2007</span>｜意味だけで決まる真理という区分を崩す議論を受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>「経験主義のふたつのドグマ」（Philosophical Review, 1951）§1-6、『ことばと対象』（1960）第2章。</p>

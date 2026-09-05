@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -300,10 +319,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>意味は、いま目の前にまるごと在るのではなく、他の語との違いによって、しかも遅れて成り立つ。話し言葉のほうが真理に近いという序列は、この遅れを見ないことで保たれてきた。テクストを読むときは、そのテクスト自身が使っている言葉のなかから、序列が崩れる箇所を見つける。</p></section>
 <section><b>主著</b><p>『グラマトロジーについて』『声と現象』『エクリチュールと差異』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html">フッサール</a><span class="yr2">1859–1938</span>｜意識にいま与えられているものを出発点にする構えを、その内側から揺らせて退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜西洋の思考の歴史を、在ることをめぐる決まった前提の連なりとして読む構えを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜『パイドロス』が書き言葉を記憶を損なうものとして退けた場面を取り上げ、その序列の成り立ちを追った。</li><li><span class="rel invert">転回</span><a href="%E3%82%BD%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB.html">ソシュール</a><span class="yr2">1857–1913</span>｜意味は違いによって成り立つという見方を受け取ったまま、その違いを遅れの側へ広げた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%BD%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB.html">ソシュール</a><span class="yr2">1857–1913</span>｜話し言葉を書き言葉の上に置く序列が、その体系にも残っていると指摘した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html">アルチュセール</a><span class="yr2">1918–1990</span>｜高等師範学校での同僚として、構造の側から読む進め方に触れた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html">オースティン</a><span class="yr2">1911–1960</span>｜言うことが行いになる場面を論じながら、うまくいかない例を脇へ置く進め方を退けた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html">フッサール</a><span class="yr2">1859–1938</span>｜意識にいま与えられているものを出発点にする構えを、その内側から揺らせて退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜西洋の思考の歴史を、在ることをめぐる決まった前提の連なりとして読む構えを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜『パイドロス』が書き言葉を記憶を損なうものとして退けた場面を取り上げ、その序列の成り立ちを追った。</li><li><span class="rel invert">転回</span><a href="%E3%82%BD%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB.html">ソシュール</a><span class="yr2">1857–1913</span>｜意味は違いによって成り立つという見方を受け取ったまま、その違いを遅れの側へ広げた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%BD%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB.html">ソシュール</a><span class="yr2">1857–1913</span>｜話し言葉を書き言葉の上に置く序列が、その体系にも残っていると指摘した。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html">アルチュセール</a><span class="yr2">1918–1990</span>｜高等師範学校で入学から4年の指導を受け、1964年からは同僚として、構造の側から読む進め方に触れた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html">オースティン</a><span class="yr2">1911–1960</span>｜言うことが行いになる場面を論じながら、うまくいかない例を脇へ置く進め方を退けた。</li></ul>
 
 
-<p class="ura"><b>裏づけ</b>『声と現象』第5-6章、『グラマトロジーについて』第1部、『散種』所収「プラトンのパルマケイアー」、『哲学の余白』所収「差延」。</p>
+<p class="ura"><b>裏づけ</b>『声と現象』第5-6章、『グラマトロジーについて』第1部、『散種』所収「プラトンのパルマケイアー」、『哲学の余白』所収「差延」・「署名 出来事 コンテクスト」（1971。オースティン批判）。</p>
 
 <nav class="tonari"><a href="%E3%83%9E%E3%83%83%E3%82%AD%E3%83%B3%E3%82%BF%E3%82%A4%E3%82%A2.html"><span class="k">同じ時代のひとつ前</span>マッキンタイア</a><a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html"><span class="k">同じ時代のつぎ</span>ローティ</a><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html"><span class="k">言語・論理のひとつ前</span>パトナム</a><a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html"><span class="k">言語・論理のつぎ</span>ローティ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

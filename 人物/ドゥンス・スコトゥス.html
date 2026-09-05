@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -285,7 +304,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M261.0,132.0 C261.0,147.0 261.0,147.0 261.0,162.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M275.0,132.0 C275.0,147.0 275.0,147.0 275.0,162.0"><title>批判</title></path>
-<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1225–1274</text></g></a>
+<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1225–1274頃</text></g></a>
 <a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">アリストテレス</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">前384–前322</text></g></a>
 <a href="%E3%82%A2%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A0%E3%82%B9.html"><g class="node c6 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">アンセルムス</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1033–1109</text></g></a>
 <a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html"><g class="node c6 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">オッカム</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1287–1347頃</text></g></a>
@@ -296,10 +315,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>在るという語は、神にも被造物にも同じ意味で使える。そうでなければ、神を論じる言葉そのものが成り立たない。個々のものを「この一つ」にしているのは、種でも素材でもなく、そのもの固有の在り方。神が世界をこう創ったのは、そうするほかなかったからではなく、そう意志したから。意志は知性の結論に縛られない。</p></section>
 <section><b>主著</b><p>『オルディナティオ』『任意討論集』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274</span>｜神と被造物とで在るという語が別の意味になる扱いを退け、同じ意味で使えるとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜個物を種と素材から説明する枠を退け、そのもの固有の在り方を加えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A0%E3%82%B9.html">アンセルムス</a><span class="yr2">1033–1109</span>｜それより大きいものが考えられないものという規定を受け取り、証明を組み直した。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274頃</span>｜神と被造物とで在るという語が別の意味になる扱いを退け、同じ意味で使えるとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜個物を種と素材から説明する枠を退け、そのもの固有の在り方を加えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A0%E3%82%B9.html">アンセルムス</a><span class="yr2">1033–1109</span>｜それより大きいものが考えられないものという規定を受け取り、証明を組み直した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html">オッカム</a><span class="yr2">1287–1347頃</span>｜在るという語が神にも被造物にも同じ意味で使えるという線を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html">オッカム</a><span class="yr2">1287–1347頃</span>｜個物を「この一つ」にしている固有の在り方を、要らない仮定として削り落とした。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『オルディナティオ』第1巻第3区分（在るという語の一義性）・第2巻第3区分（このもの性）。オッカムはこの一義性を受け取ったうえで、共通の在り方のほうを削っていく。</p>
+<p class="ura"><b>裏づけ</b>『オルディナティオ』第1巻第2区分（アンセルムスの証明の組み直し）・第1巻第3区分（在るという語の一義性）・第2巻第3区分（このもの性）。オッカムはこの一義性を受け取ったうえで、共通の在り方のほうを削っていく。</p>
 
 <nav class="tonari"><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><span class="k">同じ時代のひとつ前</span>トマス・アクィナス</a><a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html"><span class="k">同じ時代のつぎ</span>オッカム</a><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><span class="k">信仰・神学のひとつ前</span>トマス・アクィナス</a><a href="%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html"><span class="k">信仰・神学のつぎ</span>オッカム</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

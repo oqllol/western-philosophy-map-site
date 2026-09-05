@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -296,7 +315,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html"><g class="node c1 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">ポルフュリオス</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">234–305頃</text></g></a>
 <a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><g class="node c6 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">ボエティウス</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">477–524頃</text></g></a>
 <a href="%E3%82%A2%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A0%E3%82%B9.html"><g class="node c6 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">アンセルムス</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1033–1109</text></g></a>
-<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1225–1274</text></g></a>
+<a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html"><g class="node c6 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="12">トマス・アクィナス</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">1225–1274頃</text></g></a>
 <a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html"><g class="node c1 "><rect x="528.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="182.0" text-anchor="middle" font-size="13.5">デカルト</text><text class="yr" x="604.0" y="197.0" text-anchor="middle">1596–1650</text></g></a>
 <a href="%E3%83%9E%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5.html"><g class="node c1 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">マルブランシュ</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1638–1715</text></g></a>
 <g class="node c6 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">アウグスティヌス</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">354–430</text></g>
@@ -307,7 +326,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『告白』『神の国』『三位一体論』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%AD%E3%83%86%E3%82%A3%E3%83%8E%E3%82%B9.html">プロティノス</a><span class="yr2">205–270</span>｜一者から溢れ出る階層と、内へ還る道筋を受け取り、神と魂の関係として読み替えた。</li><li><span class="rel invert">転回</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜魂が自力でイデアを見るという構図を、神に照らされて初めて見えるという構図へ置き換えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AD%E3%82%B1%E3%83%AD.html">キケロ</a><span class="yr2">前106–前43</span>｜『ホルテンシウス』を読んで哲学へ向かい、ラテン語で哲学を書くための語彙を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html">ポルフュリオス</a><span class="yr2">234–305頃</span>｜新プラトン主義を、その著作のラテン語訳を通じて受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html">ポルフュリオス</a><span class="yr2">234–305頃</span>｜『神の国』で、そのキリスト教への反論を名指しで論駁した。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ボエティウス</a><span class="yr2">477–524頃</span>｜キリスト教の枠のなかで古代の思考を使う構えを引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A0%E3%82%B9.html">アンセルムス</a><span class="yr2">1033–1109</span>｜信じることが理解に先立つという順序を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274</span>｜恩寵と意志についての枠組みを引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜内へ還って確実さを見つける道筋を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5.html">マルブランシュ</a><span class="yr2">1638–1715</span>｜真理を神の光のうちに見るという構図を受け取った。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ボエティウス</a><span class="yr2">477–524頃</span>｜キリスト教の枠のなかで古代の思考を使う構えを引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A0%E3%82%B9.html">アンセルムス</a><span class="yr2">1033–1109</span>｜信じることが理解に先立つという順序を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%88%E3%83%9E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%A3%E3%83%8A%E3%82%B9.html">トマス・アクィナス</a><span class="yr2">1225–1274頃</span>｜恩寵と意志についての枠組みを引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜内へ還って確実さを見つける道筋を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5.html">マルブランシュ</a><span class="yr2">1638–1715</span>｜真理を神の光のうちに見るという構図を受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『告白』VII巻（新プラトン主義との出会い）・XI巻14以下（時間論）、『神の国』XII巻。</p>
 

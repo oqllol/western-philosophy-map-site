@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -283,7 +302,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M176.0,58.0 C176.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M260.0,132.0 C260.0,147.0 260.0,147.0 260.0,162.0"><title>継承</title></path>
-<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">前335–前263</text></g></a>
+<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">前335–前263頃</text></g></a>
 <a href="%E3%82%BD%E3%82%AF%E3%83%A9%E3%83%86%E3%82%B9.html"><g class="node c5 "><rect x="268.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="34.0" text-anchor="middle" font-size="13.5">ソクラテス</text><text class="yr" x="344.0" y="49.0" text-anchor="middle">前470–前399</text></g></a>
 <a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html"><g class="node c5 "><rect x="184.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="182.0" text-anchor="middle" font-size="13.5">モンテーニュ</text><text class="yr" x="260.0" y="197.0" text-anchor="middle">1533–1592</text></g></a>
 <g class="node c5 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">エピクテトス</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">50–135頃</text></g>
@@ -293,7 +312,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>自分に左右できるのは判断・意欲・欲求だけで、体も財産も評判も地位もそこに入らない。人を乱すのは出来事そのものではなく、出来事についての判断。左右できないものを求めるのをやめれば、誰にも妨げられず、誰にも強いられない。</p></section>
 <section><b>主著</b><p>『語録』『提要』（弟子アリアノスの筆録）</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263</span>｜ストア派の教えを受け取り、左右できるものとできないものの区別を実践の形にまで詰めた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BD%E3%82%AF%E3%83%A9%E3%83%86%E3%82%B9.html">ソクラテス</a><span class="yr2">前470–前399</span>｜対話によって相手の思い込みを崩す進め方を引き継いだ。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263頃</span>｜ストア派の教えを受け取り、左右できるものとできないものの区別を実践の形にまで詰めた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BD%E3%82%AF%E3%83%A9%E3%83%86%E3%82%B9.html">ソクラテス</a><span class="yr2">前470–前399</span>｜対話によって相手の思い込みを崩す進め方を引き継いだ。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html">モンテーニュ</a><span class="yr2">1533–1592</span>｜自分に左右できないものへ執着しないという構えを受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『提要』1章・5章、『語録』I巻1章。本人は書かず、弟子アリアノスの筆録が伝わっている。</p>

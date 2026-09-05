@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -286,7 +305,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 100.0,147.0 100.0,162.0"><title>継承</title></path>
 <path class="edge invert" marker-end="url(#ya-invert)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>転回</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 436.0,147.0 436.0,162.0"><title>継承</title></path>
-<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">前335–前263</text></g></a>
+<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">前335–前263頃</text></g></a>
 <a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><g class="node c1 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">プラトン</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">前427–前347</text></g></a>
 <a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html"><g class="node c5 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">エピクロス</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">前341–前270</text></g></a>
 <a href="%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html"><g class="node c6 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">アウグスティヌス</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">354–430</text></g></a>
@@ -296,10 +315,10 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 </svg></div>
 
 <section><b>受け取った問い</b><p>ローマには哲学を語る言葉がない。ギリシアの議論をラテン語で書けるようにできるか。</p></section>
-<section><b>出した答え</b><p>各学派の主張を並べて比べる形で書き、ラテン語に哲学の語彙を作った。後の術語となる quality・essence の元はここにある。自分の立場は判断を保留するアカデメイア派に置きながら、実践ではストア派の義務論を採った。法は人が定めた取り決めを超えた自然の理に根ざすとした。</p></section>
+<section><b>出した答え</b><p>各学派の主張を並べて比べる形で書き、ラテン語に哲学の語彙を作った。後の術語となる quality（qualitas）はここで作られた。自分の立場は判断を保留するアカデメイア派に置きながら、実践ではストア派の義務論を採った。法は人が定めた取り決めを超えた自然の理に根ざすとした。</p></section>
 <section><b>主著</b><p>『義務について』『国家について』『善と悪の究極について』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263</span>｜ストア派の義務と自然法の考えを受け取り、ローマの政治の言葉に移した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜対話の形式と、国家を論じる構えを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜快を目的に置く生き方を、公共への義務を損なうものとして退けた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263頃</span>｜ストア派の義務と自然法の考えを受け取り、ローマの政治の言葉に移した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜対話の形式と、国家を論じる構えを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜快を目的に置く生き方を、公共への義務を損なうものとして退けた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html">アウグスティヌス</a><span class="yr2">354–430</span>｜『ホルテンシウス』を読んで哲学へ向かい、ラテン語で哲学を書くための語彙を受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html">マキャヴェリ</a><span class="yr2">1469–1527</span>｜ローマ共和政を手本にする枠組みと『義務について』の章立てを受け取ったまま、結論を逆にした。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜人が定めた取り決めを超えた自然の理という考えを受け取り、国と国のあいだへ広げた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『善と悪の究極について』I巻・III巻、『国家について』III巻33（自然法）、『義務について』I巻。ラテン語の哲学用語の多くがここで作られたことは、中世ラテン語研究の通説。</p>

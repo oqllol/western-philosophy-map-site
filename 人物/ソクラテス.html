@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -288,7 +307,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,132.0 C352.0,184.0 352.0,184.0 352.0,236.0"><title>批判</title></path>
 <a href="%E3%82%BF%E3%83%AC%E3%82%B9.html"><g class="node c2 "><rect x="276.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="34.0" text-anchor="middle" font-size="13.5">タレス</text><text class="yr" x="352.0" y="49.0" text-anchor="middle">前624–前546頃</text></g></a>
 <a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><g class="node c1 "><rect x="24.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="182.0" text-anchor="middle" font-size="13.5">プラトン</text><text class="yr" x="100.0" y="197.0" text-anchor="middle">前427–前347</text></g></a>
-<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">前335–前263</text></g></a>
+<a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html"><g class="node c5 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="12">ゼノン（キティオン）</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">前335–前263頃</text></g></a>
 <a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%86%E3%83%88%E3%82%B9.html"><g class="node c5 "><rect x="360.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="182.0" text-anchor="middle" font-size="13.5">エピクテトス</text><text class="yr" x="436.0" y="197.0" text-anchor="middle">50–135頃</text></g></a>
 <a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html"><g class="node c5 "><rect x="528.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="182.0" text-anchor="middle" font-size="13.5">キルケゴール</text><text class="yr" x="604.0" y="197.0" text-anchor="middle">1813–1855</text></g></a>
 <a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html"><g class="node c5 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">ニーチェ</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1844–1900</text></g></a>
@@ -300,9 +319,9 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>著作を残さなかった</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%BF%E3%83%AC%E3%82%B9.html">タレス</a><span class="yr2">前624–前546頃</span>｜世界が何からできているかを問う道から離れ、人が何をなすべきかへ問いを移した。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜定義を問い詰める対話の方法をそのまま受け取り、対話篇の主役に据えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263</span>｜徳だけが善であり、それさえあれば幸福だという線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%86%E3%83%88%E3%82%B9.html">エピクテトス</a><span class="yr2">50–135頃</span>｜対話によって相手の思い込みを崩す進め方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html">キルケゴール</a><span class="yr2">1813–1855</span>｜教説を授けず相手を決断の前に立たせる、間接的な語り方を引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜理性で徳を定義しようとした構えを、生を弱らせる始まりとして退けた。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜定義を問い詰める対話の方法をそのまま受け取り、対話篇の主役に据えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%AD%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3%EF%BC%89.html">ゼノン（キティオン）</a><span class="yr2">前335–前263頃</span>｜徳だけが善であり、それさえあれば幸福だという線を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%86%E3%83%88%E3%82%B9.html">エピクテトス</a><span class="yr2">50–135頃</span>｜対話によって相手の思い込みを崩す進め方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AD%E3%83%AB%E3%82%B1%E3%82%B4%E3%83%BC%E3%83%AB.html">キルケゴール</a><span class="yr2">1813–1855</span>｜教説を授けず相手を決断の前に立たせる、間接的な語り方を引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜理性で徳を定義しようとした構えを、生を弱らせる始まりとして退けた。</li></ul>
 
-<p class="ura"><b>裏づけ</b>プラトン『ソクラテスの弁明』、クセノフォン『ソクラテスの思い出』、アリストファネス『雲』。本人の著作がないため、主張の中身は他人の記述を通した像。</p>
+<p class="ura"><b>裏づけ</b>プラトン『ソクラテスの弁明』、クセノフォン『ソクラテスの思い出』、アリストファネス『雲』。本人の著作がないため、主張の中身は他人の記述を通した像。タレスへの1本はこちらの整理。「哲学を天から呼び下ろした」（キケロ『トゥスクルム荘対談』V巻10-11）も『パイドン』96a-99d も、自然学の側の相手をタレスとは名指ししていない。</p>
 
 <nav class="tonari"><a href="%E3%82%BC%E3%83%8E%E3%83%B3%EF%BC%88%E3%82%A8%E3%83%AC%E3%82%A2%EF%BC%89.html"><span class="k">同じ時代のひとつ前</span>ゼノン（エレア）</a><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>デモクリトス</a><a href="%E3%83%94%E3%83%A5%E3%83%AD%E3%83%B3.html"><span class="k">生き方・実存のつぎ</span>ピュロン</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

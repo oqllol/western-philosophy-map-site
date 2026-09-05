@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -278,27 +297,25 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-分析哲学">分析哲学</a></p>
 <p class="lede">科学の役目を、感覚の要素を最も少ない手間でまとめることに限った。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 536 246" xmlns="http://www.w3.org/2000/svg">
+<div class="minibox"><svg class="mini" viewBox="0 0 520 246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 268.0,147.0 268.0,162.0"><title>継承</title></path>
-<a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html"><g class="node c2 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">ヒューム</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1711–1776</text></g></a>
-<a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html"><g class="node c2 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="13.5">バークリ</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1685–1753</text></g></a>
-<a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
-<a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><g class="node c3 "><rect x="192.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="182.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="268.0" y="197.0" text-anchor="middle">1891–1970</text></g></a>
-<g class="node c2 self"><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="13.5">マッハ</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1838–1916</text></g>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M176.0,58.0 C176.0,73.0 260.0,73.0 260.0,88.0"><title>継承</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M344.0,58.0 C344.0,73.0 260.0,73.0 260.0,88.0"><title>批判</title></path>
+<path class="edge inherit" marker-end="url(#ya-inherit)" d="M260.0,132.0 C260.0,147.0 260.0,147.0 260.0,162.0"><title>継承</title></path>
+<a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html"><g class="node c2 "><rect x="100.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="176.0" y="34.0" text-anchor="middle" font-size="13.5">ヒューム</text><text class="yr" x="176.0" y="49.0" text-anchor="middle">1711–1776</text></g></a>
+<a href="%E3%82%AB%E3%83%B3%E3%83%88.html"><g class="node c1 "><rect x="268.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="344.0" y="34.0" text-anchor="middle" font-size="13.5">カント</text><text class="yr" x="344.0" y="49.0" text-anchor="middle">1724–1804</text></g></a>
+<a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html"><g class="node c3 "><rect x="184.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="182.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="260.0" y="197.0" text-anchor="middle">1891–1970</text></g></a>
+<g class="node c2 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">マッハ</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">1838–1916</text></g>
 </svg></div>
 
 <section><b>受け取った問い</b><p>物理学は原子や絶対空間といった、誰も観察していないものを語る。それは学問に必要なのか。</p></section>
 <section><b>出した答え</b><p>与えられているのは色・音・圧といった感覚の要素だけで、物も自我もその束につけた名前にすぎない。科学の仕事は、それらの結びつきを最も手間をかけずに記述すること。絶対空間と絶対時間は誰も観察しておらず、運動は物体どうしの関係としてしか意味を持たない。</p></section>
 <section><b>主著</b><p>『感覚の分析』『力学の発達』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜自我が知覚の束だという見方と、観察へ還元する構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜観察されないものを認めないという手つきを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜空間と時間を認識の形式として先に置く扱いを退け、感覚の関係から組み立て直した。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%92%E3%83%A5%E3%83%BC%E3%83%A0.html">ヒューム</a><span class="yr2">1711–1776</span>｜自我が知覚の束だという見方と、観察へ還元する構えを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜空間と時間を認識の形式として先に置く扱いを退け、感覚の関係から組み立て直した。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AB%E3%83%AB%E3%83%8A%E3%83%83%E3%83%97.html">カルナップ</a><span class="yr2">1891–1970</span>｜観察されないものを学問から外し、感覚の要素から組み立てる構えを受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『力学の発達』（1883）第2章（絶対空間への批判）、『感覚の分析』（1886）。アインシュタインは特殊相対論を作るときにこの批判を読んでおり、ウィーン学団は当初この人の名を冠していた。</p>
+<p class="ura"><b>裏づけ</b>『力学の発達』（1883）第2章（絶対空間への批判）、『感覚の分析』（1886）。アインシュタインは特殊相対論を作るときにこの批判を読んでおり、ウィーン学団の面々が公開の活動のために作った団体は、この人の名を冠してエルンスト・マッハ協会（1928）と呼ばれた。</p>
 
 <nav class="tonari"><a href="%E3%83%96%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8E.html"><span class="k">同じ時代のひとつ前</span>ブレンターノ</a><a href="%E3%83%91%E3%83%BC%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>パース</a><a href="%E3%83%9F%E3%83%AB.html"><span class="k">自然・経験のひとつ前</span>ミル</a><a href="%E3%83%91%E3%83%BC%E3%82%B9.html"><span class="k">自然・経験のつぎ</span>パース</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

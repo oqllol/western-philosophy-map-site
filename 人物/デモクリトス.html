@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -304,9 +323,9 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>著作は断片のみ</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%91%E3%83%AB%E3%83%A1%E3%83%8B%E3%83%87%E3%82%B9.html">パルメニデス</a><span class="yr2">前515–前450頃</span>｜有るものは生成も消滅もしないという結論を受け入れ、それを分けられない粒ひとつひとつに当てはめた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%91%E3%83%AB%E3%83%A1%E3%83%8B%E3%83%87%E3%82%B9.html">パルメニデス</a><span class="yr2">前515–前450頃</span>｜無いものは語れないという出発点を退け、空虚に場所を与えた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%B3%E3%83%9A%E3%83%89%E3%82%AF%E3%83%AC%E3%82%B9.html">エンペドクレス</a><span class="yr2">前494–前434頃</span>｜元は複数あって生成も消滅もしないという解き方を受け取り、四つを無数の粒に置き換えた。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜自然を観察して仕組みを説明する構えを引き継いだ。ただし空虚は認めなかった。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜原子と空虚の自然像を受け取り、それを恐れを消すための道具として使った。</li><li><span class="rel invert">転回</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜すべてが原子の必然だとすると人の選択が消えるため、原子がわずかに逸れる余地を加えた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ルクレティウス</a><span class="yr2">前99–前55頃</span>｜原子と空虚という世界の見方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html">ベーコン</a><span class="yr2">1561–1626</span>｜自然を粒子の配置から説明する古代の見方を評価し、目的による説明の上に置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜世界を物体と運動だけで説明する構えを、同時代に復活した原子論を通じて受け取った。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜自然を観察して仕組みを説明する構えを引き継いだ。ただし空虚は認めなかった。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜原子と空虚の自然像を受け取り、それを恐れを消すための道具として使った。</li><li><span class="rel invert">転回</span><a href="%E3%82%A8%E3%83%94%E3%82%AF%E3%83%AD%E3%82%B9.html">エピクロス</a><span class="yr2">前341–前270</span>｜すべてが原子の必然だとすると人の選択が消えるため、原子がわずかに逸れる余地を加えた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">ルクレティウス</a><span class="yr2">前99–前55頃</span>｜原子と空虚という世界の見方を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%99%E3%83%BC%E3%82%B3%E3%83%B3.html">ベーコン</a><span class="yr2">1561–1626</span>｜自然を粒子の配置から説明する古代の見方を評価し、目的による説明の上に置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9B%E3%83%83%E3%83%96%E3%82%BA.html">ホッブズ</a><span class="yr2">1588–1679</span>｜世界を物体と運動だけで説明する構えを受け取った。ただし原子と空虚は退け、空の場所のない充ちた世界として書いている。</li></ul>
 
-<p class="ura"><b>裏づけ</b>アリストテレス『生成消滅論』I巻8章、『形而上学』A巻4章。</p>
+<p class="ura"><b>裏づけ</b>アリストテレス『形而上学』A巻4章（原子の形・並び・位置）。『生成消滅論』I巻8章は、エレア派に応えて分けられない物体を立てた人物としてレウキッポスを名指ししている箇所。</p>
 
 <nav class="tonari"><a href="%E3%82%BD%E3%82%AF%E3%83%A9%E3%83%86%E3%82%B9.html"><span class="k">同じ時代のひとつ前</span>ソクラテス</a><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html"><span class="k">同じ時代のつぎ</span>プラトン</a><a href="%E3%83%97%E3%83%AD%E3%82%BF%E3%82%B4%E3%83%A9%E3%82%B9.html"><span class="k">自然・経験のひとつ前</span>プロタゴラス</a><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html"><span class="k">自然・経験のつぎ</span>アリストテレス</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -274,7 +293,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
  ／ <a href="../西洋哲学史マップ.html#系統-言語・論理">言語・論理</a></p>
 
 <h1>カルナップ</h1>
-<p class="meta">1891–1970／ドイツ／アメリカ</p>
+<p class="meta">1891–1970／ドイツ／ウィーン／プラハ／アメリカ</p>
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-分析哲学">分析哲学</a></p>
 <p class="lede">哲学の問題の多くは言葉の使い方の混乱だとして、意味を確かめる手続きを言語の側に定めようとした。</p>
 
@@ -289,8 +308,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,221.0 268.0,221.0 268.0,236.0"><title>批判</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,221.0 436.0,221.0 436.0,236.0"><title>批判</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,221.0 604.0,221.0 604.0,236.0"><title>批判</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,258.0 268.0,258.0 268.0,310.0"><title>批判</title></path>
-<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,258.0 436.0,258.0 436.0,310.0"><title>批判</title></path>
+<path class="edge criticize" marker-end="url(#ya-criticize)" d="M352.0,206.0 C352.0,258.0 352.0,258.0 352.0,310.0"><title>批判</title></path>
 <a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html"><g class="node c3 "><rect x="24.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="34.0" text-anchor="middle" font-size="13.5">ラッセル</text><text class="yr" x="100.0" y="49.0" text-anchor="middle">1872–1970</text></g></a>
 <a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html"><g class="node c3 "><rect x="192.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="34.0" text-anchor="middle" font-size="12">ウィトゲンシュタイン</text><text class="yr" x="268.0" y="49.0" text-anchor="middle">1889–1951</text></g></a>
 <a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html"><g class="node c5 "><rect x="360.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="34.0" text-anchor="middle" font-size="13.5">ハイデガー</text><text class="yr" x="436.0" y="49.0" text-anchor="middle">1889–1976</text></g></a>
@@ -298,10 +316,9 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a href="%E3%83%9E%E3%83%83%E3%83%8F.html"><g class="node c2 "><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">マッハ</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1838–1916</text></g></a>
 <a href="%E3%83%9D%E3%83%91%E3%83%BC.html"><g class="node c3 "><rect x="24.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="100.0" y="256.0" text-anchor="middle" font-size="13.5">ポパー</text><text class="yr" x="100.0" y="271.0" text-anchor="middle">1902–1994</text></g></a>
 <a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html"><g class="node c3 "><rect x="192.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="256.0" text-anchor="middle" font-size="13.5">クワイン</text><text class="yr" x="268.0" y="271.0" text-anchor="middle">1908–2000</text></g></a>
-<a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html"><g class="node c3 "><rect x="360.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="256.0" text-anchor="middle" font-size="13.5">オースティン</text><text class="yr" x="436.0" y="271.0" text-anchor="middle">1911–1960</text></g></a>
-<a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html"><g class="node c3 "><rect x="528.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="256.0" text-anchor="middle" font-size="13.5">セラーズ</text><text class="yr" x="604.0" y="271.0" text-anchor="middle">1912–1989</text></g></a>
-<a href="%E3%82%AF%E3%83%BC%E3%83%B3.html"><g class="node c3 "><rect x="192.0" y="310.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="330.0" text-anchor="middle" font-size="13.5">クーン</text><text class="yr" x="268.0" y="345.0" text-anchor="middle">1922–1996</text></g></a>
-<a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html"><g class="node c3 "><rect x="360.0" y="310.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="330.0" text-anchor="middle" font-size="13.5">パトナム</text><text class="yr" x="436.0" y="345.0" text-anchor="middle">1926–2016</text></g></a>
+<a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html"><g class="node c3 "><rect x="360.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="256.0" text-anchor="middle" font-size="13.5">セラーズ</text><text class="yr" x="436.0" y="271.0" text-anchor="middle">1912–1989</text></g></a>
+<a href="%E3%82%AF%E3%83%BC%E3%83%B3.html"><g class="node c3 "><rect x="528.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="256.0" text-anchor="middle" font-size="13.5">クーン</text><text class="yr" x="604.0" y="271.0" text-anchor="middle">1922–1996</text></g></a>
+<a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html"><g class="node c3 "><rect x="276.0" y="310.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="330.0" text-anchor="middle" font-size="13.5">パトナム</text><text class="yr" x="352.0" y="345.0" text-anchor="middle">1926–2016</text></g></a>
 <g class="node c3 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">カルナップ</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1891–1970</text></g>
 </svg></div>
 
@@ -310,7 +327,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>主著</b><p>『世界の論理的構築』『言語の論理的構文論』</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html">ラッセル</a><span class="yr2">1872–1970</span>｜世界についての文を論理の形へ組み直す方法を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html">ウィトゲンシュタイン</a><span class="yr2">1889–1951</span>｜前期の、語りうるものと語りえないものを分ける線を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜「無が無化する」という文を、意味を持たない語の連なりの例として名指しで退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜経験によらずに成り立つ総合判断という枠を退け、経験で確かめられない文を無意味とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%83%E3%83%8F.html">マッハ</a><span class="yr2">1838–1916</span>｜観察されないものを学問から外し、感覚の要素から組み立てる構えを受け取った。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%9D%E3%83%91%E3%83%BC.html">ポパー</a><span class="yr2">1902–1994</span>｜経験で確かめられることを意味の条件とする立場を退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html">クワイン</a><span class="yr2">1908–2000</span>｜意味だけで決まる文と経験で確かめる文を分ける枠組みを、師の立場ごと退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html">オースティン</a><span class="yr2">1911–1960</span>｜文の意味を、経験で確かめる手続きに結びつける枠を退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html">セラーズ</a><span class="yr2">1912–1989</span>｜経験の要素から世界についての文を組み立て直せるという構えを退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AF%E3%83%BC%E3%83%B3.html">クーン</a><span class="yr2">1922–1996</span>｜科学の言葉を経験の要素へ組み直せるという構えを退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html">パトナム</a><span class="yr2">1926–2016</span>｜意味を頭のなかの規則に閉じる枠を退けた。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%9D%E3%83%91%E3%83%BC.html">ポパー</a><span class="yr2">1902–1994</span>｜経験で確かめられることを意味の条件とする立場を退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html">クワイン</a><span class="yr2">1908–2000</span>｜意味だけで決まる文と経験で確かめる文を分ける枠組みを、師の立場ごと退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html">セラーズ</a><span class="yr2">1912–1989</span>｜経験の要素から世界についての文を組み立て直せるという構えを退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AF%E3%83%BC%E3%83%B3.html">クーン</a><span class="yr2">1922–1996</span>｜科学の言葉を経験の要素へ組み直せるという構えを退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%91%E3%83%88%E3%83%8A%E3%83%A0.html">パトナム</a><span class="yr2">1926–2016</span>｜意味を頭のなかの規則に閉じる枠を退けた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>「言語の論理的分析による形而上学の克服」（1932）、『世界の論理的構築』（1928）、「経験主義・意味論・存在論」（1950）。</p>
 

@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -292,7 +311,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 
 <section><b>受け取った問い</b><p>人に決まった本質がなく自分で作るのなら、なぜ女はつねに「男から見られたもの」として定義されてきたのか。</p></section>
 <section><b>出した答え</b><p>男は自分を基準に置き、女をそこから外れたものとして定義してきた。女が置かれてきた他者の位置は、生まれつきの性質ではなく、育て方・法・経済・神話が積み上げて作ったもの。自由は誰にでもあると言うだけでは足りず、その自由が実際に使える条件があるかどうかを見なければならない。</p></section>
-<section><b>主著</b><p>『第二の性』『両義性の道徳について』</p></section>
+<section><b>主著</b><p>『第二の性』『人間について』（両義性のモラル）</p></section>
 
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜人に決まった本質はなく、自分で作るほかないという立場を受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜自由はどんな状況でも失われないという議論を受け取ったまま、その自由が現に使えるかどうかを見る側へ向きを変えた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%98%E3%83%BC%E3%82%B2%E3%83%AB.html">ヘーゲル</a><span class="yr2">1770–1831</span>｜自己と他者が互いを認め合う関係の分析を受け取り、男女の関係に当てはめた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜経済の条件が生き方を縛るという見立てを引き継いだ。</li></ul>
 

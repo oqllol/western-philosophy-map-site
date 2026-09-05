@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -293,7 +312,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html"><g class="node c5 "><rect x="528.0" y="14.0" width="152" height="44" rx="7"/><text class="nm" x="604.0" y="34.0" text-anchor="middle" font-size="13.5">ハイデガー</text><text class="yr" x="604.0" y="49.0" text-anchor="middle">1889–1976</text></g></a>
 <a href="%E3%83%AC%E3%83%B4%E3%82%A3%EF%BC%9D%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9.html"><g class="node c4 "><rect x="192.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="268.0" y="108.0" text-anchor="middle" font-size="12">レヴィ＝ストロース</text><text class="yr" x="268.0" y="123.0" text-anchor="middle">1908–2009</text></g></a>
 <a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html"><g class="node c4 "><rect x="360.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="436.0" y="108.0" text-anchor="middle" font-size="13.5">アルチュセール</text><text class="yr" x="436.0" y="123.0" text-anchor="middle">1918–1990</text></g></a>
-<a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html"><g class="node c4 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">ハーバーマス</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1929–</text></g></a>
+<a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html"><g class="node c4 "><rect x="276.0" y="236.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="256.0" text-anchor="middle" font-size="13.5">ハーバーマス</text><text class="yr" x="352.0" y="271.0" text-anchor="middle">1929–2026</text></g></a>
 <g class="node c4 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">フーコー</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1926–1984</text></g>
 </svg></div>
 
@@ -301,8 +320,8 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>狂気はいつの時代も病だったのではなく、ある時期に閉じ込めと医学の対象になった。近代の権力は、人を測り、分類し、正常とされる側へ近づける力として働く。監獄・学校・病院・工場に共通するのは、いつ見られているか分からない状態を作り、人が自分で自分を見張るようにさせる仕組み。</p></section>
 <section><b>主著</b><p>『狂気の歴史』『言葉と物』『監獄の誕生』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜価値や区分の出どころを歴史へ遡って調べる方法を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜知や制度が社会の関係に条件づけられるという見立てを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜歴史を作る主体としての人間を中心に置く構図を退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜西洋の思考の歴史を、前提の連なりとして読む構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AC%E3%83%B4%E3%82%A3%EF%BC%9D%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9.html">レヴィ＝ストロース</a><span class="yr2">1908–2009</span>｜意識されない構造の側から論じる進め方を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html">アルチュセール</a><span class="yr2">1918–1990</span>｜構造の側から思想史を読む進め方を、師から受け取った。</li></ul>
-<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–</span>｜権力の分析が、批判の基準そのものを掘り崩してしまうと論じた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8B%E3%83%BC%E3%83%81%E3%82%A7.html">ニーチェ</a><span class="yr2">1844–1900</span>｜価値や区分の出どころを歴史へ遡って調べる方法を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%AB%E3%82%AF%E3%82%B9.html">マルクス</a><span class="yr2">1818–1883</span>｜知や制度が社会の関係に条件づけられるという見立てを引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜歴史を作る主体としての人間を中心に置く構図を退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜西洋の思考の歴史を、前提の連なりとして読む構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AC%E3%83%B4%E3%82%A3%EF%BC%9D%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9.html">レヴィ＝ストロース</a><span class="yr2">1908–2009</span>｜意識されない構造の側から論じる進め方を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html">アルチュセール</a><span class="yr2">1918–1990</span>｜高等師範学校で指導を受け、のちにその著作から、構造の側で思想史を読む進め方を受け取った。マルクス読解が形になるのは1965年で、在学より後になる。</li></ul>
+<p><b>渡した</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9E%E3%82%B9.html">ハーバーマス</a><span class="yr2">1929–2026</span>｜権力の分析が、批判の基準そのものを掘り崩してしまうと論じた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『狂気の歴史』（1961）、『監獄の誕生』（1975）第3部第3章（一望監視装置）、『知の考古学』（1969）。</p>
 

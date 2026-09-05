@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -282,7 +301,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M100.0,58.0 C100.0,73.0 268.0,73.0 268.0,88.0"><title>批判</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,58.0 C268.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
-<path class="edge inherit" marker-end="url(#ya-inherit)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>継承</title></path>
+<path class="edge rediscover" marker-end="url(#ya-rediscover)" d="M436.0,58.0 C436.0,73.0 268.0,73.0 268.0,88.0"><title>再発見</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M268.0,132.0 C268.0,147.0 184.0,147.0 184.0,162.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M261.0,132.0 C261.0,147.0 345.0,147.0 345.0,162.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M275.0,132.0 C275.0,147.0 359.0,147.0 359.0,162.0"><title>批判</title></path>
@@ -298,7 +317,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <section><b>出した答え</b><p>宗教とは、限りないものに全面的に依存しているという感情であり、教義はその後から来る言葉づかいにすぎない。読むことについては、誤解は例外ではなく普通に起きるので、規則が要る。語の使い方から入る道と、書き手の心の動きをたどる道を行き来し、部分と全体のあいだを何度も往復する。著者が自分を理解していた以上に著者を理解することもできる。</p></section>
 <section><b>主著</b><p>『宗教論』『キリスト教信仰』『解釈学』</p></section>
 
-<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜宗教を道徳の枠のなかに収める扱いを退け、感情の側に芯を置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B9%E3%83%94%E3%83%8E%E3%82%B6.html">スピノザ</a><span class="yr2">1632–1677</span>｜すべてをひとつのものから捉える見方を受け取り、限りないものへの依存として読み直した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜対話篇の翻訳に長く取り組み、読むことの技術をそこで鍛えた。</li></ul>
+<p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%AB%E3%83%B3%E3%83%88.html">カント</a><span class="yr2">1724–1804</span>｜宗教を道徳の枠のなかに収める扱いを退け、感情の側に芯を置いた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B9%E3%83%94%E3%83%8E%E3%82%B6.html">スピノザ</a><span class="yr2">1632–1677</span>｜すべてをひとつのものから捉える見方を受け取り、限りないものへの依存として読み直した。</li><li><span class="rel rediscover">再発見</span><a href="%E3%83%97%E3%83%A9%E3%83%88%E3%83%B3.html">プラトン</a><span class="yr2">前427–前347</span>｜対話篇の翻訳に長く取り組んでドイツ語圏に渡し、読むことの技術をそこで鍛えた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%A3%E3%83%AB%E3%82%BF%E3%82%A4.html">ディルタイ</a><span class="yr2">1833–1911</span>｜読むことを規則のある技術として立てる構えを受け取り、その伝記を書いた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AC%E3%83%80%E3%83%9E%E3%83%BC.html">ガダマー</a><span class="yr2">1900–2002</span>｜部分と全体のあいだを往復して読むという運びを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AC%E3%83%80%E3%83%9E%E3%83%BC.html">ガダマー</a><span class="yr2">1900–2002</span>｜著者の心を再現することを目標に置く枠を退けた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『宗教論——宗教を侮蔑する教養人への講話』第2講、『キリスト教信仰』§3-4（絶対依存の感情）、『解釈学』講義録。プラトン全集のドイツ語訳はいまも読まれている。</p>

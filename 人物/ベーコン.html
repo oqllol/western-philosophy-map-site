@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -300,7 +319,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜三段論法を中心に据えた学問の方法を、新しい知識を生まないものとして退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a><span class="yr2">前460–前370頃</span>｜自然を粒子の配置から説明する古代の見方を評価し、目的による説明の上に置いた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜観察から出発して知識を組み立てる方法を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%B4%E3%82%A3%E3%83%BC%E3%82%B3.html">ヴィーコ</a><span class="yr2">1668–1744</span>｜学問を根本から作り直すという構えと、事例を集めて上る手順を受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B3%E3%83%B3%E3%83%88.html">コント</a><span class="yr2">1798–1857</span>｜観察から出発して学問を作り直す構えを受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『ノヴム・オルガヌム』I巻39-68（四つのイドラ）・II巻11-20（三つの表）。「知は力なり」はI巻3を要約した言い方として広まったもの。</p>
+<p class="ura"><b>裏づけ</b>『ノヴム・オルガヌム』I巻39-68（四つのイドラ）・II巻11-20（三つの表）。「知そのものが力である」の一文は初期の『聖なる瞑想』（1597）にあり、『ノヴム・オルガヌム』I巻3の「人間の知と力は同一に帰する」が同じ趣旨を述べている。</p>
 
 <nav class="tonari"><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html"><span class="k">同じ時代のひとつ前</span>モンテーニュ</a><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>グロティウス</a><a href="%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">自然・経験のひとつ前</span>ルクレティウス</a><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html"><span class="k">自然・経験のつぎ</span>ガッサンディ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 

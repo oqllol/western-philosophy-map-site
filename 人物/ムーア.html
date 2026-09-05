@@ -55,6 +55,25 @@ header .sub{color:var(--muted);margin:0 0 10px;font-size:13px;line-height:1.6}
 .lg.invert .sw{border-top-style:dashed} .lg.rediscover .sw{border-top-style:dashed}
 .lg.oppose .sw{border-top-style:dotted}
 
+.findwrap{position:relative;margin:0 0 12px}
+.findwrap .k{display:block;font-size:11.5px;color:var(--muted);margin:0 0 5px;letter-spacing:.04em}
+#find{width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:10px 13px;line-height:1.5;-webkit-appearance:none}
+#find:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px var(--rule)}
+#find::placeholder{color:var(--muted)}
+.find-list{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;
+  max-height:46vh;overflow-y:auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:8px;box-shadow:0 8px 24px #0000001f}
+.find-list button{display:block;width:100%;text-align:left;background:none;border:0;
+  border-top:1px solid var(--rule);font-family:inherit;font-size:14px;color:var(--ink);
+  padding:9px 13px;cursor:pointer;line-height:1.4}
+.find-list button:first-child{border-top:0}
+.find-list button:hover,.find-list button.here{background:var(--ink);color:var(--bg)}
+.find-list button i{font-style:normal;font-size:11.5px;color:var(--muted);margin-left:8px}
+.find-list button:hover i,.find-list button.here i{color:var(--bg);opacity:.75}
+.find-list .none{padding:10px 13px;font-size:12.5px;color:var(--muted)}
+
 .michiwrap{margin:0 0 10px}
 .michiwrap{background:var(--surface-2);border:1px solid var(--rule);
   border-radius:10px;padding:11px 14px 12px}
@@ -306,7 +325,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel criticize">批判</span><a href="%E3%83%99%E3%83%B3%E3%82%B5%E3%83%A0.html">ベンサム</a><span class="yr2">1748–1832</span>｜善を快の量として定義する試みを、言い換えのできないものを言い換えたものとして退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%9F%E3%83%AB.html">ミル</a><span class="yr2">1806–1873</span>｜望ましいものを、現に望まれているものから導く運びを同じ理由で退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA.html">バークリ</a><span class="yr2">1685–1753</span>｜存在するとは知覚されることだという主張を、観念論の根として名指しで退けた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AA%E3%83%BC%E3%83%89.html">リード</a><span class="yr2">1710–1796</span>｜常識が前提にしていることではなく、疑いに行き着いた道筋のほうを疑う構えを受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%83%96%E3%83%A9%E3%83%83%E3%83%89%E3%83%AA%E3%83%BC.html">ブラッドリー</a><span class="yr2">1846–1924</span>｜関係を実在しないものとする体系を、観念論の代表として退けた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html">ラッセル</a><span class="yr2">1872–1970</span>｜観念論から離れるきっかけを、1歳下の友人から受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3.html">オースティン</a><span class="yr2">1911–1960</span>｜常識と日常の言い方から始める構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%83%BC%E3%83%89%E3%83%83%E3%82%AF.html">マードック</a><span class="yr2">1919–1999</span>｜善は他の何かに言い換えられないという線を受け取った。</li></ul>
 
-<p class="ura"><b>裏づけ</b>『倫理学原理』第1章（開かれた問いの議論）、「観念論の論駁」（1903）、「外的世界の証明」（1939）。ラッセルは自伝で、観念論から離れる先導をこの人がしたと書いている。</p>
+<p class="ura"><b>裏づけ</b>『倫理学原理』第1章（開かれた問いの議論）・第3章§40（ミル批判）、「観念論の論駁」（1903）、「外的世界の証明」（1939）。ラッセルは『私の哲学の発展』（1959）で、観念論から離れる先導をこの人がしたと書いている。</p>
 
 <nav class="tonari"><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html"><span class="k">同じ時代のひとつ前</span>ラッセル</a><a href="%E3%83%A4%E3%82%B9%E3%83%91%E3%83%BC%E3%82%B9.html"><span class="k">同じ時代のつぎ</span>ヤスパース</a><a href="%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB.html"><span class="k">言語・論理のひとつ前</span>ラッセル</a><a href="%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.html"><span class="k">言語・論理のつぎ</span>ウィトゲンシュタイン</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 
