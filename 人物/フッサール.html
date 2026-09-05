@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#EDEEF0; --surface:#FAFAFB; --surface-2:#F2F3F5;
-  --ink:#191B1E; --ink-2:#41464C; --muted:#697079;
+  --ink:#191B1E; --ink-2:#41464C; --muted:#5E656E;
   --rule:#D5D9DE; --rule-strong:#AFB6BF;
   --c1:#3A5C8C; --c2:#4E7A4E; --c3:#2C7370; --c4:#8A7020; --c5:#6B5788; --c6:#7A5C3E;
   --inherit:#3A5C8C; --criticize:#B03A2E; --invert:#6B5788;
@@ -180,13 +180,27 @@ body[data-dan="2"] .card[data-d="3"]{display:none}
   padding:2px 10px;margin:0 5px 0 0;text-decoration:none;color:var(--ink-2);
   background:var(--bg);white-space:nowrap}
 #michiNote .men a:hover{background:var(--surface-2);color:var(--ink)}
+#michiNote .modosu{float:right;margin:-2px 0 0 12px;font-family:inherit;
+  font-size:11.5px;font-weight:600;color:var(--ink-2);background:var(--bg);
+  border:1px solid var(--rule-strong);border-radius:20px;padding:4px 12px;cursor:pointer}
+#michiNote .modosu:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 #michiNote .tobu{margin-left:10px;font-size:12px;font-weight:600;white-space:nowrap;
   text-decoration-color:var(--rule-strong)}
-.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:0 0 6px}
+.zubox{position:relative}
+/* 図を見ているあいだも、いま何人かと拡大が付いてくる */
+.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;
+  position:sticky;top:0;z-index:15;background:var(--bg);padding:7px 0 6px}
+.dannow{margin-right:auto;font-size:12px;color:var(--ink-2);letter-spacing:.02em}
+.dannow b{display:inline;font-size:14px;font-weight:700;color:var(--ink);
+  letter-spacing:0;margin:0 1px}
+.dannow i{font-style:normal;font-size:11px;font-weight:700;color:var(--bg);
+  background:var(--ink);border-radius:20px;padding:2px 8px;margin-left:8px;
+  opacity:0;transition:opacity .25s}
+.dannow i.on{opacity:1}
 .zoombar .k{font-size:11.5px;color:var(--muted);letter-spacing:.08em;margin-right:4px}
 #zoomNow{font-size:12px;color:var(--ink-2);min-width:3.6em;text-align:center;
   font-variant-numeric:tabular-nums}
-.zb{width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
+.zb{flex:none;width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
   background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:15px;line-height:1;
   font-family:inherit;padding:0}
 .zb.w{width:auto;padding:0 11px;font-size:12px;font-weight:600}
@@ -265,6 +279,12 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .lead{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
   padding:18px 22px;margin:14px 0 18px;color:var(--ink-2);font-size:14.5px}
 .lead p{margin:0 0 12px} .lead p:last-child{margin:0}
+/* 日本語で楽に読める1行は35〜45字。読み物の箱は、図の幅ではなく本文の幅に合わせる */
+.lead{max-width:700px}
+.kei-box{max-width:660px}
+.michi-box{max-width:900px}          /* 中の系譜図がいちばん広いもので824px */
+.michi-box p,footer{max-width:42em}
+.michi-box .men{max-width:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
 .card{background:var(--surface);border:1px solid var(--rule);
   border-left:4px solid currentColor;border-radius:10px;padding:13px 17px;
@@ -276,7 +296,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
   font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
 .card .meta{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:9px;
   font-family:inherit}
-.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.7}
+.card p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.75}
 
 .kazu{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:12px;
   letter-spacing:0;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;vertical-align:3px}
@@ -312,7 +332,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .kei-box li{margin:0 0 7px;position:relative}
 .kei-box li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
 a.mi{text-decoration:none;display:inline-block}
-.kzubox{margin:12px -6px 0;padding:6px;background:var(--surface-2);border-radius:9px;
+.kzubox{width:fit-content;max-width:100%;margin:12px auto 0;padding:6px;background:var(--surface-2);border-radius:9px;
   overflow-x:auto;max-height:640px;overflow-y:auto;overscroll-behavior:contain}
 svg.kzu{display:block;margin:0 auto}
 .keizu{font-size:12.5px;color:var(--muted);margin:-14px 0 20px}
@@ -341,8 +361,8 @@ h2.kei{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px;
 .hito section p{margin:0;color:var(--ink-2)}
 .minibox{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
   padding:8px;margin:0 0 26px;overflow-x:auto}
-svg.mini{display:block;margin:0 auto;width:100%;max-width:820px;height:auto}
-.ura{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);
+svg.mini{display:block;margin:0 auto;max-width:100%;height:auto}
+.ura{font-size:13.5px;color:var(--ink-2);border-top:1px solid var(--rule);
   padding-top:10px;margin-top:26px}
 nav.tonari{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:10px;margin-top:34px;padding-top:20px;border-top:1px solid var(--rule)}
@@ -362,6 +382,15 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .crumbrow .crumb{padding-top:0}
   .findwrap.mini{width:100%}
   .findwrap.mini #find,.findwrap.mini #find:focus{width:100%;flex:1}
+  svg.mini{max-width:none}   /* 縮めると名前が読めなくなるので、横へ流す */
+  .minibox{margin-bottom:20px}
+  .mi{padding:9px 13px}          /* 指で押せる大きさに */
+  .lg{padding:8px 12px 8px 8px}
+  .zoombar{gap:4px} .zoombar .k{display:none}   /* 幅が足りないので見出しを省く */
+  .zb{width:38px;height:36px} .zb.w{width:auto;padding:0 9px;font-size:11.5px}
+  #zoomNow{min-width:3.1em;font-size:11.5px}
+  .dannow{font-size:11px} .dannow i{margin-left:5px;padding:2px 6px}
+  .hitobito summary{padding:9px 15px}
   .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
@@ -388,7 +417,11 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-現象学">現象学</a></p>
 <p class="lede">世界が在るかどうかの判断をいったん止め、意識に現れるとおりに記述する方法を立てた。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 704 320" xmlns="http://www.w3.org/2000/svg">
+<section><b>受け取った問い</b><p>心理学が思考の法則を心の働きへ還元しようとしている。論理の正しさは、人の心の癖に左右されるのか。</p></section>
+<section><b>出した答え</b><p>論理を心の働きへ還元すると、正しさそのものが説明できなくなる。世界が実在するかどうかの判断を括弧に入れ、意識に現れる限りでの対象を丁寧に記述する。意識はつねに何かについての意識であり、この向かう働き自体を取り出せる。晩年には、数式で書ける自然像の下に埋もれてしまった日常の生活世界を掘り返した。</p></section>
+<section><b>主著</b><p>『論理学研究』『イデーンI』『ヨーロッパ諸学の危機』</p></section>
+
+<div class="minibox"><svg class="mini" viewBox="0 0 704 320" width="704" height="320" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M184.0,58.0 C184.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M352.0,58.0 C352.0,73.0 352.0,73.0 352.0,88.0"><title>継承</title></path>
@@ -412,19 +445,16 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <g class="node c1 self"><rect x="276.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="108.0" text-anchor="middle" font-size="13.5">フッサール</text><text class="yr" x="352.0" y="123.0" text-anchor="middle">1859–1938</text></g>
 </svg></div>
 
-<section><b>受け取った問い</b><p>心理学が思考の法則を心の働きへ還元しようとしている。論理の正しさは、人の心の癖に左右されるのか。</p></section>
-<section><b>出した答え</b><p>論理を心の働きへ還元すると、正しさそのものが説明できなくなる。世界が実在するかどうかの判断を括弧に入れ、意識に現れる限りでの対象を丁寧に記述する。意識はつねに何かについての意識であり、この向かう働き自体を取り出せる。晩年には、数式で書ける自然像の下に埋もれてしまった日常の生活世界を掘り返した。</p></section>
-<section><b>主著</b><p>『論理学研究』『イデーンI』『ヨーロッパ諸学の危機』</p></section>
-
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%95%E3%83%AC%E3%83%BC%E3%82%B2.html">フレーゲ</a><span class="yr2">1848–1925</span>｜論理を心の働きへ還元する立場への批判を受け止め、自分の初期の立場を改めた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%82%AB%E3%83%AB%E3%83%88.html">デカルト</a><span class="yr2">1596–1650</span>｜いったんすべてを保留し、意識の側から立て直す道筋を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%96%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8E.html">ブレンターノ</a><span class="yr2">1838–1917</span>｜心の働きがつねに何かへ向かうという規定を、講義で直接受け取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜現れるとおりに記述する方法を、助手として直接受け取った。</li><li><span class="rel invert">転回</span><a href="%E3%83%8F%E3%82%A4%E3%83%87%E3%82%AC%E3%83%BC.html">ハイデガー</a><span class="yr2">1889–1976</span>｜意識の分析から出発する枠組みを、世界のなかで気遣いながら暮らす在り方の分析へ振り向けた。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B5%E3%83%AB%E3%83%88%E3%83%AB.html">サルトル</a><span class="yr2">1905–1980</span>｜意識はつねに何かへ向かうという規定を引き継いだ。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AC%E3%83%B4%E3%82%A3%E3%83%8A%E3%82%B9.html">レヴィナス</a><span class="yr2">1906–1995</span>｜現れるとおりに記述する方法を受け取り、フランスへ紹介した。</li><li><span class="rel inherit">継承</span><a href="%E3%83%A1%E3%83%AB%E3%83%AD%EF%BC%9D%E3%83%9D%E3%83%B3%E3%83%86%E3%82%A3.html">メルロ＝ポンティ</a><span class="yr2">1908–1961</span>｜現れるとおりに記述する方法と、晩年の生活世界の問いを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AA%E3%82%AF%E3%83%BC%E3%83%AB.html">リクール</a><span class="yr2">1913–2005</span>｜現れるとおりに記述する方法を受け取り、フランス語に訳した。</li><li><span class="rel criticize">批判</span><a href="%E3%83%87%E3%83%AA%E3%83%80.html">デリダ</a><span class="yr2">1930–2004</span>｜意識にいま与えられているものを出発点にする構えを、その内側から揺らせて退けた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『論理学研究』第1巻（心理主義批判）、『イデーンI』§31-32（エポケー）、『デカルト的省察』、『危機』書。フレーゲの書評（1894）が転換にどれだけ効いたかは研究者の間で議論が続いている。</p>
 
-<nav class="tonari"><a href="%E3%83%99%E3%83%AB%E3%82%AF%E3%82%BD%E3%83%B3.html"><span class="k">同じ時代のつぎ</span>ベルクソン</a><a href="%E3%83%96%E3%83%A9%E3%83%83%E3%83%89%E3%83%AA%E3%83%BC.html"><span class="k">合理・観念のひとつ前</span>ブラッドリー</a><a href="%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%98%E3%83%83%E3%83%89.html"><span class="k">合理・観念のつぎ</span>ホワイトヘッド</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
+<nav class="tonari"><a href="%E3%83%99%E3%83%AB%E3%82%AF%E3%82%BD%E3%83%B3.html"><span class="k">同じ時代・次の人</span>ベルクソン</a><a href="%E3%83%96%E3%83%A9%E3%83%83%E3%83%89%E3%83%AA%E3%83%BC.html"><span class="k">合理・観念・前の人</span>ブラッドリー</a><a href="%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%98%E3%83%83%E3%83%89.html"><span class="k">合理・観念・次の人</span>ホワイトヘッド</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 
 <footer>
-  正本は <code>data/</code> の Markdown。このページは <code>scripts/ビューを作る.py</code> が作った生成物。
+  この人の記述の根拠は、上の「裏づけ」に書名と巻章まで書いてある。
+  <a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>の一部。最終更新 2026年9月5日。
 </footer>
 </div>
 <script>

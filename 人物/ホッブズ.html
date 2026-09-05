@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#EDEEF0; --surface:#FAFAFB; --surface-2:#F2F3F5;
-  --ink:#191B1E; --ink-2:#41464C; --muted:#697079;
+  --ink:#191B1E; --ink-2:#41464C; --muted:#5E656E;
   --rule:#D5D9DE; --rule-strong:#AFB6BF;
   --c1:#3A5C8C; --c2:#4E7A4E; --c3:#2C7370; --c4:#8A7020; --c5:#6B5788; --c6:#7A5C3E;
   --inherit:#3A5C8C; --criticize:#B03A2E; --invert:#6B5788;
@@ -180,13 +180,27 @@ body[data-dan="2"] .card[data-d="3"]{display:none}
   padding:2px 10px;margin:0 5px 0 0;text-decoration:none;color:var(--ink-2);
   background:var(--bg);white-space:nowrap}
 #michiNote .men a:hover{background:var(--surface-2);color:var(--ink)}
+#michiNote .modosu{float:right;margin:-2px 0 0 12px;font-family:inherit;
+  font-size:11.5px;font-weight:600;color:var(--ink-2);background:var(--bg);
+  border:1px solid var(--rule-strong);border-radius:20px;padding:4px 12px;cursor:pointer}
+#michiNote .modosu:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 #michiNote .tobu{margin-left:10px;font-size:12px;font-weight:600;white-space:nowrap;
   text-decoration-color:var(--rule-strong)}
-.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:0 0 6px}
+.zubox{position:relative}
+/* 図を見ているあいだも、いま何人かと拡大が付いてくる */
+.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;
+  position:sticky;top:0;z-index:15;background:var(--bg);padding:7px 0 6px}
+.dannow{margin-right:auto;font-size:12px;color:var(--ink-2);letter-spacing:.02em}
+.dannow b{display:inline;font-size:14px;font-weight:700;color:var(--ink);
+  letter-spacing:0;margin:0 1px}
+.dannow i{font-style:normal;font-size:11px;font-weight:700;color:var(--bg);
+  background:var(--ink);border-radius:20px;padding:2px 8px;margin-left:8px;
+  opacity:0;transition:opacity .25s}
+.dannow i.on{opacity:1}
 .zoombar .k{font-size:11.5px;color:var(--muted);letter-spacing:.08em;margin-right:4px}
 #zoomNow{font-size:12px;color:var(--ink-2);min-width:3.6em;text-align:center;
   font-variant-numeric:tabular-nums}
-.zb{width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
+.zb{flex:none;width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
   background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:15px;line-height:1;
   font-family:inherit;padding:0}
 .zb.w{width:auto;padding:0 11px;font-size:12px;font-weight:600}
@@ -265,6 +279,12 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .lead{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
   padding:18px 22px;margin:14px 0 18px;color:var(--ink-2);font-size:14.5px}
 .lead p{margin:0 0 12px} .lead p:last-child{margin:0}
+/* 日本語で楽に読める1行は35〜45字。読み物の箱は、図の幅ではなく本文の幅に合わせる */
+.lead{max-width:700px}
+.kei-box{max-width:660px}
+.michi-box{max-width:900px}          /* 中の系譜図がいちばん広いもので824px */
+.michi-box p,footer{max-width:42em}
+.michi-box .men{max-width:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
 .card{background:var(--surface);border:1px solid var(--rule);
   border-left:4px solid currentColor;border-radius:10px;padding:13px 17px;
@@ -276,7 +296,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
   font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
 .card .meta{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:9px;
   font-family:inherit}
-.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.7}
+.card p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.75}
 
 .kazu{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:12px;
   letter-spacing:0;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;vertical-align:3px}
@@ -312,7 +332,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .kei-box li{margin:0 0 7px;position:relative}
 .kei-box li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
 a.mi{text-decoration:none;display:inline-block}
-.kzubox{margin:12px -6px 0;padding:6px;background:var(--surface-2);border-radius:9px;
+.kzubox{width:fit-content;max-width:100%;margin:12px auto 0;padding:6px;background:var(--surface-2);border-radius:9px;
   overflow-x:auto;max-height:640px;overflow-y:auto;overscroll-behavior:contain}
 svg.kzu{display:block;margin:0 auto}
 .keizu{font-size:12.5px;color:var(--muted);margin:-14px 0 20px}
@@ -341,8 +361,8 @@ h2.kei{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px;
 .hito section p{margin:0;color:var(--ink-2)}
 .minibox{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
   padding:8px;margin:0 0 26px;overflow-x:auto}
-svg.mini{display:block;margin:0 auto;width:100%;max-width:820px;height:auto}
-.ura{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);
+svg.mini{display:block;margin:0 auto;max-width:100%;height:auto}
+.ura{font-size:13.5px;color:var(--ink-2);border-top:1px solid var(--rule);
   padding-top:10px;margin-top:26px}
 nav.tonari{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:10px;margin-top:34px;padding-top:20px;border-top:1px solid var(--rule)}
@@ -362,6 +382,15 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .crumbrow .crumb{padding-top:0}
   .findwrap.mini{width:100%}
   .findwrap.mini #find,.findwrap.mini #find:focus{width:100%;flex:1}
+  svg.mini{max-width:none}   /* 縮めると名前が読めなくなるので、横へ流す */
+  .minibox{margin-bottom:20px}
+  .mi{padding:9px 13px}          /* 指で押せる大きさに */
+  .lg{padding:8px 12px 8px 8px}
+  .zoombar{gap:4px} .zoombar .k{display:none}   /* 幅が足りないので見出しを省く */
+  .zb{width:38px;height:36px} .zb.w{width:auto;padding:0 9px;font-size:11.5px}
+  #zoomNow{min-width:3.1em;font-size:11.5px}
+  .dannow{font-size:11px} .dannow i{margin-left:5px;padding:2px 6px}
+  .hitobito summary{padding:9px 15px}
   .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
@@ -388,7 +417,11 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-原子論と唯物論">原子論と唯物論</a><a href="../西洋哲学史マップ.html#系譜-社会契約">社会契約</a></p>
 <p class="lede">人も国家も物体の運動として説明し、国家の権威を神ではなく人々の契約に置いた。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 704 394" xmlns="http://www.w3.org/2000/svg">
+<section><b>受け取った問い</b><p>内戦で王が処刑され、教会も王権も秩序の後ろ盾にならなくなった。服従する理由をどこに求めるか。</p></section>
+<section><b>出した答え</b><p>世界にあるのは動いている物体だけで、感覚も欲望も物体の運動。政府がない状態では、各人が自分の生命を守る権利を全面的に持ち、そのために万人が万人に対して争う。人々は自分の権利を一人の主権者へ渡す契約を結び、その約束の集積が国家を成り立たせる。権威の源は神の任命ではなく、生き延びたい者どうしの取り決め。</p></section>
+<section><b>主著</b><p>『リヴァイアサン』『物体論』</p></section>
+
+<div class="minibox"><svg class="mini" viewBox="0 0 704 394" width="704" height="394" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M100.0,58.0 C100.0,110.0 352.0,110.0 352.0,162.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M268.0,58.0 C268.0,110.0 352.0,110.0 352.0,162.0"><title>批判</title></path>
@@ -415,19 +448,16 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <g class="node c4 self"><rect x="276.0" y="162.0" width="152" height="44" rx="7"/><text class="nm" x="352.0" y="182.0" text-anchor="middle" font-size="13.5">ホッブズ</text><text class="yr" x="352.0" y="197.0" text-anchor="middle">1588–1679</text></g>
 </svg></div>
 
-<section><b>受け取った問い</b><p>内戦で王が処刑され、教会も王権も秩序の後ろ盾にならなくなった。服従する理由をどこに求めるか。</p></section>
-<section><b>出した答え</b><p>世界にあるのは動いている物体だけで、感覚も欲望も物体の運動。政府がない状態では、各人が自分の生命を守る権利を全面的に持ち、そのために万人が万人に対して争う。人々は自分の権利を一人の主権者へ渡す契約を結び、その約束の集積が国家を成り立たせる。権威の源は神の任命ではなく、生き延びたい者どうしの取り決め。</p></section>
-<section><b>主著</b><p>『リヴァイアサン』『物体論』</p></section>
-
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%87%E3%83%A2%E3%82%AF%E3%83%AA%E3%83%88%E3%82%B9.html">デモクリトス</a><span class="yr2">前460–前370頃</span>｜世界を物体と運動だけで説明する構えを受け取った。ただし原子と空虚は退け、空の場所のない充ちた世界として書いている。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%AA%E3%82%B9%E3%83%88%E3%83%86%E3%83%AC%E3%82%B9.html">アリストテレス</a><span class="yr2">前384–前322</span>｜人は生まれつき国家を作る動物だという前提を退け、国家を人が作った人工物とした。</li><li><span class="rel inherit">継承</span><a href="%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html">マキャヴェリ</a><span class="yr2">1469–1527</span>｜政治をあるべき姿からではなく、人が現にどう振る舞うかから論じる構えを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html">ガッサンディ</a><span class="yr2">1592–1655</span>｜パリのメルセンヌの集まりで練られた、自然を物体の運動として説明する構えを、交流を通じて受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html">グロティウス</a><span class="yr2">1583–1645</span>｜自然法を理性から導く進め方を受け取った。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%B9%E3%83%94%E3%83%8E%E3%82%B6.html">スピノザ</a><span class="yr2">1632–1677</span>｜自然権と国家を人の取り決めから導く枠組みを受け取った。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜統治の正当性を人々の取り決めに求める枠組みを引き継いだ。</li><li><span class="rel invert">転回</span><a href="%E3%83%AD%E3%83%83%E3%82%AF.html">ロック</a><span class="yr2">1632–1704</span>｜同じ契約の枠組みを使いながら、主権者に渡す権利を限定し、抵抗する権利を人々の側に残した。</li><li><span class="rel criticize">批判</span><a href="%E3%83%A2%E3%83%B3%E3%83%86%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%BC.html">モンテスキュー</a><span class="yr2">1689–1755</span>｜自然状態を万人の闘争とする前提を退け、人ははじめ怯えて互いを避けると論じた。</li><li><span class="rel inherit">継承</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜自然状態から契約によって国家を導く道筋を引き継いだ。</li><li><span class="rel criticize">批判</span><a href="%E3%83%AB%E3%82%BD%E3%83%BC.html">ルソー</a><span class="yr2">1712–1778</span>｜自然状態を万人の闘争とする前提を退け、争いは社会が生んだものだとした。</li><li><span class="rel criticize">批判</span><a href="%E3%82%A2%E3%83%80%E3%83%A0%E3%83%BB%E3%82%B9%E3%83%9F%E3%82%B9.html">アダム・スミス</a><span class="yr2">1723–1790</span>｜自己保存だけから社会を導く構図を退け、共感を人の側の出発点に置いた。</li></ul>
 
 <p class="ura"><b>裏づけ</b>『リヴァイアサン』第13章（自然状態）・第17章（コモンウェルスの生成）。ガリレオとの面会（1636）とパリのメルセンヌの集まりを経路として数えるのは、思想史研究の通説にもとづく。原子と空虚のほうは『物体論』第26章で退けている。グロティウスからの1本はこちらの整理で、直接の受容とみるか同時代の並行とみるかは研究が割れている。</p>
 
-<nav class="tonari"><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">同じ時代のひとつ前</span>グロティウス</a><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html"><span class="k">同じ時代のつぎ</span>ガッサンディ</a><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">社会・歴史のひとつ前</span>グロティウス</a><a href="%E3%83%B4%E3%82%A3%E3%83%BC%E3%82%B3.html"><span class="k">社会・歴史のつぎ</span>ヴィーコ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
+<nav class="tonari"><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">同じ時代・前の人</span>グロティウス</a><a href="%E3%82%AC%E3%83%83%E3%82%B5%E3%83%B3%E3%83%87%E3%82%A3.html"><span class="k">同じ時代・次の人</span>ガッサンディ</a><a href="%E3%82%B0%E3%83%AD%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><span class="k">社会・歴史・前の人</span>グロティウス</a><a href="%E3%83%B4%E3%82%A3%E3%83%BC%E3%82%B3.html"><span class="k">社会・歴史・次の人</span>ヴィーコ</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 
 <footer>
-  正本は <code>data/</code> の Markdown。このページは <code>scripts/ビューを作る.py</code> が作った生成物。
+  この人の記述の根拠は、上の「裏づけ」に書名と巻章まで書いてある。
+  <a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>の一部。最終更新 2026年9月5日。
 </footer>
 </div>
 <script>

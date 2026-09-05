@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#EDEEF0; --surface:#FAFAFB; --surface-2:#F2F3F5;
-  --ink:#191B1E; --ink-2:#41464C; --muted:#697079;
+  --ink:#191B1E; --ink-2:#41464C; --muted:#5E656E;
   --rule:#D5D9DE; --rule-strong:#AFB6BF;
   --c1:#3A5C8C; --c2:#4E7A4E; --c3:#2C7370; --c4:#8A7020; --c5:#6B5788; --c6:#7A5C3E;
   --inherit:#3A5C8C; --criticize:#B03A2E; --invert:#6B5788;
@@ -180,13 +180,27 @@ body[data-dan="2"] .card[data-d="3"]{display:none}
   padding:2px 10px;margin:0 5px 0 0;text-decoration:none;color:var(--ink-2);
   background:var(--bg);white-space:nowrap}
 #michiNote .men a:hover{background:var(--surface-2);color:var(--ink)}
+#michiNote .modosu{float:right;margin:-2px 0 0 12px;font-family:inherit;
+  font-size:11.5px;font-weight:600;color:var(--ink-2);background:var(--bg);
+  border:1px solid var(--rule-strong);border-radius:20px;padding:4px 12px;cursor:pointer}
+#michiNote .modosu:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 #michiNote .tobu{margin-left:10px;font-size:12px;font-weight:600;white-space:nowrap;
   text-decoration-color:var(--rule-strong)}
-.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin:0 0 6px}
+.zubox{position:relative}
+/* 図を見ているあいだも、いま何人かと拡大が付いてくる */
+.zoombar{display:flex;align-items:center;justify-content:flex-end;gap:5px;
+  position:sticky;top:0;z-index:15;background:var(--bg);padding:7px 0 6px}
+.dannow{margin-right:auto;font-size:12px;color:var(--ink-2);letter-spacing:.02em}
+.dannow b{display:inline;font-size:14px;font-weight:700;color:var(--ink);
+  letter-spacing:0;margin:0 1px}
+.dannow i{font-style:normal;font-size:11px;font-weight:700;color:var(--bg);
+  background:var(--ink);border-radius:20px;padding:2px 8px;margin-left:8px;
+  opacity:0;transition:opacity .25s}
+.dannow i.on{opacity:1}
 .zoombar .k{font-size:11.5px;color:var(--muted);letter-spacing:.08em;margin-right:4px}
 #zoomNow{font-size:12px;color:var(--ink-2);min-width:3.6em;text-align:center;
   font-variant-numeric:tabular-nums}
-.zb{width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
+.zb{flex:none;width:30px;height:28px;border:1px solid var(--rule-strong);border-radius:3px;
   background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:15px;line-height:1;
   font-family:inherit;padding:0}
 .zb.w{width:auto;padding:0 11px;font-size:12px;font-weight:600}
@@ -265,6 +279,12 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .lead{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
   padding:18px 22px;margin:14px 0 18px;color:var(--ink-2);font-size:14.5px}
 .lead p{margin:0 0 12px} .lead p:last-child{margin:0}
+/* 日本語で楽に読める1行は35〜45字。読み物の箱は、図の幅ではなく本文の幅に合わせる */
+.lead{max-width:700px}
+.kei-box{max-width:660px}
+.michi-box{max-width:900px}          /* 中の系譜図がいちばん広いもので824px */
+.michi-box p,footer{max-width:42em}
+.michi-box .men{max-width:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
 .card{background:var(--surface);border:1px solid var(--rule);
   border-left:4px solid currentColor;border-radius:10px;padding:13px 17px;
@@ -276,7 +296,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
   font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
 .card .meta{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:9px;
   font-family:inherit}
-.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.7}
+.card p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.75}
 
 .kazu{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:12px;
   letter-spacing:0;font-family:"Hiragino Sans","Noto Sans JP",sans-serif;vertical-align:3px}
@@ -312,7 +332,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .kei-box li{margin:0 0 7px;position:relative}
 .kei-box li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
 a.mi{text-decoration:none;display:inline-block}
-.kzubox{margin:12px -6px 0;padding:6px;background:var(--surface-2);border-radius:9px;
+.kzubox{width:fit-content;max-width:100%;margin:12px auto 0;padding:6px;background:var(--surface-2);border-radius:9px;
   overflow-x:auto;max-height:640px;overflow-y:auto;overscroll-behavior:contain}
 svg.kzu{display:block;margin:0 auto}
 .keizu{font-size:12.5px;color:var(--muted);margin:-14px 0 20px}
@@ -341,8 +361,8 @@ h2.kei{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px;
 .hito section p{margin:0;color:var(--ink-2)}
 .minibox{background:var(--surface);border:1px solid var(--rule);border-radius:12px;
   padding:8px;margin:0 0 26px;overflow-x:auto}
-svg.mini{display:block;margin:0 auto;width:100%;max-width:820px;height:auto}
-.ura{font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);
+svg.mini{display:block;margin:0 auto;max-width:100%;height:auto}
+.ura{font-size:13.5px;color:var(--ink-2);border-top:1px solid var(--rule);
   padding-top:10px;margin-top:26px}
 nav.tonari{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:10px;margin-top:34px;padding-top:20px;border-top:1px solid var(--rule)}
@@ -362,6 +382,15 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   .crumbrow .crumb{padding-top:0}
   .findwrap.mini{width:100%}
   .findwrap.mini #find,.findwrap.mini #find:focus{width:100%;flex:1}
+  svg.mini{max-width:none}   /* 縮めると名前が読めなくなるので、横へ流す */
+  .minibox{margin-bottom:20px}
+  .mi{padding:9px 13px}          /* 指で押せる大きさに */
+  .lg{padding:8px 12px 8px 8px}
+  .zoombar{gap:4px} .zoombar .k{display:none}   /* 幅が足りないので見出しを省く */
+  .zb{width:38px;height:36px} .zb.w{width:auto;padding:0 9px;font-size:11.5px}
+  #zoomNow{min-width:3.1em;font-size:11.5px}
+  .dannow{font-size:11px} .dannow i{margin-left:5px;padding:2px 6px}
+  .hitobito summary{padding:9px 15px}
   .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
@@ -388,7 +417,11 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="keizu"><a href="../西洋哲学史マップ.html#系譜-分析哲学">分析哲学</a></p>
 <p class="lede">他人の言葉を理解することは、相手をおおむね正しいと見なすところから始まるとした。</p>
 
-<div class="minibox"><svg class="mini" viewBox="0 0 520 246" xmlns="http://www.w3.org/2000/svg">
+<section><b>受け取った問い</b><p>言葉の意味を説明するのに、意味という別の何かを持ち出さずに済ませられるか。</p></section>
+<section><b>出した答え</b><p>ある文の意味を与えることは、その文がどんなときに真になるかを与えること。まったく知らない言語を前にした人が何をするかを考えれば、理解の仕組みが見える。相手の発言の大半を正しいものとして扱わなければ、そもそも解釈が始まらない。理由は行為の原因でもあり、心と体は同じ出来事を別の言葉で捉えている。</p></section>
+<section><b>主著</b><p>論文集『行為と出来事』『真理と解釈』</p></section>
+
+<div class="minibox"><svg class="mini" viewBox="0 0 520 246" width="520" height="246" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="ya-inherit" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya inherit"/></marker><marker id="ya-inherit-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya inherit"/></marker><marker id="ya-criticize" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya criticize"/></marker><marker id="ya-criticize-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya criticize"/></marker><marker id="ya-invert" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya invert"/></marker><marker id="ya-invert-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya invert"/></marker><marker id="ya-merge" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya merge"/></marker><marker id="ya-merge-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya merge"/></marker><marker id="ya-rediscover" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya rediscover"/></marker><marker id="ya-rediscover-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya rediscover"/></marker><marker id="ya-oppose" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6 z" class="ya oppose"/></marker><marker id="ya-oppose-r" viewBox="0 0 8 6" refX="7" refY="3" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M8,0 L0,3 L8,6 z" class="ya oppose"/></marker></defs>
 <path class="edge inherit" marker-end="url(#ya-inherit)" d="M169.0,58.0 C169.0,73.0 253.0,73.0 253.0,88.0"><title>継承</title></path>
 <path class="edge criticize" marker-end="url(#ya-criticize)" d="M183.0,58.0 C183.0,73.0 267.0,73.0 267.0,88.0"><title>批判</title></path>
@@ -400,19 +433,16 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <g class="node c3 self"><rect x="184.0" y="88.0" width="152" height="44" rx="7"/><text class="nm" x="260.0" y="108.0" text-anchor="middle" font-size="13.5">デイヴィドソン</text><text class="yr" x="260.0" y="123.0" text-anchor="middle">1917–2003</text></g>
 </svg></div>
 
-<section><b>受け取った問い</b><p>言葉の意味を説明するのに、意味という別の何かを持ち出さずに済ませられるか。</p></section>
-<section><b>出した答え</b><p>ある文の意味を与えることは、その文がどんなときに真になるかを与えること。まったく知らない言語を前にした人が何をするかを考えれば、理解の仕組みが見える。相手の発言の大半を正しいものとして扱わなければ、そもそも解釈が始まらない。理由は行為の原因でもあり、心と体は同じ出来事を別の言葉で捉えている。</p></section>
-<section><b>主著</b><p>論文集『行為と出来事』『真理と解釈』</p></section>
-
 <p><b>受け取った</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html">クワイン</a><span class="yr2">1908–2000</span>｜知識をひとつの網として見る立場と、知らない言語を訳す場面から考える進め方を受け取った。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3.html">クワイン</a><span class="yr2">1908–2000</span>｜枠組みと中身を分ける見方を、経験主義に残った最後の教条として退けた。</li><li><span class="rel criticize">批判</span><a href="%E3%82%AF%E3%83%BC%E3%83%B3.html">クーン</a><span class="yr2">1922–1996</span>｜枠組みが違えば比べられないという議論を、訳せないものを言語と呼べない以上は成り立たないと論じた。</li></ul>
 <p><b>渡した</b></p><ul class="rels"><li><span class="rel inherit">継承</span><a href="%E3%83%AD%E3%83%BC%E3%83%86%E3%82%A3.html">ローティ</a><span class="yr2">1931–2007</span>｜言葉と世界の対応を問う枠そのものを外す議論を受け取った。</li></ul>
 
 <p class="ura"><b>裏づけ</b>「真理と意味」（1967）、「行為・理由・原因」（1963）、「概念枠という考えそのものについて」（1974）。</p>
 
-<nav class="tonari"><a href="%E3%83%AA%E3%82%AF%E3%83%BC%E3%83%AB.html"><span class="k">同じ時代のひとつ前</span>リクール</a><a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html"><span class="k">同じ時代のつぎ</span>アルチュセール</a><a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html"><span class="k">言語・論理のひとつ前</span>セラーズ</a><a href="%E3%82%A2%E3%83%B3%E3%82%B9%E3%82%B3%E3%83%A0.html"><span class="k">言語・論理のつぎ</span>アンスコム</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
+<nav class="tonari"><a href="%E3%83%AA%E3%82%AF%E3%83%BC%E3%83%AB.html"><span class="k">同じ時代・前の人</span>リクール</a><a href="%E3%82%A2%E3%83%AB%E3%83%81%E3%83%A5%E3%82%BB%E3%83%BC%E3%83%AB.html"><span class="k">同じ時代・次の人</span>アルチュセール</a><a href="%E3%82%BB%E3%83%A9%E3%83%BC%E3%82%BA.html"><span class="k">言語・論理・前の人</span>セラーズ</a><a href="%E3%82%A2%E3%83%B3%E3%82%B9%E3%82%B3%E3%83%A0.html"><span class="k">言語・論理・次の人</span>アンスコム</a><a href="../西洋哲学史マップ.html"><span class="k">全体</span>図に戻る</a></nav>
 
 <footer>
-  正本は <code>data/</code> の Markdown。このページは <code>scripts/ビューを作る.py</code> が作った生成物。
+  この人の記述の根拠は、上の「裏づけ」に書名と巻章まで書いてある。
+  <a href="../西洋哲学史マップ.html">西洋哲学史マップ</a>の一部。最終更新 2026年9月5日。
 </footer>
 </div>
 <script>
