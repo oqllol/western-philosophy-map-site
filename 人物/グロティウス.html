@@ -318,7 +318,9 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .hitobito summary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .lead-top{font-size:17px;font-weight:700;color:var(--ink);line-height:1.75;
   margin:0 0 15px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;letter-spacing:.02em}
-.watashi{margin:15px 0 0;padding:11px 15px;background:var(--surface-2);border-radius:8px;
+/* .lead p:last-child{margin:0} が上の余白を打ち消すので、あとから同じ強さで指定し直す */
+.lead p.watashi{margin:18px 0 0}
+.watashi{margin:18px 0 0;padding:11px 15px;background:var(--surface-2);border-radius:8px;
   border-left:3px solid var(--rule-strong);font-size:13.5px;color:var(--ink-2)}
 .watashi b{display:block;font-size:11px;color:var(--muted);letter-spacing:.12em;
   margin:0 0 3px;font-weight:700}
@@ -328,6 +330,7 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .lead li:last-child{margin-bottom:0}
 /* 時代の導入は、まずリードの一行だけを見せる。起きたことの並びは開けて読む */
 .dekigoto{margin:0}
+.dekigoto>summary{margin:0}
 .dekigoto>summary{cursor:pointer;list-style:none;user-select:none;display:inline-block;
   font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);
   border:1px solid var(--rule-strong);border-radius:3px;padding:5px 13px;background:var(--bg)}
