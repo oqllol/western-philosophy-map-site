@@ -326,6 +326,17 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .lead li{margin:0 0 7px;position:relative;padding-left:0}
 .lead li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
 .lead li:last-child{margin-bottom:0}
+/* 時代の導入は、まずリードの一行だけを見せる。起きたことの並びは開けて読む */
+.dekigoto{margin:0}
+.dekigoto>summary{cursor:pointer;list-style:none;user-select:none;display:inline-block;
+  font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:5px 13px;background:var(--bg)}
+.dekigoto>summary::-webkit-details-marker{display:none}
+.dekigoto>summary::before{content:"▸ ";color:var(--rule-strong)}
+.dekigoto[open]>summary::before{content:"▾ "}
+.dekigoto>summary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dekigoto[open]>summary{margin-bottom:12px}
+.dekigoto .kaz{font-weight:400;color:var(--muted);margin-left:7px;letter-spacing:0}
 .mi-b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;
   margin:0 4px 0 0;font-weight:700}
 .kei-box ul{margin:0;padding-left:1.15em;list-style:none;color:var(--ink-2);font-size:14px}
@@ -391,6 +402,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   #zoomNow{min-width:3.1em;font-size:11.5px}
   .dannow{font-size:11px} .dannow i{margin-left:5px;padding:2px 6px}
   .hitobito summary{padding:9px 15px}
+  .dekigoto>summary{padding:9px 15px}
   .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>

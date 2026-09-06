@@ -325,6 +325,17 @@ h2.era{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;
 .lead li{margin:0 0 7px;position:relative;padding-left:0}
 .lead li::before{content:"—";position:absolute;left:-1.15em;color:var(--rule-strong)}
 .lead li:last-child{margin-bottom:0}
+/* 時代の導入は、まずリードの一行だけを見せる。起きたことの並びは開けて読む */
+.dekigoto{margin:0}
+.dekigoto>summary{cursor:pointer;list-style:none;user-select:none;display:inline-block;
+  font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:5px 13px;background:var(--bg)}
+.dekigoto>summary::-webkit-details-marker{display:none}
+.dekigoto>summary::before{content:"▸ ";color:var(--rule-strong)}
+.dekigoto[open]>summary::before{content:"▾ "}
+.dekigoto>summary:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dekigoto[open]>summary{margin-bottom:12px}
+.dekigoto .kaz{font-weight:400;color:var(--muted);margin-left:7px;letter-spacing:0}
 .mi-b{display:inline;font-size:inherit;color:var(--ink);letter-spacing:normal;
   margin:0 4px 0 0;font-weight:700}
 .kei-box ul{margin:0;padding-left:1.15em;list-style:none;color:var(--ink-2);font-size:14px}
@@ -390,6 +401,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
   #zoomNow{min-width:3.1em;font-size:11.5px}
   .dannow{font-size:11px} .dannow i{margin-left:5px;padding:2px 6px}
   .hitobito summary{padding:9px 15px}
+  .dekigoto>summary{padding:9px 15px}
   .findwrap.mini .find-list{left:0;right:0;width:auto}
 }
 </style>
@@ -1048,7 +1060,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <div id="panel"><button class="x" aria-label="閉じる">×</button><div id="pbody"></div></div>
 
 <h2 class="era" id="時代-古代">古代<span class="kazu" data-era="古代">22人</span></h2>
-<div class="lead"><p class="lead-top">「世界は何でできているのか」から始まって、「人はどう生きるべきか」へ問いが移るまで。</p><ul><li>世界のもとをひとつのものに求める試みが、小アジアの港町で始まる。水、限りのないもの、火と、答えが分かれた</li><li>パルメニデスが「ものが変わるということ自体、筋が通らない」と論じ、自然の説明は組み直しを迫られる。もとを四つに置く道と、無数の粒に置く道へ</li><li>どの説明も決着しないまま並んだところで、ソクラテスが問いを人の側へ向け直す。よく生きるとは何か</li><li>プラトンが「本当の姿」を別の世界に置き、アリストテレスがそれを目の前のものの内側へ戻す</li><li>都市国家が力を失うと、話の中心は生き方へ移る。エピクロス派・ストア派・懐疑派が、心を乱されずにいる作法を競った</li><li>ローマがそれをラテン語に移し、プロティノスがプラトンを、上から下へ連なる体系として読み直す</li></ul><p class="watashi"><b>次の時代へ渡ったもの</b>アリストテレスの論理学と、プラトンを上下の連なりとして読む枠組み</p></div>
+<div class="lead"><p class="lead-top">「世界は何でできているのか」から始まって、「人はどう生きるべきか」へ問いが移るまで。</p><details class="dekigoto"><summary>この時代に起きたこと<span class="kaz">6</span></summary><ul><li>世界のもとをひとつのものに求める試みが、小アジアの港町で始まる。水、限りのないもの、火と、答えが分かれた</li><li>パルメニデスが「ものが変わるということ自体、筋が通らない」と論じ、自然の説明は組み直しを迫られる。もとを四つに置く道と、無数の粒に置く道へ</li><li>どの説明も決着しないまま並んだところで、ソクラテスが問いを人の側へ向け直す。よく生きるとは何か</li><li>プラトンが「本当の姿」を別の世界に置き、アリストテレスがそれを目の前のものの内側へ戻す</li><li>都市国家が力を失うと、話の中心は生き方へ移る。エピクロス派・ストア派・懐疑派が、心を乱されずにいる作法を競った</li><li>ローマがそれをラテン語に移し、プロティノスがプラトンを、上から下へ連なる体系として読み直す</li></ul></details><p class="watashi"><b>次の時代へ渡ったもの</b>アリストテレスの論理学と、プラトンを上下の連なりとして読む枠組み</p></div>
 <details class="hitobito" data-era="古代"><summary>この時代の<span class="n">22</span>人を見る</summary><div class="cards">
 <a class="card c2" data-d="1" href="人物/%E3%82%BF%E3%83%AC%E3%82%B9.html"><h3>タレス<span class="meta">前624–前546頃／自然・経験</span></h3><p>世界が何からできているのかを、神々の物語を使わずに答えようとした。</p></a>
 <a class="card c2" data-d="3" href="人物/%E3%82%A2%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%9E%E3%83%B3%E3%83%89%E3%83%AD%E3%82%B9.html"><h3>アナクシマンドロス<span class="meta">前610–前546頃／自然・経験</span></h3><p>世界の元を、水のような目に見えるものではなく、限りのないものだとした。</p></a>
@@ -1074,7 +1086,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c1" data-d="3" href="人物/%E3%83%9D%E3%83%AB%E3%83%95%E3%83%A5%E3%83%AA%E3%82%AA%E3%82%B9.html"><h3>ポルフュリオス<span class="meta">234–305頃／合理・観念</span></h3><p>プロティノスの講義を編んで残し、その入門書の一文が中世千年の論争を生んだ。</p></a>
 </div></details>
 <h2 class="era" id="時代-中世">中世<span class="kazu" data-era="中世">11人</span></h2>
-<div class="lead"><p class="lead-top">アリストテレスの本が西ヨーロッパから消え、イスラム世界を通って戻ってくるまでの八百年。</p><ul><li>ローマの西側が崩れ、アリストテレスの本の大半が読めなくなる。ボエティウスが訳した論理学の一部だけが残った</li><li>哲学は神学の中で続き、「信じることと分かること、どちらが先か」が問われる</li><li>失われた本はアラビア語圏で読み継がれていた。イブン・シーナーが体系に組み直し、ガザーリーがそれを論破し、イブン・ルシュドが原文どおりに読み直す</li><li>12世紀、その訳がラテン語に入り、生まれたばかりの大学がそれを読む</li><li>トマス・アクィナスが、理性で分かる範囲と、聖書がなければ分からない範囲を線で分けて、両方を立てる</li><li>ドゥンス・スコトゥスとオッカムがその線を引き直し、理性の側を狭める。在るのは一つひとつのものだけになった</li></ul><p class="watashi"><b>次の時代へ渡ったもの</b>神の秩序を理性でたどりきれるとは限らないという緩みと、自然を神学から切り離して観察してよいという余地</p></div>
+<div class="lead"><p class="lead-top">アリストテレスの本が西ヨーロッパから消え、イスラム世界を通って戻ってくるまでの八百年。</p><details class="dekigoto"><summary>この時代に起きたこと<span class="kaz">6</span></summary><ul><li>ローマの西側が崩れ、アリストテレスの本の大半が読めなくなる。ボエティウスが訳した論理学の一部だけが残った</li><li>哲学は神学の中で続き、「信じることと分かること、どちらが先か」が問われる</li><li>失われた本はアラビア語圏で読み継がれていた。イブン・シーナーが体系に組み直し、ガザーリーがそれを論破し、イブン・ルシュドが原文どおりに読み直す</li><li>12世紀、その訳がラテン語に入り、生まれたばかりの大学がそれを読む</li><li>トマス・アクィナスが、理性で分かる範囲と、聖書がなければ分からない範囲を線で分けて、両方を立てる</li><li>ドゥンス・スコトゥスとオッカムがその線を引き直し、理性の側を狭める。在るのは一つひとつのものだけになった</li></ul></details><p class="watashi"><b>次の時代へ渡ったもの</b>神の秩序を理性でたどりきれるとは限らないという緩みと、自然を神学から切り離して観察してよいという余地</p></div>
 <details class="hitobito" data-era="中世"><summary>この時代の<span class="n">11</span>人を見る</summary><div class="cards">
 <a class="card c6" data-d="1" href="人物/%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8C%E3%82%B9.html"><h3>アウグスティヌス<span class="meta">354–430／信仰・神学</span></h3><p>ギリシア以来の思考の道具でキリスト教の信仰を説明し、内面を掘り下げる書き方を始めた。</p></a>
 <a class="card c6" data-d="2" href="人物/%E3%83%9C%E3%82%A8%E3%83%86%E3%82%A3%E3%82%A6%E3%82%B9.html"><h3>ボエティウス<span class="meta">477–524頃／信仰・神学</span></h3><p>処刑を待つ獄中で幸福と運命を論じ、ギリシア論理学をラテン世界へ橋渡しした。</p></a>
@@ -1089,7 +1101,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c6" data-d="1" href="人物/%E3%82%AA%E3%83%83%E3%82%AB%E3%83%A0.html"><h3>オッカム<span class="meta">1287–1347頃／信仰・神学</span></h3><p>「人間そのもの」のような普遍は名前にすぎず、在るのは個々のものだけだとした。</p></a>
 </div></details>
 <h2 class="era" id="時代-近世">近世<span class="kazu" data-era="近世">20人</span></h2>
-<div class="lead"><p class="lead-top">教会の一致と昔ながらの世界像が同時に崩れ、「何なら確かだと言えるのか」を一から考え直した時代。</p><ul><li>宗教改革が教会の一致を壊し、新しい天文学が世界の見取り図を壊す</li><li>1562年に古代の懐疑論が訳され、モンテーニュが「私は何を知っているのか」と書く</li><li>答え方が二つに分かれる。デカルトは疑いに耐える一点から理屈で積み直し、ベーコンとロックは観察の側から積み上げた</li><li>分かれ目は時代を通じて広がる。一方はスピノザとライプニッツへ、他方はバークリとヒュームへ</li><li>ヒュームが「経験だけを材料にする」という決まりを最後まで守ったとき、因果関係も自分自身も手元に残らなかった</li><li>同じ時期、グロティウス・ホッブズ・ロック・ルソーが、国の正しさを神の任命から人々の取り決めへ移す</li></ul><p class="watashi"><b>次の時代へ渡ったもの</b>カントが二つの道を、「見る側の枠組み」という一点でまとめ直した</p></div>
+<div class="lead"><p class="lead-top">教会の一致と昔ながらの世界像が同時に崩れ、「何なら確かだと言えるのか」を一から考え直した時代。</p><details class="dekigoto"><summary>この時代に起きたこと<span class="kaz">6</span></summary><ul><li>宗教改革が教会の一致を壊し、新しい天文学が世界の見取り図を壊す</li><li>1562年に古代の懐疑論が訳され、モンテーニュが「私は何を知っているのか」と書く</li><li>答え方が二つに分かれる。デカルトは疑いに耐える一点から理屈で積み直し、ベーコンとロックは観察の側から積み上げた</li><li>分かれ目は時代を通じて広がる。一方はスピノザとライプニッツへ、他方はバークリとヒュームへ</li><li>ヒュームが「経験だけを材料にする」という決まりを最後まで守ったとき、因果関係も自分自身も手元に残らなかった</li><li>同じ時期、グロティウス・ホッブズ・ロック・ルソーが、国の正しさを神の任命から人々の取り決めへ移す</li></ul></details><p class="watashi"><b>次の時代へ渡ったもの</b>カントが二つの道を、「見る側の枠組み」という一点でまとめ直した</p></div>
 <details class="hitobito" data-era="近世"><summary>この時代の<span class="n">20</span>人を見る</summary><div class="cards">
 <a class="card c4" data-d="1" href="人物/%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA.html"><h3>マキャヴェリ<span class="meta">1469–1527／社会・歴史</span></h3><p>政治を、あるべき姿からではなく、人が現にどう振る舞うかから論じ直した。</p></a>
 <a class="card c5" data-d="1" href="人物/%E3%83%A2%E3%83%B3%E3%83%86%E3%83%BC%E3%83%8B%E3%83%A5.html"><h3>モンテーニュ<span class="meta">1533–1592／生き方・実存</span></h3><p>自分自身を材料にして書き、「私は何を知っているか」と問い続けた。</p></a>
@@ -1113,7 +1125,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c1" data-d="1" href="人物/%E3%82%AB%E3%83%B3%E3%83%88.html"><h3>カント<span class="meta">1724–1804／合理・観念</span></h3><p>対象のほうが認識の形式に従うと向きを変え、経験を重んじる流れと理性を重んじる流れをまとめ直した。</p></a>
 </div></details>
 <h2 class="era" id="時代-近代">近代<span class="kazu" data-era="近代">23人</span></h2>
-<div class="lead"><p class="lead-top">カントが残した宿題を、次の世代がそれぞれ別の方向へ引き受けた時代。</p><ul><li>カントが残したのは二つ。人が世界を捉えるときの枠組みと、その枠組みが届かない範囲</li><li>フィヒテとヘーゲルは届かない範囲を消し、動いていく体系へ進む</li><li>その体系に対して、キルケゴールは決断する一人の私を、マルクスは物を作り分け合う仕組みを突きつけた</li><li>イギリスでは経験を重んじる流れがベンサムとミルの功利主義へ、フランスではコントが社会を科学の対象にする</li><li>世紀の終わりに、ニーチェが「その価値はどこから来たのか」を問い、フロイトが理性の下に無意識を置いた</li><li>同じ頃、フレーゲが推論を記号だけで書ける形にする</li></ul><p class="watashi"><b>次の時代へ渡ったもの</b>フレーゲの記法と、人が世界に住み着いている在り方への問い。次の世紀はこの二つから始まる</p></div>
+<div class="lead"><p class="lead-top">カントが残した宿題を、次の世代がそれぞれ別の方向へ引き受けた時代。</p><details class="dekigoto"><summary>この時代に起きたこと<span class="kaz">6</span></summary><ul><li>カントが残したのは二つ。人が世界を捉えるときの枠組みと、その枠組みが届かない範囲</li><li>フィヒテとヘーゲルは届かない範囲を消し、動いていく体系へ進む</li><li>その体系に対して、キルケゴールは決断する一人の私を、マルクスは物を作り分け合う仕組みを突きつけた</li><li>イギリスでは経験を重んじる流れがベンサムとミルの功利主義へ、フランスではコントが社会を科学の対象にする</li><li>世紀の終わりに、ニーチェが「その価値はどこから来たのか」を問い、フロイトが理性の下に無意識を置いた</li><li>同じ頃、フレーゲが推論を記号だけで書ける形にする</li></ul></details><p class="watashi"><b>次の時代へ渡ったもの</b>フレーゲの記法と、人が世界に住み着いている在り方への問い。次の世紀はこの二つから始まる</p></div>
 <details class="hitobito" data-era="近代"><summary>この時代の<span class="n">23</span>人を見る</summary><div class="cards">
 <a class="card c1" data-d="3" href="人物/%E3%83%A4%E3%82%B3%E3%83%BC%E3%83%93.html"><h3>ヤコービ<span class="meta">1743–1819／合理・観念</span></h3><p>理性を最後まで押していくと信仰を失うと論じ、スピノザをめぐる論争に火をつけた。</p></a>
 <a class="card c4" data-d="3" href="人物/%E3%83%98%E3%83%AB%E3%83%80%E3%83%BC.html"><h3>ヘルダー<span class="meta">1744–1803／社会・歴史</span></h3><p>どの民族にも固有の考え方があるとし、言語と歴史をその現れとして読んだ。</p></a>
@@ -1140,7 +1152,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
 <a class="card c3" data-d="2" href="人物/%E3%82%BD%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB.html"><h3>ソシュール<span class="meta">1857–1913／言語・論理</span></h3><p>語の意味は、それが指す物ではなく、体系のなかの他の語との違いから決まるとした。</p></a>
 </div></details>
 <h2 class="era" id="時代-現代">現代<span class="kazu" data-era="現代">47人</span></h2>
-<div class="lead"><p class="lead-top">二つの流れが別々に進み、やがてそれぞれの内側から足元が崩れていった百年。</p><ul><li>一方はフレーゲからラッセル、ムーア、ウィトゲンシュタイン、カルナップへ。言葉と論理の側から哲学を組み直そうとする</li><li>もう一方はブレンターノからフッサール、ハイデガー、サルトルへ。人がすでに世界の中に住んでいるところから組み直そうとする</li><li>二つの世界大戦と絶滅収容所を経て、アドルノとアレントが理性そのものを問い直す</li><li>ロールズが正義の原則を立て直し、ノージック・セン・テイラー・ヌスバウムが四方向から応じた</li><li>世紀の後半、それぞれの道の内側から足元を崩す動きが出る。クワインとクーンが一方で、フーコーとデリダとドゥルーズがもう一方で</li><li>アンスコムの呼びかけから、二千年ぶりに徳をめぐる議論が戻ってくる</li><li>ローティは両方を読んだうえで、哲学を「会話を続ける営み」と呼び直した</li></ul><p class="watashi"><b>次の時代へ渡ったもの</b>二つの流れは今も別々に進んでいる。その両方を読んだ人が、あいだを行き来し始めた</p></div>
+<div class="lead"><p class="lead-top">二つの流れが別々に進み、やがてそれぞれの内側から足元が崩れていった百年。</p><details class="dekigoto"><summary>この時代に起きたこと<span class="kaz">7</span></summary><ul><li>一方はフレーゲからラッセル、ムーア、ウィトゲンシュタイン、カルナップへ。言葉と論理の側から哲学を組み直そうとする</li><li>もう一方はブレンターノからフッサール、ハイデガー、サルトルへ。人がすでに世界の中に住んでいるところから組み直そうとする</li><li>二つの世界大戦と絶滅収容所を経て、アドルノとアレントが理性そのものを問い直す</li><li>ロールズが正義の原則を立て直し、ノージック・セン・テイラー・ヌスバウムが四方向から応じた</li><li>世紀の後半、それぞれの道の内側から足元を崩す動きが出る。クワインとクーンが一方で、フーコーとデリダとドゥルーズがもう一方で</li><li>アンスコムの呼びかけから、二千年ぶりに徳をめぐる議論が戻ってくる</li><li>ローティは両方を読んだうえで、哲学を「会話を続ける営み」と呼び直した</li></ul></details><p class="watashi"><b>次の時代へ渡ったもの</b>二つの流れは今も別々に進んでいる。その両方を読んだ人が、あいだを行き来し始めた</p></div>
 <details class="hitobito" data-era="現代"><summary>この時代の<span class="n">47</span>人を見る</summary><div class="cards">
 <a class="card c1" data-d="1" href="人物/%E3%83%95%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB.html"><h3>フッサール<span class="meta">1859–1938／合理・観念</span></h3><p>世界が在るかどうかの判断をいったん止め、意識に現れるとおりに記述する方法を立てた。</p></a>
 <a class="card c5" data-d="3" href="人物/%E3%83%99%E3%83%AB%E3%82%AF%E3%82%BD%E3%83%B3.html"><h3>ベルクソン<span class="meta">1859–1941／生き方・実存</span></h3><p>時計で測る時間と、生きられている時間は別のものだとして、後者を哲学の中心に置いた。</p></a>
